@@ -31,6 +31,39 @@ const register = (req, res, next) =>{
     })
 }
 
+const login = (req, res, next) => {
+    var username = req.body.username
+    var password = req.body.password
+
+    User.findOne({$or: [{email:username},{phone: username}]}) //how does this make sense?
+    .then(user =>{
+        if(user){
+            bcrypt.compare(password, user.password, function(er, result){
+                if(err){
+                    res.json({
+                        error:err
+                    })
+                }
+                if(result){
+                    let token = jwt.sign({name: user.name}, 'verySecretValue',{expiresIn: '1h'})
+                    res.json({
+                        message: 'Login Successful!',
+                        token
+                    })
+                }else{
+                    res.json({
+                        message: 'Password does not match!'
+                    })
+                }
+            })
+
+        }else{ res.json({
+                message:'No user found!'
+            })
+        }
+    })
+}
+
 module.exports = {
     register
 } 
