@@ -1,0 +1,171 @@
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orientation App</title>
+    <link rel="stylesheet" href="studAct.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+  </head>
+  <body>
+      <div style="background-color: FAF3F5;" class="container-fluid-xxl">
+          <nav class="navbar navbar-expand-md navbar-light pt-20 pb-4">
+              <div class="container-xxl">
+                <!-- navbar brand / title -->
+                <a class="navbar-brand" href="#Home">
+                    <img src ="Assets/oag logo.png" alt="Avatar Logo"  style="width:200px; padding-top: 10%;padding-left: 15%;">
+                          </a>
+            <!-- toggle button for mobile nav -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- navbar links -->
+            <div class="collapse navbar-collapse justify-content-end align-center" id="main-nav">
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a style="color: black;" class="nav-link" href="#Home">HOME</a>
+                </li>
+                <li class="nav-item">
+                  <a style="color: black;" class="nav-link" href="#Guide">GUIDE</a>
+                </li>
+                <li class="nav-item">
+                  <a style="color:black;" class="nav-link" href="#Map">MAP</a>
+                </li>
+                <li class="nav-item">
+                  <a style="color:black" class="nav-link" href="#Welfare">WELFARE</a>
+                </li>
+                <li class="nav-item ms-2 d-none d-md-inline">
+                  <a style ="margin-top: 6%;" class="btn btn-primary btn-sm" href="#getStarted">Get Started</a>
+                </li>
+                
+              </ul>
+            </div>
+          </div>
+        </nav>
+        <section id="getStarted">
+        <div class="container-lg">
+                <div class="row">
+                  <div class="col-md-4">
+                    <div class="thumbnail">
+                      <a href="/w3images/lights.jpg" target="_blank">
+                        <img src="Assets/student activities pic 2.png" alt="Lights" style="width:100%">
+                      </a>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="thumbnail">
+                      <a href="/w3images/nature.jpg" target="_blank">
+                        <img src="Assets/student activities pic 3.png" alt="Nature" style="width:100%">
+                      </a>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="thumbnail">
+                      <a href="/w3images/fjords.jpg" target="_blank">
+                        <img src="Assets/student act 11.png" alt="Fjords" style="width:100%">
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div>
+                <P> </P>
+                <p> </p>
+                <h1 style="color: black; font-family:Inter; font-size: 30px; text-align: left;"  >Below Are Student Activities Which You Can Select From</h1>
+                <P> </P>
+                <form action="results.html" method="POST">
+                    <label for="faithB">Faith Based Organizations:</label>
+                    <p> </p>
+                <select name="faithB" id="faithB">
+                    <option value="Musilim Students Society">Musilim Students Society</option>
+                    <option value="AUN Catholic Society">AUN Catholic Society</option>
+                    <option value="Non Denominational Christian Fellowship">Non Denominational Christian Fellowship</option>
+                </select>
+              </div>
+              <div>
+                <p> </p>
+                <label for="academic">Academic Interest Bsed Associations:</label>
+                <p> </p>
+                <select name="academic" id="academic">
+                    <option value=" Law Students Society">Law Students Society </option>
+                    <option value="Institute of Electrical Electronics Engineers">Institute of Electrical Electronics Engineers</option>
+                    <option value="AUN Chemical Society">AUN Chemical Society</option>
+                    <option value="Politics and Peace Studies Society">Politics and Peace Studies Society</option>
+                    <option value="Student Teams Advocating for Regional Sustainability (STARS)">Student Teams Advocating for Regional Sustainability (STARS)</option>
+                    <option value="Entrepreneurship and Leadership Society">Entrepreneurship and Leadership Society</option>
+                </select>
+              </div>
+              <P> </P>
+              <div>
+                <p> </p>
+                <label for="sports">Sports Club:</label>
+                <p> </p>
+                <select name="sports" id="sports">
+                    <option value="Aun Intramural Football League">Aun Intramural Football League</option>
+                    <option value="Badminton Club">Badminton Club</option>
+                    <option value="Tennis Club">Tennis Club</option>
+                    <option value="Martial Arts Club">Martial Arts Club</option>
+                    <option value="AUN Basketball League">AUN Basketball League</option>
+                    <option value="AUN Volleyball League">AUN Volleyball League</option>
+                </select>
+              </div>
+              <P> </P>
+              <div>
+                <p> </p>
+                <label for="Hobbies">Hobbies Pssion and Interests:</label>
+                <p> </p>
+                <select name="hobbies" id="hobbies">
+                    <option value="Art Club">Art Club</option>
+                    <option value="Theater Club">Theater Club</option>
+                    <option value="AUN Dance Troupe">AUN Dance Troupe</option>
+                    <option value="Spoken Word and Poetry Club">Spoken Word and Poetry Club</option>
+                    <option value="Stallion Radio">Stallion Radio</option>
+                </select>
+              </div>
+              <P> </P>
+              <div>
+                <p> </p>
+                <label for="Governance">Governance Leadership Boards and Councils:</label>
+                <p> </p>
+                <select name="Governance" id="Governance">
+                    <option value="Women's Leadership Council">Women's Leadership Council</option>
+                    <option value="AUN Honor Society">AUN Honor Society</option>
+                    <option value="Campus Activities Board">Campus Activities Board</option>
+                    <option value="Student Government Association (SGA)">Student Government Association (SGA)</option>
+                </select>
+              </div>
+              <P> </P>
+              <P> </P>
+              <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+              <P> </P>
+              <div class="table-responsive">
+                <table class="table table-hover">
+                  <thead>
+                    <tr>
+                      <th>ADMIN APPROVAL</th>
+                      <th>STATUS</th>
+                      <th>Check</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                        <td>OVERALL CHECK</td>
+                        <td>APPROVED</td>
+                        <td>
+                        <label for="radio1"></label>
+                        <input type="radio"  class="larger1" name="radios" id="radio1" />
+                        </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+               
+        
+              <button class="previous" id="previous" href="housing.html">Previous</button>
+              <button class="next" id="next" href="">Next</button>
+              <P> </P>     
+        </div>
+        </section>
+        
+
+          
+

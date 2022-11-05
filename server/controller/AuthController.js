@@ -1,8 +1,8 @@
-const User = require('../models/User')
+const User = require('../models/model')
 const bcrypt = require('bcryptjs')
 const jwt = require('jsonwebtoken')
 
-const register = (req, res, next) =>{
+exports.register = (req, res, next) =>{
     bcrypt.hash(req.body.password, 10, function(err,hashedPass){
         if(err){
             res.json({
@@ -31,21 +31,21 @@ const register = (req, res, next) =>{
     })
 }
 
-const login = (req, res, next) => {
+exports.login = (req, res, next) =>{
     var username = req.body.username
     var password = req.body.password
 
-    User.findOne({$or: [{email:username},{phone: username}]}) //how does this make sense?
+    User.findOne({$or: [{email: username},{phone: username}]}) //how does this make sense? //okay it checks if anyine submit email or phone as username
     .then(user =>{
         if(user){
-            bcrypt.compare(password, user.password, function(er, result){
+            bcrypt.compare(password, user.password, function(err, result){
                 if(err){
                     res.json({
-                        error:err
+                        error: err
                     })
                 }
                 if(result){
-                    let token = jwt.sign({name: user.name}, 'verySecretValue',{expiresIn: '1h'})
+                    let token = jwt.sign({name: user.name}, 'verySecretValue', {expiresIn: '1h'})
                     res.json({
                         message: 'Login Successful!',
                         token
@@ -57,13 +57,15 @@ const login = (req, res, next) => {
                 }
             })
 
-        }else{ res.json({
+        }else{ 
+            // errors.email = "User not found";
+            // res.status(404).json({ errors });// stop further execution in this callback
+            // return;
+            res.json({
                 message:'No user found!'
             })
+            // return;
         }
     })
 }
 
-module.exports = {
-    register
-} 

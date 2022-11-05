@@ -1,0 +1,103 @@
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orientation App</title>
+    <link rel="stylesheet" href="login.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+  </head>
+  <body>
+      <div style="background-color: FAF3F5;" class="container-fluid-xxl">
+          <nav class="navbar navbar-expand-md navbar-light pt-20 pb-4">
+              <div class="container-xxl">
+                <!-- navbar brand / title -->
+                <a class="navbar-brand" href="#Home">
+                    <img src ="Assets/oag logo.png" alt="Avatar Logo"  style="width:200px; padding-top: 10%;padding-left: 15%;">
+                          </a>
+            <!-- toggle button for mobile nav -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- navbar links -->
+            <div class="collapse navbar-collapse justify-content-end align-center" id="main-nav">
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a style="color: black;" class="nav-link" href="#Home">HOME</a>
+                </li>
+                <li class="nav-item">
+                  <a style="color: black;" class="nav-link" href="#Guide">GUIDE</a>
+                </li>
+                <li class="nav-item">
+                  <a style="color:black;" class="nav-link" href="#Map">MAP</a>
+                </li>
+                <li class="nav-item">
+                  <a style="color:black" class="nav-link" href="#Welfare">WELFARE</a>
+                </li>
+                <li class="nav-item ms-2 d-none d-md-inline">
+                  <a style ="margin-top: 6%;" class="btn btn-primary btn-sm" href="#getStarted">Get Started</a>
+                </li>
+                
+              </ul>
+            </div>
+          </div>
+        </nav>
+      <div class="container-lg">
+          <h1 style="color: 103908; font-family:Inter; font-size: 30px;"  >STEP 4: I.T </h1>
+          <P> </P>
+          <form action="results.html" method="POST">
+            <div class="form-group">
+              <label for="exampleInputEmail1">First Name:</label>
+              <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter First Name">
+            </div>
+            <P> </P>
+            <div class="form-group">
+                <label for="exampleInputEmail1">Last Name:</label>
+                <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Last Name">
+            </div>
+            <P> </P>
+            <div class="form-group">
+                <label for="exampleInputEmail1">Middle Name:</label>
+                <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Middle Name">
+            </div>
+            <P> </P>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+          <div class="table-responsive">
+            <table class="table table-hover">
+              <thead>
+                <tr>
+                  <th>ADMIN APPROVAL</th>
+                  <th>STATUS</th>
+                  <th>Check</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                    <td>OPENERP CREATION</td>
+                    <td>APPROVED</td>
+                    <td>
+                        <label for="radio1"></label>
+                        <input type="radio"  class="larger1" name="radios" id="radio1" />
+                    </td>
+                    
+                </tr>
+                <tr>
+                    <td>OVERALL CHECK</td>
+                    <td>APPROVED</td>
+                    <td>
+                        <label for="radio1"></label>
+                        <input type="radio"  class="larger1" name="radios" id="radio1" />
+                    </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <button class="previous" id="previous" href="finanace.html">Previous</button>
+          <button class="next" id="next" href="housing.html">Next</button>
+          <P> </P>
+          <P> </P>
+
+      </div>
+
+
+

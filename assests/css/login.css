@@ -1,0 +1,64 @@
+.container-fluid{
+    background-color: FAF3F5;
+}.container-lg{
+    background-color: FAF3F5;
+}.Home{
+    background-color: FAF3F5;
+} a{
+        text-decoration: none;
+        font-weight: bold;
+        color:black;
+
+}page-text1 {
+    color: #0e41e6;
+  }
+  .page-text2 {
+    color: #ea1e1e;
+  }.container-lg1{
+    padding-right: 10%;
+  }.next{
+  padding: 15px 10px;
+  border-radius: 6px;
+  background: black;
+  color: white;
+  border:0;
+  outline: none;
+  cursor: pointer;
+  width: 100px;
+  margin-left: 1090;
+
+ 
+  }a.btn{
+  padding: 15px 10px;
+  border-radius: 6px;
+  background: black;
+  color: white;
+  border:0;
+  outline: none;
+  cursor: pointer;
+  width: 100px;
+  margin-left: 1090;
+
+  }
+
+  .previous {
+  padding: 15px 10px;
+  border-radius: 6px;
+  background: black;
+  color: white;
+  border:0;
+  outline: none;
+  cursor: pointer;
+  width: 100px;
+  
+
+
+  }input.larger{
+    transform: scale(2);
+    margin: 30px;
+
+  }input.larger1 {
+    transform: scale(2);
+    
+  }
+  
