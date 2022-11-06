@@ -6,7 +6,6 @@ const morgan = require('morgan');
 const bodyparser = require('body-parser');
 const path = require('path');
 const connectDB = require('./server/database/connection');
-// const AuthRoute = require('./server/routes/auth')
 
 dotenv.config({path:'config.env'})
 
