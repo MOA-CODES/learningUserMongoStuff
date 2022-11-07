@@ -18,7 +18,7 @@ const studentSchema = new Schema({
     Major :{
         type: String
     },
-    SchoolID :{
+    Address :{
         type: String
     },
     Personalemail :{
