@@ -54,3 +54,24 @@ exports.update = (req,res)=>{
     })
     
 }
+
+exports.delete = (req,res)=>{
+    const id = req.body.StudID;
+
+    // Userdb.findOneAndDelete()
+    Userdb.findOneAndDelete({StudID: id})
+        .then(data =>{
+            if(!data){
+                res.status(404).send({message:`Cannot Delete with ${id}. id maybe Wrong!`})
+            }else{
+                res.send({
+                    message:"User was deleted successfully!"
+                })
+            }
+        })
+        .catch(err=>{
+            res.status(500).send({
+                message:"Could not delete User with id=" +id
+            });
+        });
+}

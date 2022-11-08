@@ -4,7 +4,13 @@ const Schema = mongoose.Schema;
 
 //role
 const roleSchema = new Schema({
-    name:{
+    Role_id:{
+        type: String
+    },
+    Title:{
+        type: String
+    },
+    Description:{
         type: String
     }
 })

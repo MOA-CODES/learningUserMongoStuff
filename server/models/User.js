@@ -2,19 +2,16 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 //user
 const userSchema = new Schema({
+    User_id :{
+        type: String
+    },
     name :{
-        type: String
-    },
-    email :{
-        type: String
-    },
-    phone :{
         type: String
     },
     password :{
         type: String
     },
-    role :{
+    role_id :{
         type: mongoose.Schema.Types.ObjectId, ref: 'Role'
     }
 },{timestamps: true})
