@@ -16,10 +16,16 @@ router.post('/register/student', StudController.create)  //create student
 router.put('/update/student', StudController.update)    //update student
 
 router.post('/register/role', RoleController.create)  //create Role
+router.put('/update/role', RoleController.update)    //update Role
 
 router.post('/register/user', UserController.create)  //create User
+router.put('/update/user', UserController.update)    //update User
+
 
 router.post('/register/file', FileController.create)  //create File
+router.put('/update/file', FileController.update)    //update File
+
+
 
 
 

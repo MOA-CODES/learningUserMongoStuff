@@ -45,7 +45,7 @@ exports.update = (req,res)=>{
         }else{
             // res.send(data)
             res.json({
-                message:'Student updated'
+                message:'Student: '+id+' updated'
             })
         }
     })

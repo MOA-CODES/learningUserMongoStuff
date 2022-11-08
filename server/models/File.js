@@ -4,7 +4,7 @@ const Schema = mongoose.Schema;
 
 //role
 const FileSchema = new Schema({
-    Stud_id:{
+    StudID:{
         type: String
     },
     Jamb:{
