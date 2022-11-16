@@ -12,6 +12,7 @@ const UserController = require('../controller/UserController')
 const FileController = require('../controller/FileController')
 
 route.get('/',services.homeRoutes);
+route.get('/login',services.login);
 
 
 

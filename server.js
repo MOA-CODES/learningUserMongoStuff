@@ -22,18 +22,18 @@ connectDB();
 //parse request to body parser
 app.use(bodyparser.urlencoded({extended:true}))
 
-// app.set('view engine', 'ejs');
+app.set('view engine', 'ejs');
 
 //load assests
 app.use('/css', express.static(path.resolve(__dirname,"assests/css")));
 app.use('/img', express.static(path.resolve(__dirname,"assests/img")));
 app.use('/js', express.static(path.resolve(__dirname,"assests/js")));
 
-// app.use('/', require('./server/routes/router')) 
+app.use('/', require('./server/routes/router')) 
 
-app.get("/", (req, res) => {
-  res.sendFile(path.join(__dirname, 'views/index.html'))
-});
+// app.get("/", (req, res) => {
+//   res.sendFile(path.join(__dirname, 'views/index.html'))
+// });
 
 app.listen(PORT, ()=>{
     console.log(`Server is running on http://localhost:${PORT}`)
