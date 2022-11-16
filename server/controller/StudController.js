@@ -6,6 +6,10 @@ exports.create = (req,res)=>{
         res.status(400).send({message: "Content can not be empty!"})
         return;
     }
+    // if( Student.find(req.StudID)){
+    //     res.status(400).send({message: "ID:"+req.StudID+" already exists in table"})
+    //     return;
+    // }
 
     //new user
     const stud = new Student({
@@ -45,7 +49,7 @@ exports.update = (req,res)=>{
         }else{
             // res.send(data)
             res.json({
-                message:'Student: '+id+' updated'
+                message:'Student: '+id+' updated'   
             })
         }
     })
@@ -75,3 +79,19 @@ exports.delete = (req,res)=>{
             });
         });
 }
+
+exports.filter = async (req, res) => { //because i do .then i didnt use async
+    if (!req.body) {
+        res.status(400).send({ message: "Please enter some filter parameters!" })
+        return;
+    }
+
+
+    // const { paymentPlan, Housing } = req.body;
+    const students = await Student.find({ ...req.body });
+    // const students = await Student.find({ ...req.body }); WHAtever is passed in req.body it used it to search
+
+    return res.status(200).send({ students });
+
+
+}//its fronts end job to arrange

@@ -6,6 +6,12 @@ exports.create = (req,res)=>{
         res.status(400).send({message: "Content can not be empty!"})
         return;
     }
+    if( Role.find(req.body.Role_id)  ){
+        res.status(400).send({message: "ID: already exists in table"})
+        return;
+    }
+
+
 
     //new role
     const R = new Role({

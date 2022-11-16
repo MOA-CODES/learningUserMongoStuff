@@ -31,22 +31,28 @@ const studentSchema = new Schema({
         type: String
     },
     Adminvr :{
-        type: Boolean
+        type: Boolean,
+        default: false,
     },
     Financevr :{
-        type: Boolean
+        type: Boolean,
+        default: false,
     },
     Housingvr :{
-        type: Boolean
+        type: Boolean,
+        default: false,
     },
     Itvr :{
-        type: Boolean
+        type: Boolean,
+        default: false,
     },
     Healthvr :{
-        type: Boolean
+        type: Boolean,
+        default: false,
     },
     Studactvr :{
-        type: Boolean
+        type: Boolean,
+        default: false,
     }
 },)
 

@@ -25,7 +25,7 @@
   outline: none;
   cursor: pointer;
   width: 100px;
-  margin-left: 1090;
+  float: right;
 
   }
   .previous {
@@ -37,7 +37,7 @@
   outline: none;
   cursor: pointer;
   width: 100px;
-  
+    
 
 
   }input.larger{
@@ -47,5 +47,17 @@
   }input.larger1 {
     transform: scale(2);
     
-  }
+  }Body{
+    background:url("Assets/output-onlinepngtools\ \(11\).png");
+    min-width : 100%;
+    background-size:100% 100%;
+    background-repeat:no-repeat;
+   }.now1{
+    font-weight: bold;
+  }.navbar {
+    background-color: FAF3F5;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    }
   

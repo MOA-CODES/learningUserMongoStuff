@@ -7,61 +7,64 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
   </head>
   <body>
-      <div style="background-color: FAF3F5;" class="container-fluid-xxl">
-          <nav class="navbar navbar-expand-md navbar-light pt-20 pb-4">
-              <div class="container-xxl">
-                <!-- navbar brand / title -->
-                <a class="navbar-brand" href="#Home">
-                    <img src ="Assets/oag logo.png" alt="Avatar Logo"  style="width:200px; padding-top: 10%;padding-left: 15%;">
-                          </a>
-            <!-- toggle button for mobile nav -->
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
+    <nav class="navbar fixed-top navbar-expand-md navbar-light pt-2 ">
+      <div style="background-color: FAF3F5;"  class="container-xxl">
+        <!-- navbar brand / title -->
+        <a class="navbar-brand" href="#Home">
+            <img src ="Assets/oag logo.png" alt="Avatar Logo"  style="width:200px; padding-top: 1%;padding-left: 15%;">
+                  </a>
+        <!-- toggle button for mobile nav -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
             <!-- navbar links -->
             <div class="collapse navbar-collapse justify-content-end align-center" id="main-nav">
               <ul class="navbar-nav">
                 <li class="nav-item">
-                  <a style="color: black;" class="nav-link" href="#Home">HOME</a>
+                  <a style="color: black;" class="nav-link" href="index.html">Home</a>
                 </li>
                 <li class="nav-item">
-                  <a style="color: black;" class="nav-link" href="#Guide">GUIDE</a>
+                  <a style="color: black;" class="nav-link" href="admissions.html">Guide</a>
                 </li>
                 <li class="nav-item">
-                  <a style="color:black;" class="nav-link" href="#Map">MAP</a>
+                  <a style="color:black;" class="nav-link" href="#Map">Map</a>
                 </li>
                 <li class="nav-item">
-                  <a style="color:black" class="nav-link" href="#Welfare">WELFARE</a>
+                  <a style="color:black" class="nav-link" href="#Welfare">Welfare</a>
                 </li>
                 <li class="nav-item ms-2 d-none d-md-inline">
-                  <a style ="margin-top: 6%;" class="btn btn-primary btn-sm" href="#getStarted">Get Started</a>
+                  <a style ="margin-top: 6%;" class="btn btn-danger btn-sm" href="login.html">Log Out</a>
                 </li>
                 
               </ul>
             </div>
           </div>
         </nav>
-        <section id="getStarted">
-        <div class="container-lg">
+      </div>
+        <section id="studActStage">
+        <div class="container">
+          <P> <br> <br> <br> </P>
+          <h1 style="color: 103908; font-family:Inter; font-size: 30px;"  >STEP VI: STUDENT ACTIVITIES</h1>
+          <P> </P>
                 <div class="row">
                   <div class="col-md-4">
                     <div class="thumbnail">
                       <a href="/w3images/lights.jpg" target="_blank">
-                        <img src="Assets/student activities pic 2.png" alt="Lights" style="width:100%">
+                        <img src="Assets/student activities pic 2.png" alt="Lights" style="width:100%" class="rounded border-danger border border-2 shadow-lg p-2 mb-4 bg-body">
                       </a>
                     </div>
                   </div>
                   <div class="col-md-4">
                     <div class="thumbnail">
                       <a href="/w3images/nature.jpg" target="_blank">
-                        <img src="Assets/student activities pic 3.png" alt="Nature" style="width:100%">
+                        <img src="Assets/student activities pic 3.png" alt="Nature" style="width:100%" class="rounded border-primary  border border-2 shadow-lg p-2 mb-4 bg-body">
                       </a>
                     </div>
                   </div>
                   <div class="col-md-4">
                     <div class="thumbnail">
                       <a href="/w3images/fjords.jpg" target="_blank">
-                        <img src="Assets/student act 11.png" alt="Fjords" style="width:100%">
+                        <img src="Assets/student act 11.png" alt="Fjords" style="width:100%" class="rounded border-success border border-2 shadow-lg p-2 mb-4 bg-body">
                       </a>
                     </div>
                   </div>
@@ -71,10 +74,10 @@
                 <p> </p>
                 <h1 style="color: black; font-family:Inter; font-size: 30px; text-align: left;"  >Below Are Student Activities Which You Can Select From</h1>
                 <P> </P>
-                <form action="results.html" method="POST">
-                    <label for="faithB">Faith Based Organizations:</label>
+                <form action="results.html" method="POST" onsubmit="return false">
+                    <label class="now1" for="faithB">Faith Based Organizations:</label>
                     <p> </p>
-                <select name="faithB" id="faithB">
+                <select name="faithB" id="faithB" style="background-color: FAF3F5;" required>
                     <option value="Musilim Students Society">Musilim Students Society</option>
                     <option value="AUN Catholic Society">AUN Catholic Society</option>
                     <option value="Non Denominational Christian Fellowship">Non Denominational Christian Fellowship</option>
@@ -82,9 +85,9 @@
               </div>
               <div>
                 <p> </p>
-                <label for="academic">Academic Interest Bsed Associations:</label>
+                <label class="now1" for="academic">Academic Interest Bsed Associations:</label>
                 <p> </p>
-                <select name="academic" id="academic">
+                <select name="academicG" id="academic" style="background-color: FAF3F5;" required>
                     <option value=" Law Students Society">Law Students Society </option>
                     <option value="Institute of Electrical Electronics Engineers">Institute of Electrical Electronics Engineers</option>
                     <option value="AUN Chemical Society">AUN Chemical Society</option>
@@ -96,9 +99,9 @@
               <P> </P>
               <div>
                 <p> </p>
-                <label for="sports">Sports Club:</label>
+                <label class="now1" for="sports">Sports Club:</label>
                 <p> </p>
-                <select name="sports" id="sports">
+                <select name="sportsG" id="sports" style="background-color: FAF3F5;" required>
                     <option value="Aun Intramural Football League">Aun Intramural Football League</option>
                     <option value="Badminton Club">Badminton Club</option>
                     <option value="Tennis Club">Tennis Club</option>
@@ -110,9 +113,9 @@
               <P> </P>
               <div>
                 <p> </p>
-                <label for="Hobbies">Hobbies Pssion and Interests:</label>
+                <label class="now1" for="Hobbies">Hobbies Pssion and Interests:</label>
                 <p> </p>
-                <select name="hobbies" id="hobbies">
+                <select name="hobbiesG" id="hobbies" style="background-color: FAF3F5;" required>
                     <option value="Art Club">Art Club</option>
                     <option value="Theater Club">Theater Club</option>
                     <option value="AUN Dance Troupe">AUN Dance Troupe</option>
@@ -123,15 +126,16 @@
               <P> </P>
               <div>
                 <p> </p>
-                <label for="Governance">Governance Leadership Boards and Councils:</label>
+                <label class="now1" for="Governance">Governance Leadership Boards and Councils:</label>
                 <p> </p>
-                <select name="Governance" id="Governance">
+                <select name="governanceG" id="Governance" style="background-color: FAF3F5;" required>
                     <option value="Women's Leadership Council">Women's Leadership Council</option>
                     <option value="AUN Honor Society">AUN Honor Society</option>
                     <option value="Campus Activities Board">Campus Activities Board</option>
                     <option value="Student Government Association (SGA)">Student Government Association (SGA)</option>
                 </select>
               </div>
+              <P> </P>
               <P> </P>
               <P> </P>
               <button type="submit" class="btn btn-primary">Submit</button>
@@ -143,7 +147,7 @@
                     <tr>
                       <th>ADMIN APPROVAL</th>
                       <th>STATUS</th>
-                      <th>Check</th>
+                      <th>CHECK</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -152,19 +156,43 @@
                         <td>APPROVED</td>
                         <td>
                         <label for="radio1"></label>
-                        <input type="radio"  class="larger1" name="radios" id="radio1" />
+                        <input type="radio"  class="larger1" name="radios" id="studActOverall" />
                         </td>
                     </tr>
                   </tbody>
                 </table>
               </div>
-               
-        
-              <button class="previous" id="previous" href="housing.html">Previous</button>
-              <button class="next" id="next" href="">Next</button>
-              <P> </P>     
+              <a>
+                <button class="previous" id="previous" disabled>Previous</button>
+              </a>
+              <a href="congrats.html">
+                <button class="next" id="nextst">Next</button>
+              </a>
+              <P> </P>
+              <label for="accept">
+                <input type="checkbox" id="accept1" onclick="myFunc()">
+             </label>    
         </div>
         </section>
+      </div>
+      <script>
+        var nextstt = document.getElementById("nextst");
+        nextstt.disabled = true;
+        var stRadio = document.getElementById("studActOverall");
+        function myFunc() {
+        var checkBox = document.getElementById("accept1");
+        if (checkBox.checked == true){
+          stRadio.checked = true;
+          nextst.disabled = false;
+        } else {
+          stRadio.checked = false;
+          nextst.disabled = true;
+
+        }
+        }
+      </script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+    </body>
         
 
           

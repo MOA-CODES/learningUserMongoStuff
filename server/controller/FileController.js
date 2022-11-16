@@ -5,11 +5,15 @@ exports.create = (req,res)=>{
     if(!req.body){
         res.status(400).send({message: "Content can not be empty!"})
         return;
-    }
+    } 
+    // if( File.find(req.StudID)){
+    //     res.status(400).send({message: "ID:"+ x +" already exists in table"})
+    //     return;
+    // }
 
     //new file
     const F = new File({
-        Stud_id:req.body.Srud_id,
+        StudID:req.body.StudID,
         Jamb:req.body.Jamb,
         P_essay:req.body.P_essay
     })

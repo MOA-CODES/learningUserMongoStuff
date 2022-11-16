@@ -3,29 +3,28 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Orientation App</title>
-    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="admiss.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
   </head>
   <body>
-      <div style="background-color: FAF3F5;" class="container-fluid-xxl">
-          <nav class="navbar navbar-expand-md navbar-light pt-20 pb-4">
-              <div class="container-xxl">
-                <!-- navbar brand / title -->
-                <a class="navbar-brand" href="#Home">
-                    <img src ="Assets/oag logo.png" alt="Avatar Logo"  style="width:200px; padding-top: 10%;padding-left: 15%;">
-                          </a>
-            <!-- toggle button for mobile nav -->
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
+    <nav class="navbar fixed-top navbar-expand-md navbar-light pt-2 ">
+      <div style="background-color: FAF3F5;"  class="container-xxl">
+        <!-- navbar brand / title -->
+        <a class="navbar-brand" href="#Home">
+            <img src ="Assets/oag logo.png" alt="Avatar Logo"  style="width:200px; padding-top: 1%;padding-left: 15%;">
+                  </a>
+        <!-- toggle button for mobile nav -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
             <!-- navbar links -->
             <div class="collapse navbar-collapse justify-content-end align-center" id="main-nav">
               <ul class="navbar-nav">
                 <li class="nav-item">
-                  <a style="color: black;" class="nav-link" href="#Home">HOME</a>
+                  <a style="color: black;" class="nav-link" href="index.html">HOME</a>
                 </li>
                 <li class="nav-item">
-                  <a style="color: black;" class="nav-link" href="#Guide">GUIDE</a>
+                  <a style="color: black;" class="nav-link" href="admissions.html">GUIDE</a>
                 </li>
                 <li class="nav-item">
                   <a style="color:black;" class="nav-link" href="#Map">MAP</a>
@@ -34,73 +33,74 @@
                   <a style="color:black" class="nav-link" href="#Welfare">WELFARE</a>
                 </li>
                 <li class="nav-item ms-2 d-none d-md-inline">
-                  <a style ="margin-top: 6%;" class="btn btn-primary btn-sm" href="#getStarted">Get Started</a>
+                  <a style ="margin-top: 6%;" class="btn btn-danger btn-sm" href="login.html">Log Out</a>
                 </li>
                 
               </ul>
             </div>
           </div>
         </nav>
+      </div>
     </section>
-    <section id="guide">
-        <div class="container-lg">
-            <h1 style="color: 103908; font-family:Inter; font-size: 30px;"  >STEP 3: HOUSING & ID </h1>
-  
-            <form action="results.html" method="POST">
+    <section id="housingStage">
+        <div class="container">
+          <P> <br> <br> <br> </P>
+            <h1 style="color: 103908; font-family:Inter; font-size: 30px;"  >STEP IV: HOUSING & ID </h1>
+            <form action="results.html" method="POST"  onsubmit="return false">
                 <div class="form-group">
-                  <label for="exampleInputEmail1">First Name:</label>
-                  <input type="text" class="form-control" id="inputFirst" aria-describedby="emailHelp" placeholder="Enter First Name">
+                  <label class="now1" for="exampleInputEmail1">First Name:</label>
+                  <input type="text" class="form-control" name="hfName" id="hFName" aria-describedby="emailHelp" placeholder="Enter First Name" style="background-color: FAF3F5;" required>
                 </div>
                 <P> </P>
                 <div class="form-group">
-                    <label for="exampleInputEmail1">Last Name:</label>
-                    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Last Name">
+                    <label class="now1" for="exampleInputEmail1">Last Name:</label>
+                    <input type="text" class="form-control" id="hlName" name="hLName" aria-describedby="emailHelp" placeholder="Enter Last Name" style="background-color: FAF3F5;" required>
                 </div>
                 <P> </P>
                 <div class="form-group">
-                    <label for="exampleInputEmail1">Middle Name:</label>
-                    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Middle Name">
+                    <label  class="now1"for="exampleInputEmail1">Middle Name:</label>
+                    <input type="text" class="form-control" id="hmName" name="hMName" aria-describedby="emailHelp" placeholder="Enter Middle Name" style="background-color: FAF3F5;" required>
                 </div>
                 <P> </P>
                 <div class="form-group">
-                    <label for="exampleInputEmail1">Phone Number:</label>
-                    <input type="number" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Phone Number">
+                    <label class="now1" for="exampleInputEmail1">Phone Number:</label>
+                    <input type="number" class="form-control" name="hPhoneNumber" id="hPhoneNumber" aria-describedby="emailHelp" placeholder="Enter Phone Number" style="background-color: FAF3F5;" required>
                 </div>
                 <P> </P>
                 <div class="form-group">
-                    <label for="exampleInputEmail1">Major:</label>
-                    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Your Major">
+                    <label class="now1" for="exampleInputEmail1">Major:</label>
+                    <input type="text" class="form-control" id="hMajor" name="hMajor" aria-describedby="emailHelp" placeholder="Enter Major" style="background-color: FAF3F5;" required>
                 </div>
                 <P> </P>
                 <div class="form-group">
-                    <label for="exampleInputEmail1">Email:</label>
-                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Email Address">
+                    <label class="now1" for="exampleInputEmail1">Email:</label>
+                    <input type="email" class="form-control" id="hEmail" name="hEmail" aria-describedby="emailHelp" placeholder="Enter Email Address" style="background-color: FAF3F5;" required>
                 </div>
                 <P> </P>
                 <div>
-                  <label for="dog-names">Housing Types:</label>
+                  <label class="now1" for="housing-types">Housing Types:</label>
                   <P> </P>
-                  <select name="dog-names" id="dog-names">
-                      <option value="rigatoni">3 - in - 1 with facilities</option>
-                      <option value="dave">2 - in - 1 with facilities</option>
-                      <option value="pumpernickel">2 - in - 1 without facilities</option>
+                  <select name="housing-types" id="housing-types" style="background-color: FAF3F5;" required>
+                      <option value="3-in-1">3 - in - 1 with facilities</option>
+                      <option value="2-in-1-with">2 - in - 1 with facilities</option>
+                      <option value="2-in-1-without">2 - in - 1 without facilities</option>
                   </select>
                 </div>
                 <p> </p>
                 <div>
-                    <label for="dog-names">Preffered Meal Plan:</label>
+                    <label  class="now1" for="meal-plan">Preffered Meal Plan:</label>
                     <P> </P>
-                    <select name="dog-names" id="dog-names">
-                        <option value="rigatoni">7 - Days Plan</option>
-                        <option value="dave">14 - Days Plan</option>
-                        <option value="pumpernickel">28 - Days Plan</option>
+                    <select name="meal-plan" id="meal-plan" style="background-color: FAF3F5;" required>
+                        <option value="7 Days Meal Plan">7 Days Meal Plan</option>
+                        <option value="14 Days Meal Plan">14  Days Meal Plan</option>
+                        <option value="28 Days Meal Plan">28 Days Meal Plan</option>
                     </select>
                   </div>
                   <p> </p>
                 <div>
-                    <label for="file">Passport Photograph:</label>
+                    <label class="now1" for="file">Passport Photograph:</label>
                     <p> </p>
-                    <input id="file" type="file" name="file">
+                    <input id="PassportID" type="file" name="passportfile">
                   </div>
                 <p> </p>
                 
@@ -112,7 +112,7 @@
                     <tr>
                       <th>ADMIN APPROVAL</th>
                       <th>STATUS</th>
-                      <th>Check</th>
+                      <th>CHECK</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -121,17 +121,53 @@
                         <td>APPROVED</td>
                         <td>
                         <label for="radio1"></label>
-                        <input type="radio"  class="larger1" name="radios" id="radio1" />
+                        <input type="radio"  class="larger1" name="radios" id="housingOverall" />
                         </td>
                     </tr>
                   </tbody>
                 </table>
               </div>
-              <button class="previous" id="previous" href="housing.html">Previous</button>
-              <a class="btn" id="next" href="studAct.html">Next</a>
+              <a>
+                <button class="previous" id="previoushs" disabled>Previous</button>
+              </a>
+              <a href="health.html">
+                <button class="next" id="nexths">Next</button>
+              </a>
               <P> </P>
+              <label for="accept">
+                <input type="checkbox" id="accept1" onclick="myFunc()">
+             </label>
         </div>
     </section>
+      </div>
+      <script>
+        var nexthss = document.getElementById("nexths");
+        nexthss.disabled = true;
+        var hsRadio = document.getElementById("housingOverall");
+        function myFunc() {
+        var checkBox = document.getElementById("accept1");
+        if (checkBox.checked == true){
+          hsRadio.checked = true;
+          nexths.disabled = false;
+        } else {
+          hsRadio.checked = false;
+          nexths.disabled = true;
+
+        }
+  }
+      </script>
+      <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+      <script type="text/javascript">
+        $(document).ready(function() {
+          $('input[type="radio"]').click(function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+          });
+        });
+      </script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+
+  </body>
 
 
                 

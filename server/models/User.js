@@ -11,7 +11,7 @@ const userSchema = new Schema({
     password :{
         type: String
     },
-    role_id :{
+    Role_id :{
         type: mongoose.Schema.Types.ObjectId, ref: 'Role'
     }
 },{timestamps: true})

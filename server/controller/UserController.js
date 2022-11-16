@@ -9,16 +9,16 @@ exports.create = (req,res)=>{
 
     //new file
     const U = new User({
-        Stud_id:req.body.Srud_id,
-        Jamb:req.body.Jamb,
-        P_essay:req.body.P_essay
+        User_id:req.body.User_id,
+        name:req.body.name,
+        password:req.body.password
     })
 
     //save file in database
-    F.save()
+    U.save()
     .then(data =>{
         res.json({
-            message: 'Role Added Succesfully!'
+            message: 'User Added Succesfully!'
 
         })
     })
@@ -52,4 +52,26 @@ exports.update = (req,res)=>{
         res.status(500).send({message:"Error Update user information"})
     })
     
+}
+
+exports.find = (req,res)=>{
+    if(!req.body){
+        res.status(400).send({message: "Data can not be empty!"})
+        return;
+    }
+
+    const id = req.body.id;
+
+        User.findById({User_id: id})
+            .then(data=>{
+                if(!data){
+                    res.status(404).send({message: "User not Found with"+id+"id"})
+                }else{
+                    res.send(data)
+                }
+            })
+            .catch(err=>{
+                res.status(500).send({ message:"Eroor retrieving user with id"+id })
+            })
+
 }

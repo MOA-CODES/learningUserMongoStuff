@@ -1,0 +1,76 @@
+.container-fluid{
+    background-color: FAF3F5;
+}.container-lg{
+    background-color: FAF3F5;
+}.Home{
+    background-color: FAF3F5;
+} a{
+        text-decoration: none;
+        font-weight: bold;
+        color:black;
+
+}page-text1 {
+    color: #0e41e6;
+  }
+  .page-text2 {
+    color: #ea1e1e;
+  }.container-lg1{
+    padding-right: 10%;
+  }.next{
+  padding: 15px 10px;
+  border-radius: 6px;
+  background: black;
+  color: white;
+  border:0;
+  outline: none;
+  cursor: pointer;
+  width: 100px;
+  float: right;
+
+  }
+
+  .previous {
+  padding: 15px 10px;
+  border-radius: 6px;
+  background: black;
+  color: white;
+  border:0;
+  outline: none;
+  cursor: pointer;
+  width: 100px;
+  
+
+
+  }input.larger{
+    transform: scale(2);
+    margin: 30px;
+
+  }input.larger1 {
+    transform: scale(2);
+    
+  }Body{
+    background:url("Assets/output-onlinepngtools\ \(11\).png");
+    min-width : 100%;
+    background-size:100% 100%;
+    background-repeat:no-repeat;
+    padding-bottom: 70px;
+   
+  }.now1{
+    font-weight: bold;
+  }.navbar {
+  background-color: FAF3F5;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  }#myCarousel {
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+  
+  .carousel-control-prev {
+    margin-left: -140px;
+  }
+  
+  .carousel-control-next {
+    margin-right: -140px;
+  }
