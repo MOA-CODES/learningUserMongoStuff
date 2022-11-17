@@ -1,5 +1,7 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
+const passportLocalMongoose = require('passport-local-mongoose');
+
 //user
 const userSchema = new Schema({
     User_id :{
@@ -14,8 +16,9 @@ const userSchema = new Schema({
     Role_id :{
         type: mongoose.Schema.Types.ObjectId, ref: 'Role'
     }
-},{timestamps: true})
+},{timestamps: true});
 
+userSchema.plugin(passportLocalMongoose);
 
 const User = mongoose.model('User', userSchema)//in mongodb this schema will be chaged to users
 

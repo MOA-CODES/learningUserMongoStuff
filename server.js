@@ -29,10 +29,16 @@ app.use('/css', express.static(path.resolve(__dirname,"assests/css")));
 app.use('/img', express.static(path.resolve(__dirname,"assests/img")));
 app.use('/js', express.static(path.resolve(__dirname,"assests/js")));
 
-app.use('/', require('./server/routes/router')) 
+app.use('/api', require('./server/routes/router')) 
+// app.use('/', require('./server/routes/router')) 
+
 
 // app.get("/", (req, res) => {
 //   res.sendFile(path.join(__dirname, 'views/index.html'))
+// });
+
+// app.get("/", (req, res) => {
+//   res.json({ message: "Welcome to AOA application." });
 // });
 
 app.listen(PORT, ()=>{

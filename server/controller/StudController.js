@@ -95,3 +95,47 @@ exports.filter = async (req, res) => { //because i do .then i didnt use async
 
 
 }//its fronts end job to arrange
+
+exports.StudTotal = async (req,res)=>{
+    const x = await Student.countDocuments({})
+
+    return res.status(200).send({ x });
+}
+
+exports.StudAdminvr = async (req,res)=>{
+    const x = await Student.countDocuments({ Adminvr: true})
+
+    return res.status(200).send({ x });
+}
+
+exports.StudFinancevr = async (req,res)=>{
+    const x = await Student.countDocuments({ Financevr: true})
+
+    return res.status(200).send({ x });
+}
+
+exports.StudHousingvr = async (req,res)=>{
+    const x = await Student.countDocuments({ Housingvr: true})
+
+    return res.status(200).send({ x });
+}
+
+exports.StudItvr = async (req,res)=>{
+    const x = await Student.countDocuments({ Itvr: true})
+
+    return res.status(200).send({ x });
+}
+
+exports.StudHealthvr = async (req,res)=>{
+    const x = await Student.countDocuments({ Healthvr: true})
+
+    return res.status(200).send({ x });
+}
+
+exports.StudActvr = async (req,res)=>{
+    const x = await Student.countDocuments({ Studactvr: true})
+
+    return res.status(200).send({ x });
+}
+
+

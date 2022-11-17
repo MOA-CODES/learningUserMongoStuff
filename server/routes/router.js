@@ -11,30 +11,39 @@ const RoleController = require('../controller/RoleController')
 const UserController = require('../controller/UserController')
 const FileController = require('../controller/FileController')
 
+//connecting pages
 route.get('/',services.homeRoutes);
 route.get('/login',services.login);
 
 
 
 
-
-route.post('/register/user1', AuthController.register)    //create user
-route.post('/login', AuthController.login)               //login user
+//api
+route.post('/user/login2', AuthController.login)               //login user
 
 // router.post('/register/student',upload.upload.single('image'),StudController.create)  //create student
-route.post('/register/student',StudController.create)  //create student
-route.put('/update/student', StudController.update)    //update student
-route.post('/filter/student', StudController.filter)    //update student
+route.post('/student/register',StudController.create)  //create student
+route.put('/student/update', StudController.update)    //update student
+route.post('/student/filter', StudController.filter)    //update student
+route.post('/student/total', StudController.StudTotal)    //total student
+route.post('/student/totalAdmin', StudController.StudAdminvr)    //total student Admin verified
+route.post('/student/totalFinance', StudController.StudFinancevr)    //total student Admin verified
+route.post('/student/totalHousing', StudController.StudHousingvr)    //total student Admin verified
+route.post('/student/totalIt', StudController.StudItvr)    //total student Admin verified
+route.post('/student/totalHealth', StudController.StudHealthvr)    //total student Admin verified
+route.post('/student/totalAct', StudController.StudActvr)    //total student Admin verified
 
 
-route.post('/register/role', RoleController.create)  //create Role
-route.put('/update/role', RoleController.update)    //update Role
 
-route.post('/register/user', UserController.create)  //create User
-route.put('/update/user', UserController.update)    //update User
 
-route.post('/register/file', FileController.create)  //create File
-route.put('/update/file', FileController.update)    //update File
+route.post('/role/register', RoleController.create)  //create Role
+route.put('/role/update', RoleController.update)    //update Role
+
+route.post('/user/register', UserController.create)  //create User
+route.put('/user/update', UserController.update)    //update User
+
+route.post('/file/register', FileController.create)  //create File
+route.put('/file/update', FileController.update)    //update File
 
 
 module.exports = route

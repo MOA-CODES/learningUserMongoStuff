@@ -24,6 +24,9 @@ const studentSchema = new Schema({
     Personalemail :{
         type: String
     },
+    PaymentPlan:{
+        type: String
+    },
     SchoolEmail :{
         type: String
     },
