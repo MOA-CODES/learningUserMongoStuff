@@ -35,6 +35,10 @@ route.post('/student/totalIt', StudController.StudItvr)    //total student Admin
 route.post('/student/totalHealth', StudController.StudHealthvr)    //total student Admin verified
 route.post('/student/totalAct', StudController.StudActvr)    //total student Admin verified
 
+route.post('/student/totalSEmail', StudController.totalSEmail)    //total student Admin verified
+route.post('/student/totalOpenerp', StudController.totalOpenerp)    //total student Admin verified
+
+
 route.post('/student/Adminstat', StudController.StudAdminStatus)    //student Admin verified status
 route.post('/student/Financestat', StudController.StudFinanceStatus)    //student Admin verified status
 route.post('/student/Housingstat', StudController.StudHousingStatus)    //student Admin verified status

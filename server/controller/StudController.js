@@ -139,6 +139,18 @@ exports.StudActvr = async (req,res)=>{
     return res.status(200).send({ x });
 }
 
+exports.totalOpenerp = async (req,res)=>{
+    const x = await Student.countDocuments({ OpenerpStatus: true})
+
+    return res.status(200).send({ x });
+}
+
+exports.totalSEmail = async (req,res)=>{
+    const x = await Student.countDocuments({ SchoolEmail: true})
+
+    return res.status(200).send({ x });
+}
+
 //status
 exports.StudAdminStatus = async (req,res)=>{
     var id = req.body.StudID;
