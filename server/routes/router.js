@@ -25,13 +25,25 @@ route.post('/user/login2', AuthController.login)               //login user
 route.post('/student/register',StudController.create)  //create student
 route.put('/student/update', StudController.update)    //update student
 route.post('/student/filter', StudController.filter)    //update student
+
 route.post('/student/total', StudController.StudTotal)    //total student
+
 route.post('/student/totalAdmin', StudController.StudAdminvr)    //total student Admin verified
 route.post('/student/totalFinance', StudController.StudFinancevr)    //total student Admin verified
 route.post('/student/totalHousing', StudController.StudHousingvr)    //total student Admin verified
 route.post('/student/totalIt', StudController.StudItvr)    //total student Admin verified
 route.post('/student/totalHealth', StudController.StudHealthvr)    //total student Admin verified
 route.post('/student/totalAct', StudController.StudActvr)    //total student Admin verified
+
+route.post('/student/Adminstat', StudController.StudAdminStatus)    //student Admin verified status
+route.post('/student/Financestat', StudController.StudFinanceStatus)    //student Admin verified status
+route.post('/student/Housingstat', StudController.StudHousingStatus)    //student Admin verified status
+route.post('/student/Itstat', StudController.StudItStatus)    //student Admin verified status
+route.post('/student/Healthstat', StudController.StudHealthStatus)    //student Admin verified status
+route.post('/student/Actstat', StudController.StudactStatus)    //student Admin verified status
+
+route.post('/student/SEmailstat', StudController.SEmailStatus)    //student Admin verified status
+route.post('/student/Openerpstat', StudController.OpenerpStatus)    //student Admin verified status
 
 
 

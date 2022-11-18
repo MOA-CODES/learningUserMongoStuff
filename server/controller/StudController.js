@@ -102,6 +102,7 @@ exports.StudTotal = async (req,res)=>{
     return res.status(200).send({ x });
 }
 
+//verified count
 exports.StudAdminvr = async (req,res)=>{
     const x = await Student.countDocuments({ Adminvr: true})
 
@@ -137,5 +138,71 @@ exports.StudActvr = async (req,res)=>{
 
     return res.status(200).send({ x });
 }
+
+//status
+exports.StudAdminStatus = async (req,res)=>{
+    var id = req.body.StudID;
+
+    const Adminvrstatus = await Student.find({StudID: id}).distinct("Adminvr");
+    // console.log(curso)
+    return res.status(200).send({ Adminvrstatus });
+}
+
+exports.StudFinanceStatus = async (req,res)=>{
+    var id = req.body.StudID;
+
+    const Financevrstatus = await Student.find({StudID: id}).distinct("Financevr");
+    // console.log(curso)
+    return res.status(200).send({ Financevrstatus });
+}
+
+exports.StudHousingStatus = async (req,res)=>{
+    var id = req.body.StudID;
+
+    const Housingvrstatus = await Student.find({StudID: id}).distinct("Housingvr");
+    // console.log(curso)
+    return res.status(200).send({ Housingvrstatus });
+}
+
+exports.StudItStatus = async (req,res)=>{
+    var id = req.body.StudID;
+
+    const Itvrstatus = await Student.find({StudID: id}).distinct("Itvr");
+    // console.log(curso)
+    return res.status(200).send({ Itvrstatus });
+}
+
+exports.StudHealthStatus = async (req,res)=>{
+    var id = req.body.StudID;
+
+    const Healthvrstatus = await Student.find({StudID: id}).distinct("Healthvr");
+    // console.log(curso)
+    return res.status(200).send({ Healthvrstatus });
+}
+
+exports.StudactStatus = async (req,res)=>{
+    var id = req.body.StudID;
+
+    const Studactvrstatus = await Student.find({StudID: id}).distinct("Studactvr");
+    // console.log(curso)
+    return res.status(200).send({ Studactvrstatus });
+}
+
+exports.SEmailStatus = async (req,res)=>{
+    var id = req.body.StudID;
+
+    const SEmailvrstatus = await Student.find({StudID: id}).distinct("SchoolEmail");
+    // console.log(curso)
+    return res.status(200).send({ SEmailvrstatus });
+}
+
+exports.OpenerpStatus = async (req,res)=>{
+    var id = req.body.StudID;
+
+    const Openerpvrstatus = await Student.find({StudID: id}).distinct("OpenerpStatus");
+    // console.log(curso)
+    return res.status(200).send({ Openerpvrstatus });
+}
+
 
 

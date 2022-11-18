@@ -15,6 +15,9 @@ const studentSchema = new Schema({
     Lastname :{
         type: String
     },
+    Gender :{
+        type: String
+    },
     Major :{
         type: String
     },
@@ -24,13 +27,66 @@ const studentSchema = new Schema({
     Personalemail :{
         type: String
     },
+    Phonenumber :{
+        type: String
+    },  
+    ArrivalDate :{
+        type: String
+    },
+    GaurdianName :{
+        type: String
+    },
+    GaurdianRel :{
+        type: String
+    },
     PaymentPlan:{
         type: String
     },
     SchoolEmail :{
+        type: Boolean,
+        default: false,
+    },
+    OpenerpStatus :{
+        type: Boolean,
+        default: false,
+    },
+    HousingType :{
         type: String
     },
-    Phone :{
+    MealPlan :{
+        type: String
+    },
+    HousingType :{
+        type: String
+    },
+    DOB :{
+        type: String
+    },
+    Nationality :{
+        type: String
+    },
+    BG :{
+        type: String
+    },
+    GT :{
+        type: String
+    },
+    MaritalStatus :{
+        type: String
+    },
+    MedicalCond :{
+        type: String
+    },
+    Faith :{
+        type: String
+    },
+    AcademicInt :{
+        type: String
+    },
+    SportsClub :{
+        type: String
+    },
+    OtherClubs :{
         type: String
     },
     Adminvr :{
