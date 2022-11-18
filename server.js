@@ -29,7 +29,7 @@ app.use('/css', express.static(path.resolve(__dirname,"assests/css")));
 app.use('/img', express.static(path.resolve(__dirname,"assests/img")));
 app.use('/js', express.static(path.resolve(__dirname,"assests/js")));
 
-app.use('/api', require('./server/routes/router')) 
+app.use('/', require('./server/routes/router')) 
 // app.use('/', require('./server/routes/router')) 
 
 

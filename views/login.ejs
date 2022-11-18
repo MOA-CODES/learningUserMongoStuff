@@ -7,7 +7,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="/css/login.css">
     <!--Stylesheet-->
     <style media="screen">
       *,
@@ -18,7 +18,7 @@
     box-sizing: border-box;
 }
 body{
-    background:url("./img/output-onlinepngtools\ \(13\).png");
+    background:url("/img/output-onlinepngtools\ \(13\).png");
     
 }
 .background{
@@ -31,7 +31,8 @@ body{
     top: 50%;
 }
 form{
-    height: 470px;
+    margin-top: 5%;
+    height: 450px;
     width: 400px;
     background-color: rgba(255,255,255,0.13);
     position: absolute;
@@ -43,10 +44,11 @@ form{
     border: 2px solid rgba(255,255,255,0.1);
     box-shadow: 0 0 40px rgba(8,7,16,0.6);
     padding: 50px 35px;
+   
 }
 form *{
     font-family: 'Poppins',sans-serif;
-    color: #ffffff;
+    color: #0c0c0c;
     letter-spacing: 0.5px;
     outline: none;
     border: none;
@@ -73,7 +75,7 @@ input{
     background-color: rgba(255,255,255,0.07);
     border-radius: 3px;
     padding: 0 10px;
-    margin-top: 5px;
+    margin-top: 20px;
     font-size: 14px;
     font-weight: 300;
 }
@@ -108,16 +110,19 @@ button{
           </h1>
         <p> <br> <br> </p>
         <h1 style="color: #0a2e21; font-family:Lucida Handwriting; font-size: 35px; text-align: center;">Welcome to AUN</h1>
-    </div>
-    <p> <br> <br> </p>
-    <p> <br> <br> </p>
+        <p> <br> <br> </p>
+        <p> <br> <br> </p>
+        </div>
+        <p> <br> <br> </p>
+        <p> <br> <br> </p>
     <form action="" method="">
         <h3></h3>
-        <label for="ID">ID</label>
-        <input type="text" name="User_id" id="firstNameLogin" placeholder="Your ID"required>
 
-        <label for="PASSWORD">PASSWORD</label>
-        <input type="text" name="password" id="idNumber" placeholder="Your PASSWORD" required>
+        <label for="idNumber">ID Number</label>
+        <input type="text" name="idNumberLogin" id="idNumber" placeholder="Your ID" required>
+        
+        <label for="password">Password</label>
+        <input type="password" name="password" id="password" placeholder="Your Password" required>
 
         <button style="color: #080710; background-color: #dee1e4;">Log In</button>
     </form>

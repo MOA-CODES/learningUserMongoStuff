@@ -78,12 +78,17 @@ exports.login2 = (req, res, next) =>{
     User.findOne({User_id: id}, function(err, user){
         if(err){
             console.log(err);
+            res.send(err)
         }else{
             console.log(user.password);
             if(user.password==password){
-                res.send("Logged in")
+                res.send("Logged in correctly")
+            }else{
+                res.send("Wrong password")
             }
         }
+    }).catch((err)=>{
+        console.log(err);
     });
    
 }
