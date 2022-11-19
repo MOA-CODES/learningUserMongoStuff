@@ -33,7 +33,7 @@
                 <a style="color:black" class="nav-link" href="/Welfare">Welfare</a>
               </li>
               <li class="nav-item ms-2 d-none d-md-inline">
-                <a style ="margin-top: 6%;" class="btn btn-danger btn-sm" href="/login">Log Out</a>
+                <a style ="margin-top: 6%;" class="btn btn-danger btn-sm" href="/index">Log Out</a>
               </li>
               
             </ul>
@@ -49,33 +49,33 @@
         <form action="" method="POST"  onsubmit="return false">
           <div class="form-group">
             <label class="now1" for="exampleInputEmail1">First Name:</label>
-            <input type="text" class="form-control" name="ffName" id="ffName" aria-describedby="emailHelp" placeholder="Enter First Name"  style="background-color: FAF3F5;" required>
+            <input type="text" class="form-control" name="Firstname" id="firstt" aria-describedby="emailHelp" placeholder="Enter First Name"  style="background-color: FAF3F5;" required>
           </div>
           <P> </P>
           <div class="form-group">
               <label class="now1" for="exampleInputEmail1">Last Name:</label>
-              <input type="text" class="form-control" name="flName" id="flName" aria-describedby="emailHelp" placeholder="Enter Last Name"  style="background-color: FAF3F5;"required>
+              <input type="text" class="form-control" name="Lastname" id="lastt" aria-describedby="emailHelp" placeholder="Enter Last Name"  style="background-color: FAF3F5;"required>
           </div>
           <P> </P>
           <div class="form-group">
               <label class="now1" for="exampleInputEmail1">Middle Name:</label>
-              <input type="text" class="form-control" name="fmName" id="fmName" aria-describedby="emailHelp" placeholder="Enter Middle Name"  style="background-color: FAF3F5;" required>
+              <input type="text" class="form-control" name="Middlename" id="midddle" aria-describedby="emailHelp" placeholder="Enter Middle Name"  style="background-color: FAF3F5;" required>
           </div>
           <P> </P>
           <div class="form-group">
               <label class="now1" for="exampleInputEmail1">Major:</label>
-              <input type="text" class="form-control" name="fMajor" id="fMajor" aria-describedby="emailHelp" placeholder="Enter Major"  style="background-color: FAF3F5;" required>
+              <input type="text" class="form-control" name="Major" id="fMajor" aria-describedby="emailHelp" placeholder="Enter Major"  style="background-color: FAF3F5;" required>
           </div>
           <P> </P>
           <div class="form-group">
               <label class="now1" for="exampleInputEmail1">Email:</label>
-              <input type="email" class="form-control" name="fEmail" id="fEmail" aria-describedby="emailHelp" placeholder="Enter Email Address"  style="background-color: FAF3F5;" required>
+              <input type="email" class="form-control" name="Personalemail" id="fEmail" aria-describedby="emailHelp" placeholder="Enter Email Address"  style="background-color: FAF3F5;" required>
           </div>
           <P> </P>
           <div class="form-group">
               <label class="now1" for="admission-status">Admission Status:</label>
               <P> </P>
-              <select style="background-color: FAF3F5;" name="admission-status" id="admission-status" required>
+              <select style="background-color: FAF3F5;" name="PaymentPlan" id="admission-status" required>
                   <option value="DPP">Deffered Payment Plan</option>
                   <option value="Full">Full Payment</option>
                   <option value="Founder Scholarship">Founder Scholarship</option>
@@ -87,12 +87,12 @@
             <p> </p>
             <div class="form-group">
               <label class="now1" for="exampleInputEmail1">Guardian Name:</label>
-              <input type="text" class="form-control" name="gName" id="gName" aria-describedby="emailHelp" placeholder="Enter Guardian Name"  style="background-color: FAF3F5;" required>
+              <input type="text" class="form-control" name="GuardianName" id="gName" aria-describedby="emailHelp" placeholder="Enter Guardian Name"  style="background-color: FAF3F5;" required>
           </div>
           <P> </P>
           <div class="form-group">
               <label class="now1" class="now1"for="exampleInputEmail1">Guardian Relationship:</label>
-              <input type="text" class="form-control" name="gRelationship" id="gRelationship" aria-describedby="emailHelp" placeholder="Enter Relationship" style="background-color: FAF3F5;" required>
+              <input type="text" class="form-control" name="GuardianRel" id="gRelationship" aria-describedby="emailHelp" placeholder="Enter Relationship" style="background-color: FAF3F5;" required>
           </div>
             <p> </p>
             <P> </P>
@@ -156,5 +156,23 @@
         });
       });
     </script>
+     <script>
+      document.getElementById("firstt").innerHTML=localStorage.getItem("firstNameValue");
+      var xx1 = localStorage.getItem("firstNameValue");
+      document.getElementById("firstt").defaultValue = xx1;
+
+      document.getElementById("lastt").innerHTML=localStorage.getItem("lastNameValue");
+      var xx2 = localStorage.getItem("lastNameValue");
+      document.getElementById("lastt").defaultValue = xx2;
+
+      document.getElementById("midddle").innerHTML=localStorage.getItem("middleNameValue");
+      var xx3 = localStorage.getItem("middleNameValue");
+      document.getElementById("midddle").defaultValue = xx3;
+
+      document.getElementById("fMajor").innerHTML=localStorage.getItem("majorValue");
+      var xx4 = localStorage.getItem("majorValue");
+      document.getElementById("fMajor").defaultValue = xx4;
+
+</script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
   </body>

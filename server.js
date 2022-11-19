@@ -32,6 +32,8 @@ app.use('/js', express.static(path.resolve(__dirname,"assests/js")));
 app.use('/icons', express.static(path.resolve(__dirname,"assests/chuka/icons")));
 app.use('/scss', express.static(path.resolve(__dirname,"assests/chuka/scss")));
 app.use('/vendor', express.static(path.resolve(__dirname,"assests/chuka/vendor")));
+app.use('/jsc', express.static(path.resolve(__dirname,"assests/chuka/js")));
+
 
 app.use('/', require('./server/routes/router')) 
 // app.use('/', require('./server/routes/router')) 

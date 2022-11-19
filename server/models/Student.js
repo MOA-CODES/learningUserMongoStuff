@@ -74,7 +74,22 @@ const studentSchema = new Schema({
     MaritalStatus :{
         type: String
     },
+    DateReg :{
+        type: String
+    },
     MedicalCond :{
+        type: String
+    },
+    Parentname :{
+        type: String
+    },
+    ParentRel :{
+        type: String
+    },
+    ParentAddress :{
+        type: String
+    },
+    ParentPhone :{
         type: String
     },
     Faith :{
@@ -86,12 +101,18 @@ const studentSchema = new Schema({
     SportsClub :{
         type: String
     },
-    OtherClubs :{
+    Hobbies :{
+        type: String
+    },
+    GovClubs :{
         type: String
     },
     Adminvr :{
         type: Boolean,
         default: false,
+    },
+    Allergies :{
+        type: String
     },
     Financevr :{
         type: Boolean,

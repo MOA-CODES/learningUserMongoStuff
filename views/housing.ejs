@@ -33,7 +33,7 @@
                 <a style="color:black" class="nav-link" href="/Welfare">WELFARE</a>
               </li>
               <li class="nav-item ms-2 d-none d-md-inline">
-                <a style ="margin-top: 6%;" class="btn btn-danger btn-sm" href="/login">Log Out</a>
+                <a style ="margin-top: 6%;" class="btn btn-danger btn-sm" href="/index">Log Out</a> 
               </li>
               
             </ul>
@@ -49,38 +49,38 @@
           <form action="results.html" method="POST"  onsubmit="return false">
               <div class="form-group">
                 <label class="now1" for="exampleInputEmail1">First Name:</label>
-                <input type="text" class="form-control" name="hfName" id="hFName" aria-describedby="emailHelp" placeholder="Enter First Name" style="background-color: FAF3F5;" required>
+                <input type="text" class="form-control" name="Firstname" id="hFName" aria-describedby="emailHelp" placeholder="Enter First Name" style="background-color: FAF3F5;" required>
               </div>
               <P> </P>
               <div class="form-group">
                   <label class="now1" for="exampleInputEmail1">Last Name:</label>
-                  <input type="text" class="form-control" id="hlName" name="hLName" aria-describedby="emailHelp" placeholder="Enter Last Name" style="background-color: FAF3F5;" required>
+                  <input type="text" class="form-control" id="hlName" name="Lastname" aria-describedby="emailHelp" placeholder="Enter Last Name" style="background-color: FAF3F5;" required>
               </div>
               <P> </P>
               <div class="form-group">
                   <label  class="now1"for="exampleInputEmail1">Middle Name:</label>
-                  <input type="text" class="form-control" id="hmName" name="hMName" aria-describedby="emailHelp" placeholder="Enter Middle Name" style="background-color: FAF3F5;" required>
+                  <input type="text" class="form-control" id="hmName" name="Middlename" aria-describedby="emailHelp" placeholder="Enter Middle Name" style="background-color: FAF3F5;" required>
               </div>
               <P> </P>
               <div class="form-group">
                   <label class="now1" for="exampleInputEmail1">Phone Number:</label>
-                  <input type="text" class="form-control" name="hPhoneNumber" id="hPhoneNumber" aria-describedby="emailHelp" placeholder="Enter Phone Number" style="background-color: FAF3F5;" required>
+                  <input type="text" class="form-control" name="Phonenumber" id="hPhoneNumber" aria-describedby="emailHelp" placeholder="Enter Phone Number" style="background-color: FAF3F5;" required>
               </div>
               <P> </P>
               <div class="form-group">
                   <label class="now1" for="exampleInputEmail1">Major:</label>
-                  <input type="text" class="form-control" id="hMajor" name="hMajor" aria-describedby="emailHelp" placeholder="Enter Major" style="background-color: FAF3F5;" required>
+                  <input type="text" class="form-control" id="hMajor" name="Major" aria-describedby="emailHelp" placeholder="Enter Major" style="background-color: FAF3F5;" required>
               </div>
               <P> </P>
               <div class="form-group">
                   <label class="now1" for="exampleInputEmail1">Email:</label>
-                  <input type="email" class="form-control" id="hEmail" name="hEmail" aria-describedby="emailHelp" placeholder="Enter Email Address" style="background-color: FAF3F5;" required>
+                  <input type="email" class="form-control" id="hEmail" name="SchoolEmail" aria-describedby="emailHelp" placeholder="Enter Email Address" style="background-color: FAF3F5;" required>
               </div>
               <P> </P>
               <div>
                 <label class="now1" for="housing-types">Housing Types:</label>
                 <P> </P>
-                <select name="housing-types" id="housing-types" style="background-color: FAF3F5;" required>
+                <select name="HousingType" id="housing-types" style="background-color: FAF3F5;" required>
                     <option value="3-in-1">3 - in - 1 with facilities</option>
                     <option value="2-in-1-with">2 - in - 1 with facilities</option>
                     <option value="2-in-1-without">2 - in - 1 without facilities</option>
@@ -90,7 +90,7 @@
               <div>
                   <label  class="now1" for="meal-plan">Preffered Meal Plan:</label>
                   <P> </P>
-                  <select name="meal-plan" id="meal-plan" style="background-color: FAF3F5;" required>
+                  <select name="MealPlan" id="meal-plan" style="background-color: FAF3F5;" required>
                       <option value="7 Days Meal Plan">7 Days Meal Plan</option>
                       <option value="14 Days Meal Plan">14  Days Meal Plan</option>
                       <option value="28 Days Meal Plan">28 Days Meal Plan</option>
@@ -100,7 +100,7 @@
               <div>
                   <label class="now1" for="file">Passport Photograph:</label>
                   <p> </p>
-                  <input id="PassportID" type="file" name="passportfile">
+                  <input id="PassportID" type="file" name="Pic_Passport">
                 </div>
               <p> </p>
               
@@ -166,6 +166,25 @@
       });
     </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+    <script>
+      document.getElementById("hFName").innerHTML=localStorage.getItem("firstNameValue");
+      var xx1 = localStorage.getItem("firstNameValue");
+      document.getElementById("hFName").defaultValue = xx1;
+
+      document.getElementById("hlName").innerHTML=localStorage.getItem("lastNameValue");
+      var xx2 = localStorage.getItem("lastNameValue");
+      document.getElementById("hlName").defaultValue = xx2;
+
+      document.getElementById("hmName").innerHTML=localStorage.getItem("middleNameValue");
+      var xx3 = localStorage.getItem("middleNameValue");
+      document.getElementById("hmName").defaultValue = xx3;
+
+      document.getElementById("hMajor").innerHTML=localStorage.getItem("majorValue");
+      var xx4 = localStorage.getItem("majorValue");
+      document.getElementById("hMajor").defaultValue = xx4;
+
+</script>
+
 
 </body>
 

@@ -2,6 +2,7 @@ const axios = require('axios');
 
 exports.homeRoutes = (req, res)=>{
     res.render('index')
+    // res.render('mainadmin') //test
 }
 
 exports.login = (req, res)=>{

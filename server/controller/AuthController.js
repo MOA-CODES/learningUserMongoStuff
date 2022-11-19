@@ -3,6 +3,8 @@ const bcrypt = require('bcryptjs')
 const jwt = require('jsonwebtoken')
 const bodyparser = require('body-parser')
 const passport = require('passport')
+const router = require('../routes/router')
+
 
 // import {generateAccessToken, respond, authenticate} from '../middleware/authmiddleware' 
 // const {generateAccessToken, respond, authenticate} = require('../middleware/authmiddleware')
@@ -78,15 +80,16 @@ exports.login2 = (req, res, next) =>{
     User.findOne({User_id: id}, function(err, user){
         if(err){
             console.log(err);
-            res.send(err)
+            res.send(err);
         }else{
-            console.log(user.password);
+            // console.log(user.password);
             if(user.password==password){
                 console.log("Logged in ")
-                res.send("Logged in correctly")
+                res.send("Logged in")
+                // res.redirect("/admissions");
             }else{
-                console.log("Wrong ")
-                res.send("Wrong password")
+                console.log("Wrong credentials");
+                res.send("Wrong credentials");
             }
         }
     }).catch((err)=>{
