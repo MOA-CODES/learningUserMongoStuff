@@ -24,6 +24,15 @@ route.get('/health',services.health);
 route.get('/finance',services.finance);
 route.get('/congrats',services.congrats);
 
+route.get('/mainadmin', services.mainadmin);
+route.get('/ooactivities',services.ooactivities);
+route.get('/ooadmissions',services.ooadmissions);
+route.get('/oofinance',services.oofinance);
+route.get('/oohealth',services.oohealth);
+route.get('/oohousing',services.oohousing);
+route.get('/ooit',services.ooit);
+
+
 
 
 
@@ -32,6 +41,9 @@ route.get('/congrats',services.congrats);
 
 //api
 route.post('/api/user/login2', AuthController.login2)               //login user
+// route.get('/api/user/login2', AuthController.login2)               //login user
+
+
 
 // router.post('/register/student',upload.upload.single('image'),StudController.create)  //create student
 route.post('/api/student/register',StudController.create)  //create student

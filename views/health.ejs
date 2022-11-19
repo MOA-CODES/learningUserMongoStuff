@@ -1,225 +1,225 @@
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Orientation App</title>
-    <link rel="stylesheet" href="admiss.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
-  </head>
-  <body>
-    <nav class="navbar fixed-top navbar-expand-md navbar-light pt-2 ">
-      <div style="background-color: FAF3F5;"  class="container-xxl">
-        <!-- navbar brand / title -->
-        <a class="navbar-brand" href="#Home">
-            <img src ="Assets/oag logo.png" alt="Avatar Logo"  style="width:200px; padding-top: 1%;padding-left: 15%;">
-                  </a>
-        <!-- toggle button for mobile nav -->
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-            <!-- navbar links -->
-            <div class="collapse navbar-collapse justify-content-end align-center" id="main-nav">
-              <ul class="navbar-nav">
-                <li class="nav-item">
-                  <a style="color: black;" class="nav-link" href="index.html">Home</a>
-                </li>
-                <li class="nav-item">
-                  <a style="color: black;" class="nav-link" href="admissions.html">Guide</a>
-                </li>
-                <li class="nav-item">
-                  <a style="color:black;" class="nav-link" href="#Map">Map</a>
-                </li>
-                <li class="nav-item">
-                  <a style="color:black" class="nav-link" href="#Welfare">Welfare</a>
-                </li>
-                <li class="nav-item ms-2 d-none d-md-inline">
-                  <a style ="margin-top: 6%;" class="btn btn-danger btn-sm" href="login.html">Log Out</a>
-                </li>
-                
-              </ul>
-            </div>
-          </div>
-        </nav>
-      </div>
-        <section id="healthStage">
-            <div class="container">
-              <P> <br> <br> <br> </P>
-                <h1 style="color: 103908; font-family:Inter; font-size: 30px;"  >STEP V: HEALTH DESK</h1>
-                <P> </P>
-                <form action="results.html" method="POST"  onsubmit="return false">
-                  <div class="form-group">
-                    <label  class="now1" for="exampleInputEmail1">ID Number:</label>
-                    <input type="text" class="form-control" name="healthIdNo" id="healthIdNo" aria-describedby="emailHelp" placeholder="Enter ID Number" style="background-color: FAF3F5;" required>
-                  </div>
-                  <P> </P>
-                  <div>
-                    <label  class="now1" for="exampleInputEmail1">Gender:&nbsp;&nbsp;&nbsp;</label>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Orientation App</title>
+  <link rel="stylesheet" href="/css/admiss.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+</head>
+<body>
+  <nav class="navbar fixed-top navbar-expand-md navbar-light pt-2 ">
+    <div style="background-color: FAF3F5;"  class="container-xxl">
+      <!-- navbar brand / title -->
+      <a class="navbar-brand" href="#Home">
+          <img src ="img/oag logo.png" alt="Avatar Logo"  style="width:200px; padding-top: 1%;padding-left: 15%;">
+                </a>
+      <!-- toggle button for mobile nav -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+          <!-- navbar links -->
+          <div class="collapse navbar-collapse justify-content-end align-center" id="main-nav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a style="color: black;" class="nav-link" href="/index">Home</a>
+              </li>
+              <li class="nav-item">
+                <a style="color: black;" class="nav-link" href="/admissions">Guide</a>
+              </li>
+              <li class="nav-item">
+                <a style="color:black;" class="nav-link" href="/Map">Map</a>
+              </li>
+              <li class="nav-item">
+                <a style="color:black" class="nav-link" href="/Welfare">Welfare</a>
+              </li>
+              <li class="nav-item ms-2 d-none d-md-inline">
+                <a style ="margin-top: 6%;" class="btn btn-danger btn-sm" href="/login">Log Out</a>
+              </li>
               
-                    <input type="radio" id="healthMale" name="gender" value="Male">
-                    <label for="Male">Male</label>
-                    <input type="radio" id="healthFemale" name="gender" value="Female">
-                    <label for="Female">Female</label>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+      <section id="healthStage">
+          <div class="container">
+            <P> <br> <br> <br> </P>
+              <h1 style="color: 103908; font-family: Lucida Fax; font-size: 30px;"  >STEP V: HEALTH DESK</h1>
+              <P> </P>
+              <form action="results.html" method="POST"  onsubmit="return false">
+                <div class="form-group">
+                  <label  class="now1" for="exampleInputEmail1">ID Number:</label>
+                  <input type="text" class="form-control" name="healthIdNo" id="healthIdNo" aria-describedby="emailHelp" placeholder="Enter ID Number" style="background-color: FAF3F5;" required>
+                </div>
+                <P> </P>
+                <div>
+                  <label  class="now1" for="exampleInputEmail1">Gender:&nbsp;&nbsp;&nbsp;</label>
+            
+                  <input type="radio" id="healthMale" name="gender" value="Male">
+                  <label for="Male">Male</label>
+                  <input type="radio" id="healthFemale" name="gender" value="Female">
+                  <label for="Female">Female</label>
+              </div>
+              <P> </P>
+              <div class="form-group">
+                  <label  class="now1" for="DOB">Date of Birth:</label>
+                  <input type="date" class="form-control" id="DOB" name="birthOfDate" style="background-color: FAF3F5;" required>
                 </div>
                 <P> </P>
                 <div class="form-group">
-                    <label  class="now1" for="DOB">Date of Birth:</label>
-                    <input type="date" class="form-control" id="DOB" name="birthOfDate" style="background-color: FAF3F5;" required>
-                  </div>
-                  <P> </P>
-                  <div class="form-group">
-                    <label  class="now1" for="nationality">Nationality: </label>
-                      <input type="text" class="form-control" name="nationality" id="nationality" aria-describedby="emailHelp" placeholder="Enter Nationality" style="background-color: FAF3F5;" required>
-                  </div>
-                  <P> </P>
-                  <div class="form-group">
-                      <label  class="now1" for="exampleInputEmail1">House Address:</label>
-                      <input type="text" class="form-control" name="houseAddress" id="houseAddress" aria-describedby="emailHelp" placeholder="Enter House Address" style="background-color: FAF3F5;" required>
-                  </div>
-                  <P> </P>
-                  <div class="form-group">
-                      <label  class="now1" for="exampleInputEmail1">Email:</label>
-                      <input type="email" class="form-control" name="healthEmail" id="healthEmail" aria-describedby="emailHelp" placeholder="Enter Email Adress" style="background-color: FAF3F5;" required>
-                  </div>
-                  <P> </P>
-                  <div class="form-group">
-                    <label  class="now1" for="exampleInputEmail1">Mobile No:</label>
-                    <input type="number" class="form-control" id="mobileNo" aria-describedby="emailHelp" name="mobileNo" placeholder="Enter Mobile Number" style="background-color: FAF3F5;" required>
+                  <label  class="now1" for="nationality">Nationality: </label>
+                    <input type="text" class="form-control" name="nationality" id="nationality" aria-describedby="emailHelp" placeholder="Enter Nationality" style="background-color: FAF3F5;" required>
                 </div>
-                  <P> </P>
-                  <div>
-                    <label  class="now1" for="marital-status">Marital Status:</label>
-                    <P> </P>
-                    <select name="maritalstatus" id="marital-status" style="background-color: FAF3F5;" required>
-                        <option value="Single">Single</option>
-                        <option value="Married">Married</option>
-                        <option value="Divorced">Divorced</option>
-                    </select>
-                  </div>
-                  <p> </p>
-                  <div>
-                    <label  class="now1" for="blood-group">Blood Group:</label>
-                    <P> </P>
-                    <select name="bloodgroup" id="blood-group" style="background-color: FAF3F5;" required>
-                        <option value="A+">A+</option><option value="A-">A-</option>
-                        <option value="B+">B+</option><option value="B-">B-</option>
-                        <option value="O+">O+</option><option value="O-">O-</option>
-                        <option value="AB+">AB+</option><option value="AB-">AB-</option>
-                    </select>
-                  </div>
-                  <P> </P>
-                  <div>
-                    <label  class="now1" for="genotype">Genotype:</label>
-                    <P> </P>
-                    <select name="genotype" id="genotype" style="background-color: FAF3F5;" required>
-                        <option value="AA">AA</option><option value="AB">AB</option>
-                        <option value="AO">AO</option><option value="OO">OO</option>
-                        <option value="BB">BB</option>
-                        <option value="BO">BO</option>
-                    </select>
-                  </div>
-                  <P> </P>
+                <P> </P>
                 <div class="form-group">
-                    <label  class="now1" for="medicalCondition">Medical Condition:</label>
-                    <input type="text" class="form-control" id="medicalCondition" name="medicalCondition" aria-describedby="emailHelp" placeholder="Enter If Any" style="background-color: FAF3F5;" required>
+                    <label  class="now1" for="exampleInputEmail1">House Address:</label>
+                    <input type="text" class="form-control" name="houseAddress" id="houseAddress" aria-describedby="emailHelp" placeholder="Enter House Address" style="background-color: FAF3F5;" required>
+                </div>
+                <P> </P>
+                <div class="form-group">
+                    <label  class="now1" for="exampleInputEmail1">Email:</label>
+                    <input type="email" class="form-control" name="healthEmail" id="healthEmail" aria-describedby="emailHelp" placeholder="Enter Email Adress" style="background-color: FAF3F5;" required>
+                </div>
+                <P> </P>
+                <div class="form-group">
+                  <label  class="now1" for="exampleInputEmail1">Mobile No:</label>
+                  <input type="number" class="form-control" id="mobileNo" aria-describedby="emailHelp" name="mobileNo" placeholder="Enter Mobile Number" style="background-color: FAF3F5;" required>
+              </div>
+                <P> </P>
+                <div>
+                  <label  class="now1" for="marital-status">Marital Status:</label>
+                  <P> </P>
+                  <select name="maritalstatus" id="marital-status" style="background-color: FAF3F5;" required>
+                      <option value="Single">Single</option>
+                      <option value="Married">Married</option>
+                      <option value="Divorced">Divorced</option>
+                  </select>
                 </div>
                 <p> </p>
-                <div class="form-group">
-                    <label  class="now1" for="allergies">Allergies:</label>
-                    <input type="text" class="form-control" id="allergies" name="allergies" aria-describedby="emailHelp" placeholder="Enter Allergies If Any" style="background-color: FAF3F5;" required>
-                </div>
-                <P> </P>
-                  <p> </p>
-                  <div class="form-group">
-                    <label  class="now1" for="dateRegistered">Date Registered:</label>
-                    <input type="date" class="form-control" id="registerDate" name="registerDate" style="background-color: FAF3F5;" required>
-                  </div>
+                <div>
+                  <label  class="now1" for="blood-group">Blood Group:</label>
                   <P> </P>
+                  <select name="bloodgroup" id="blood-group" style="background-color: FAF3F5;" required>
+                      <option value="A+">A+</option><option value="A-">A-</option>
+                      <option value="B+">B+</option><option value="B-">B-</option>
+                      <option value="O+">O+</option><option value="O-">O-</option>
+                      <option value="AB+">AB+</option><option value="AB-">AB-</option>
+                  </select>
+                </div>
+                <P> </P>
+                <div>
+                  <label  class="now1" for="genotype">Genotype:</label>
                   <P> </P>
-                  <P> <br> </P>
-                  <label  class="now1" for="">GUARDIAN CONTACT</label><br>
-                  <P> </P>
-                  <div class="form-group">
-                    <label  class="now1" for="parentName">Name:</label>
-                    <input type="text" class="form-control" id="parentName" name="parentName" aria-describedby="emailHelp" placeholder="Enter Parent Name" style="background-color: FAF3F5;" required>
+                  <select name="genotype" id="genotype" style="background-color: FAF3F5;" required>
+                      <option value="AA">AA</option><option value="AB">AB</option>
+                      <option value="AO">AO</option><option value="OO">OO</option>
+                      <option value="BB">BB</option>
+                      <option value="BO">BO</option>
+                  </select>
                 </div>
                 <P> </P>
-                <div class="form-group">
-                    <label  class="now1" for="parentRelationship">Relationship:</label>
-                    <input type="text" class="form-control" id="parentRelationship" name="parentRelationship" aria-describedby="emailHelp" placeholder="Enter Relationship" style="background-color: FAF3F5;" required>
-                </div>
-                <P> </P>
-                <div class="form-group">
-                    <label  class="now1" for="parentAddress">Address:</label>
-                    <input type="text" class="form-control" id="parentAddress"  name="parentAddress" aria-describedby="emailHelp" placeholder="Enter Parent Address" style="background-color: FAF3F5;" required>
-                </div>
-                <P> </P>
-                <div class="form-group">
-                    <label  class="now1" for="parentPhoneNo">Phone Number:</label>
-                    <input type="number" class="form-control" id="parentPhoneNo" name="parentPhoneNo" aria-describedby="emailHelp" placeholder="Enter Parent Phone Number" style="background-color: FAF3F5;" required>
-                </div>
-                <P></P>
-                <P> </P>
-                <P> </P>
-                <button type="submit" class="btn btn-primary">Submit</button>
+              <div class="form-group">
+                  <label  class="now1" for="medicalCondition">Medical Condition:</label>
+                  <input type="text" class="form-control" id="medicalCondition" name="medicalCondition" aria-describedby="emailHelp" placeholder="Enter If Any" style="background-color: FAF3F5;" required>
+              </div>
+              <p> </p>
+              <div class="form-group">
+                  <label  class="now1" for="allergies">Allergies:</label>
+                  <input type="text" class="form-control" id="allergies" name="allergies" aria-describedby="emailHelp" placeholder="Enter Allergies If Any" style="background-color: FAF3F5;" required>
+              </div>
+              <P> </P>
                 <p> </p>
-                </form>
-                <P> </P>
-                <div class="table-responsive">
-                    <table class="table table-hover">
-                      <thead>
-                        <tr>
-                          <th>ADMIN APPROVAL</th>
-                          <th>STATUS</th>
-                          <th>CHECK</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr>
-                            <td>OVERALL CHECK</td>
-                            <td>APPROVED</td>
-                            <td>
-                            <label for="radio1"></label>
-                            <input type="radio"  class="larger1" name="radios" id="healthOverall" />
-                            </td>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </div>
-                  <button class="previous" id="previoush" disabled>Previous</button>
-                  <a href="studAct.html">
-                    <button class="next" id="nexth">Next</button>
-                  </a>
-                  <P> </P>
-                  <label for="accept">
-                    <input type="checkbox" id="accept1" onclick="myFunc()">
-                 </label>
+                <div class="form-group">
+                  <label  class="now1" for="dateRegistered">Date Registered:</label>
+                  <input type="date" class="form-control" id="registerDate" name="registerDate" style="background-color: FAF3F5;" required>
                 </div>
-        </section>
-      </div>
-      <script>
-        var nexthh = document.getElementById("nexth");
+                <P> </P>
+                <P> </P>
+                <P> <br> </P>
+                <label  class="now1" for="">GUARDIAN CONTACT</label><br>
+                <P> </P>
+                <div class="form-group">
+                  <label  class="now1" for="parentName">Name:</label>
+                  <input type="text" class="form-control" id="parentName" name="parentName" aria-describedby="emailHelp" placeholder="Enter Parent Name" style="background-color: FAF3F5;" required>
+              </div>
+              <P> </P>
+              <div class="form-group">
+                  <label  class="now1" for="parentRelationship">Relationship:</label>
+                  <input type="text" class="form-control" id="parentRelationship" name="parentRelationship" aria-describedby="emailHelp" placeholder="Enter Relationship" style="background-color: FAF3F5;" required>
+              </div>
+              <P> </P>
+              <div class="form-group">
+                  <label  class="now1" for="parentAddress">Address:</label>
+                  <input type="text" class="form-control" id="parentAddress"  name="parentAddress" aria-describedby="emailHelp" placeholder="Enter Parent Address" style="background-color: FAF3F5;" required>
+              </div>
+              <P> </P>
+              <div class="form-group">
+                  <label  class="now1" for="parentPhoneNo">Phone Number:</label>
+                  <input type="number" class="form-control" id="parentPhoneNo" name="parentPhoneNo" aria-describedby="emailHelp" placeholder="Enter Parent Phone Number" style="background-color: FAF3F5;" required>
+              </div>
+              <P></P>
+              <P> </P>
+              <P> </P>
+              <button type="submit" class="btn btn-primary">Submit</button>
+              <p> </p>
+              </form>
+              <P> </P>
+              <div class="table-responsive">
+                  <table class="table table-hover">
+                    <thead>
+                      <tr>
+                        <th>ADMIN APPROVAL</th>
+                        <th>STATUS</th>
+                        <th>CHECK</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                          <td>OVERALL CHECK</td>
+                          <td>APPROVED</td>
+                          <td>
+                          <label for="radio1"></label>
+                          <input type="radio"  class="larger1" name="radios" id="healthOverall" />
+                          </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <button class="previous" id="previoush" disabled>Previous</button>
+                <a href="/studAct">
+                  <button class="next" id="nexth">Next</button>
+                </a>
+                <P> </P>
+                <label for="accept">
+                  <input type="checkbox" id="accept1" onclick="myFunc()">
+               </label>
+              </div>
+      </section>
+    </div>
+    <script>
+      var nexthh = document.getElementById("nexth");
+      nexthh.disabled = true;
+      var hRadio = document.getElementById("healthOverall");
+      function myFunc() {
+      var checkBox = document.getElementById("accept1");
+      if (checkBox.checked == true){
+        hRadio.checked = true;
+        nexthh.disabled = false;
+      } else {
+        hRadio.checked = false;
         nexthh.disabled = true;
-        var hRadio = document.getElementById("healthOverall");
-        function myFunc() {
-        var checkBox = document.getElementById("accept1");
-        if (checkBox.checked == true){
-          hRadio.checked = true;
-          nexthh.disabled = false;
-        } else {
-          hRadio.checked = false;
-          nexthh.disabled = true;
 
-        }
-  }
-      </script>
-      <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-      <script type="text/javascript">
-        $(document).ready(function() {
-          $('input[type="radio"]').click(function(e) {
-            e.preventDefault();
-            e.stopPropagation();
-          });
+      }
+}
+    </script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function() {
+        $('input[type="radio"]').click(function(e) {
+          e.preventDefault();
+          e.stopPropagation();
         });
-      </script>
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
-  </body>
+      });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+</body>

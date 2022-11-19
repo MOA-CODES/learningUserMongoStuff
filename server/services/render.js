@@ -46,6 +46,37 @@ exports.congrats = (req, res)=>{
 
 
 
+exports.mainadmin = (req, res)=>{
+    res.render('mainadmin')
+}
+
+exports.ooactivities = (req, res)=>{
+    res.render('ooactivities')
+}
+
+exports.ooadmissions = (req, res)=>{
+    res.render('ooadmissions')
+}
+
+exports.oofinance = (req, res)=>{
+    res.render('oofinance')
+}
+
+exports.oohealth = (req, res)=>{
+    res.render('oohealth')
+}
+
+exports.oohousing = (req, res)=>{
+    res.render('oohousing')
+}
+
+exports.ooit = (req, res)=>{
+    res.render('ooit')
+}
+
+
+
+
 
 
 

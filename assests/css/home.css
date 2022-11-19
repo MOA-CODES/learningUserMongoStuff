@@ -85,7 +85,7 @@ a{
   }input.larger1 {
     transform: scale(2);
   }Body{
-    background:url("../img/output-onlinepngtools\ \(6\).png");
+    background:url("/img/output-onlinepngtools\ \(6\).png");
     min-width : 100%;
     background-size:100% 100%;
     background-repeat:no-repeat;

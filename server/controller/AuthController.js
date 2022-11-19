@@ -82,8 +82,10 @@ exports.login2 = (req, res, next) =>{
         }else{
             console.log(user.password);
             if(user.password==password){
+                console.log("Logged in ")
                 res.send("Logged in correctly")
             }else{
+                console.log("Wrong ")
                 res.send("Wrong password")
             }
         }

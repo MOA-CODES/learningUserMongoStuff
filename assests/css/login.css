@@ -101,7 +101,7 @@ width: 100px;
   opacity: 1;
   right: 0;
 }Body{
-  background:url("Assets/extended\ pic.png");
+  background:url("/img/extended\ pic.png");
   min-width : 100%;
   background-size:100% 100%;
   background-repeat:no-repeat;

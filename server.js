@@ -29,6 +29,10 @@ app.use('/css', express.static(path.resolve(__dirname,"assests/css")));
 app.use('/img', express.static(path.resolve(__dirname,"assests/img")));
 app.use('/js', express.static(path.resolve(__dirname,"assests/js")));
 
+app.use('/icons', express.static(path.resolve(__dirname,"assests/chuka/icons")));
+app.use('/scss', express.static(path.resolve(__dirname,"assests/chuka/scss")));
+app.use('/vendor', express.static(path.resolve(__dirname,"assests/chuka/vendor")));
+
 app.use('/', require('./server/routes/router')) 
 // app.use('/', require('./server/routes/router')) 
 

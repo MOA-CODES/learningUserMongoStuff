@@ -97,6 +97,7 @@ button{
     </style>
 </head>
 <body>
+    <section id="OGAl">
     <div class="background">
         <div class="shape"></div>
         <div class="shape"></div>
@@ -115,16 +116,20 @@ button{
         </div>
         <p> <br> <br> </p>
         <p> <br> <br> </p>
-    <form action="" method="">
+    <form id="OGAlogin" method="POST">
         <h3></h3>
 
         <label for="idNumber">ID Number</label>
-        <input type="text" name="idNumberLogin" id="idNumber" placeholder="Your ID" required>
+        <input type="text" name="User_id" id="idNumber" placeholder="Your ID" required>
         
         <label for="password">Password</label>
         <input type="password" name="password" id="password" placeholder="Your Password" required>
 
-        <button style="color: #080710; background-color: #dee1e4;">Log In</button>
+        <button id="loginresponse" type="submit" style="color: #080710; background-color: #dee1e4;">Log In</button>
     </form>
+</section>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="/js/conn.js"></script>
+
 </body>
 </html>

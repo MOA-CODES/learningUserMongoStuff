@@ -13,6 +13,9 @@ const FileSchema = new Schema({
     Passport:{
         type: String
     },
+    Waec:{
+        type: String
+    },
     Transcript:{
         type: String
     },
