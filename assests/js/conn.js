@@ -46,7 +46,7 @@ $("#OGAlogin").submit(function(event){
                 alert("chuka never do am")
             }else{ //student user
                 alert("Log in successful")
-                location.assign("http://localhost:3001/admissions")
+                location.assign("http://localhost:3001/info")
             }
 
         }else{
