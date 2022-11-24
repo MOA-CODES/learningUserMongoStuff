@@ -60,7 +60,14 @@ exports.ooadmissions = (req, res)=>{
 }
 
 exports.oofinance = (req, res)=>{
-    res.render('oofinance')
+    axios.get('http://localhost:3001/api/student/retrieve')
+    .then(function(response){
+        res.render('oofinance', {students:response.data})
+    })
+    .catch(err=>{
+        res.send(err);
+    })
+
 }
 
 exports.oohealth = (req, res)=>{

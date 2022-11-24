@@ -1,5 +1,8 @@
 const express = require('express')
 const route = express.Router()
+const multer = require('multer') 
+const path = require('path')
+
 
 const services = require('../services/render')
 
@@ -10,6 +13,9 @@ const StudController = require('../controller/StudController')
 const RoleController = require('../controller/RoleController')
 const UserController = require('../controller/UserController')
 const FileController = require('../controller/FileController')
+
+
+
 
 //connecting pages
 route.get('/',services.homeRoutes);
@@ -50,6 +56,7 @@ route.post('/api/student/register',StudController.create)  //create student
 route.put('/api/student/update', StudController.update)    //update student
 route.post('/api/student/filter', StudController.filter)    //update student
 
+route.get('/api/student/retrieve',StudController.retrieve) //retrieve student
 route.post('/api/student/total', StudController.StudTotal)    //total student
 
 route.post('/api/student/totalAdmin', StudController.StudAdminvr)    //total student Admin verified
@@ -82,7 +89,25 @@ route.put('/api/role/update', RoleController.update)    //update Role
 route.post('/api/user/register', UserController.create)  //create User
 route.put('/api/user/update', UserController.update)    //update User
 
-route.post('/api/file/register', FileController.create)  //create File
+const storage = multer.diskStorage({
+	destination: "./files/",
+	filename: function (req, file, cb) {
+	  cb(
+		null,
+		file.fieldname + "-" + Date.now() + path.extname(file.originalname)
+	  );
+	},
+});
+
+const upload = multer({
+	storage: storage
+});
+
+
+route.post('/api/file/register', upload.single("file"), FileController.create)  //create File
+route.post('/api/file/register', upload.array("files"), FileController.create)  //create Files
+
+
 route.put('/api/file/update', FileController.update)    //update File
 
 

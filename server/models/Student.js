@@ -4,7 +4,8 @@ const Schema = mongoose.Schema;
 //student
 const studentSchema = new Schema({
     StudID :{
-        type: String
+        type: String,
+        unique: true,
     },
     Firstname :{
         type: String

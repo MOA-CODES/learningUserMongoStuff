@@ -2,37 +2,21 @@ const File = require('../models/File')
 
 exports.create = (req,res)=>{
     //validate request
-    if(!req.body){
-        res.status(400).send({message: "Content can not be empty!"})
-        return;
-    } 
-    // if( File.find(req.StudID)){
-    //     res.status(400).send({message: "ID:"+ x +" already exists in table"})
-    //     return;
-    // }
-
-    //new file
-    const F = new File({
-        StudID:req.body.StudID,
-        Jamb:req.body.Jamb,
-        P_essay:req.body.P_essay
-    })
-
-    //save file in database
-    F.save()
-    .then(data =>{
-        res.json({
-            message: 'Role Added Succesfully!'
-
+    console.log(req.file);
+    if (!req.file) {
+		return res.status(400).send({ success: false, message:"Error uploading file, try again" });
+	} else {
+        // new file
+        const F = new File({
+            StudID:req.body.StudID,
+            Jamb:req.file.filename,
         })
-    })
-    .catch(err=>{
-        res.status(500).send({
-            message:err.message||"Some error occured while doing create operation"
-        });
-    });
-
+        F.save();
+        return res.status(200).send({ success: true, message:"Success upload successful" });
+    }
 }
+
+
 
 exports.update = (req,res)=>{
     if(!req.body){

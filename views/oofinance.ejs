@@ -733,7 +733,7 @@
                             <li class="nav-item dropdown header-profile">
                                 <a class="nav-link" href="javascript:void(0)" role="button" data-toggle="dropdown">
 									<div class="header-info">
-										<span class="text-black">Hello, <strong>Chuka-Utazi</strong></span>
+										<span class="text-black">Hello, <strong>OOFinance</strong></span>
 										<p class="fs-12 mb-0">Admin</p>
 									</div>
                                     <!-- <img src="images/profile/17.jpg" width="20" alt=""/> -->
@@ -785,27 +785,29 @@
                           <thead>
                             <tr>
                               <th>Name</th>
-                              <th>Email Address</th>
-                              <th>Major</th>
-                              <th>Admission Status</th>
+                              <th>StudID</th>
+                              <th>PaymentPlan</th>
+                              <th>Financevr</th>
 
                               <!-- <th>Admin Verification</th> -->
                             </tr>
                           </thead>
                           <tbody>
+							<%for (var i = 0; i<students.length; i++){%>
                             <tr>
-                                <td>Rimansukwe Magaji</td>
-                                <td>rimanmagaji@aun.edu.ng</td>
-                                <td>Software Engineering</td>
-                                <td>Full Payment Plan</td>
+                                <td><%= students[i].Firstname %></td>
+                                <td><%= students[i].StudID %></td>
+                                <td><%= students[i].PaymentPlan %></td>
+                                <td><%= students[i].Financevr %></td>
 
 
-                                <!-- <td>
+                                <td>
                                 <label for="radio1"></label>
                                 <input type="radio"  class="larger1" name="radios1" id="finanaceOverall1" />
-                                </td> -->
+                                </td>
                             </tr>
-                            <tr>
+							<%}%>
+                            <!-- <tr>
                                 <td>Chukwuani ELvis</td>
                                 <td>elvis@aun.edu.ng</td>
                                 <td>Software Engineering</td>
@@ -815,29 +817,29 @@
                                 <label for="radio1"></label>
                                 <input type="radio"  class="larger1" name="radios2" id="finanaceOverall2" />
                                 </td> -->
-                            </tr>
+                            <!-- </tr>
                             <tr>
                                 <td>Chuka-Utazi Obumneme</td>
                                 <td>chuka@aun.edu.ng</td>
                                 <<td>Software Engineering</td>
                                 <td>Full Payment Plan</td>
 
-                                <!-- <td>
+                                <td>
                                 <label for="radio1"></label>
                                 <input type="radio"  class="larger1" name="radios3" id="finanaceOverall3" />
                                 </td> -->
-                            </tr>
+                            <!-- </tr>
                             <tr>
                                 <td>Moyosore Ajala</td>
                                 <td>ajala@aun.edu.ng</td>
                                 <td>Software Engineering</td>
-                                <td>Full Payment Plan</td>
+                                <td>Full Payment Plan</td> -->
 
                                 <!-- <td>
                                 <label for="radio1"></label>
                                 <input type="radio"  class="larger1" name="radios4" id="finanaceOverall4" />
                                 </td> -->
-                            </tr>
+                            <!-- </tr> -->
                           </tbody>
                         </table>
                         <div class="">

@@ -80,6 +80,18 @@ exports.delete = (req,res)=>{
         });
 }
 
+exports.retrieve = (req, res) => {
+    Student.find()
+       .then(data => {
+            res.send(data)
+        })
+        .catch(err=>{
+            res.status(500).send({
+                message:err.message||"Error occured while retrieving Student info"
+            });
+        });
+}
+
 exports.filter = async (req, res) => { //because i do .then i didnt use async
     if (!req.body) {
         res.status(400).send({ message: "Please enter some filter parameters!" })

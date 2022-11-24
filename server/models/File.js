@@ -5,7 +5,8 @@ const Schema = mongoose.Schema;
 //role
 const FileSchema = new Schema({
     StudID:{
-        type: String
+        type: String,
+        unique: true,
     },
     Jamb:{
         type: String

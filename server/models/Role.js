@@ -5,7 +5,8 @@ const Schema = mongoose.Schema;
 //role
 const roleSchema = new Schema({
     Role_id:{
-        type: String
+        type: String,
+        unique: true,
     },
     Title:{
         type: String
