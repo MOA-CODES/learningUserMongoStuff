@@ -38,10 +38,7 @@ route.get('/oohealth',services.oohealth);
 route.get('/oohousing',services.oohousing);
 route.get('/ooit',services.ooit);
 
-
-
-
-
+route.get('/update-ooadmissions',services.oofin_update);
 
 
 
@@ -49,14 +46,15 @@ route.get('/ooit',services.ooit);
 route.post('/api/user/login2', AuthController.login2)               //login user
 // route.get('/api/user/login2', AuthController.login2)               //login user
 
-
-
-// router.post('/register/student',upload.upload.single('image'),StudController.create)  //create student
 route.post('/api/student/register',StudController.create)  //create student
 route.put('/api/student/update', StudController.update)    //update student
+route.put('/api/student/update/:id', StudController.update2)    //update student
+
 route.post('/api/student/filter', StudController.filter)    //update student
 
 route.get('/api/student/retrieve',StudController.retrieve) //retrieve student
+route.get('/api/student/retrieve2',StudController.retrieve2) //retrieve student
+
 route.post('/api/student/total', StudController.StudTotal)    //total student
 
 route.post('/api/student/totalAdmin', StudController.StudAdminvr)    //total student Admin verified

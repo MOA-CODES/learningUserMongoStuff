@@ -34,7 +34,7 @@ const studentSchema = new Schema({
     ArrivalDate :{
         type: String
     },
-    GaurdianName :{
+    GuardianName :{
         type: String
     },
     GaurdianRel :{

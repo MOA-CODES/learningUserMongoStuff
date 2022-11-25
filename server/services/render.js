@@ -10,7 +10,16 @@ exports.login = (req, res)=>{
 }
 
 exports.info = (req, res)=>{
-    res.render('info')
+    // res.render('info')
+    axios.get('http://localhost:3001/api/student/retrieve',{params:{StudID:req.query.StudID}})
+    
+    .then(function(response){
+        res.render("info",{stud:response.data})
+    })
+    .catch(err=>{
+        res.send(err);
+    })
+
 }
 
 exports.admissions = (req, res)=>{
@@ -38,7 +47,15 @@ exports.health = (req, res)=>{
 }
 
 exports.finance = (req, res)=>{
-    res.render('finance')
+    // res.render('finance')
+    axios.get('http://localhost:3001/api/student/retrieve',{params:{StudID:req.query.StudID}})
+    
+    .then(function(response){
+        res.render("finance",{stud:response.data})
+    })
+    .catch(err=>{
+        res.send(err);
+    })
 }
 
 exports.congrats = (req, res)=>{
@@ -80,6 +97,20 @@ exports.oohousing = (req, res)=>{
 
 exports.ooit = (req, res)=>{
     res.render('ooit')
+}
+
+exports.oofin_update = (req, res)=>{
+
+    axios.get('http://localhost:3001/api/student/retrieve',{params:{StudID:req.query.StudID}})
+    
+    .then(function(response){
+        console.log(req.query.StudID);
+        console.log(response.data);
+        res.render("oofin_upd",{stud:response.data})
+    })
+    .catch(err=>{
+        res.send(err);
+    })
 }
 
 

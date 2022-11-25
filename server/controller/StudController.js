@@ -48,6 +48,29 @@ exports.update = (req,res)=>{
             res.status(404).send({message:`Cannot Update user with ${id}. Maybe user not found!`})
         }else{
             // res.send(data)
+            // res.json({message:'Student: '+id+' updated'   })
+            res.send("Student updated")
+        }
+    })
+    .catch(err=>{
+        res.status(500).send({message:"Error Update user information"})
+    })
+    
+}
+
+exports.update2 = (req,res)=>{
+    if(!req.body){
+        res.status(400).send({message: "Data to update can not be empty!"})
+        return;
+    }
+
+    const id = req.params.StudID;
+    Student.findOneAndUpdate({StudID: id}, req.body, {useFindAndModify: false})
+    .then(data =>{
+        if(!data){
+            res.status(404).send({message:`Cannot Update user with ${id}. Maybe user not found!`})
+        }else{
+            // res.send(data)
             res.json({
                 message:'Student: '+id+' updated'   
             })
@@ -81,15 +104,53 @@ exports.delete = (req,res)=>{
 }
 
 exports.retrieve = (req, res) => {
-    Student.find()
-       .then(data => {
-            res.send(data)
-        })
-        .catch(err=>{
-            res.status(500).send({
-                message:err.message||"Error occured while retrieving Student info"
+    if(req.query.StudID){
+        const id = req.query.StudID;
+
+        console.log("hello")
+
+        Student.findOne({StudID: id})
+            .then(data=>{
+                if(!data){
+                    res.status(404).send({message: "User not Found with"+id+"id"})
+                }else{
+                    res.send(data)
+                }
+            })
+            .catch(err=>{
+                res.status(500).send({ message:"Eroor retrieving user with id "+id })
+            })
+
+    }else{
+        Student.find()
+        .then(data => {
+                res.send(data)
+            })
+            .catch(err=>{
+                res.status(500).send({
+                    message:err.message||"Error occured while retrieving Student info"
+                });
             });
-        });
+    }
+}
+
+
+exports.retrieve2 = (req, res) => {
+        const id = req.params.StudID;
+
+        console.log("hello")
+
+        Student.findById({StudID: id}, req.params, {useFindAndModify: false})
+            .then(data=>{
+                if(!data){
+                    res.status(404).send({message: "User not Found with"+id+"id"})
+                }else{
+                    res.send(data)
+                }
+            })
+            .catch(err=>{
+                res.status(500).send({ message:"Eroor retrieving user with id"+id })
+            })    
 }
 
 exports.filter = async (req, res) => { //because i do .then i didnt use async
