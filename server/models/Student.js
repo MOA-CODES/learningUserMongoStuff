@@ -37,7 +37,7 @@ const studentSchema = new Schema({
     GuardianName :{
         type: String
     },
-    GaurdianRel :{
+    GuardianRel :{
         type: String
     },
     PaymentPlan:{

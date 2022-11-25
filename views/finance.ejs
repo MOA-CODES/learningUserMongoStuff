@@ -116,36 +116,34 @@
                       <input type="radio"  class="larger1" name="radios" id="finanaceOverall" />
                       </td>
                   </tr>
+                  <tr><td colspan="3"><input type="text" name="Financevr" id="getFinancevrstatus" value="<%- stud.Financevr%>" hidden> </td> </tr>
                 </tbody>
               </table>
             </div>
             <a>
               <button class="previous" id="previousf" disabled>Previous</button>
             </a>
-            <a href="/IT">
+            <a href="/IT?StudID=<%- stud.StudID%>">
               <button class="next" id="nextf">Next</button>
             </a>
             <P> </P>
-            <label for="accept">
-              <input type="checkbox" id="accept1" onclick="myFunc()">
-           </label>
   </section>
     </div>
     <script>
       var nextff = document.getElementById("nextf");
       nextff.disabled = true;
-      var fradio = document.getElementById("finanaceOverall");
-      function myFunc() {
-      var checkBox = document.getElementById("accept1");
-      if (checkBox.checked == true){
-        fradio.checked = true;
-        nextff.disabled = false;
-      } else {
-        fradio.checked = false;
-        nextff.disabled = true;
 
+      var status = document.getElementById("getFinancevrstatus").value;
+      var rd = document.getElementById("finanaceOverall");
+
+      if(status == "true"){
+        rd.checked = true;
+        nexff.disabled = false;
+      }else{
+        rd.checked = false;
+        nexff.disabled = true;
       }
-}
+
     </script>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script type="text/javascript">
