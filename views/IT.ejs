@@ -109,6 +109,10 @@
                       <input type="radio"  class="larger1" name="radios1" id="iTOverall" />
                   </td>
               </tr>
+              <tr>
+                <td><input type="text" name="Financevr" id="getitvrstatus" value="<%- stud.Financevr%>" hidden> </td>
+                <td><input type="text" name="Financevr" id="openerpstatus" value="<%- stud.OpenerpStatus%>" hidden> </td>
+              </tr>
             </tbody>
           </table>
         </div>
@@ -119,50 +123,27 @@
         <a href="housing.html">
           <button class="next" id="nextit">Next</button>
         </a>
-        <P> </P>
-        <label for="accept">
-          <input type="checkbox" id="accept1" onclick="myFunc()">
-       </label>
     </div>
     </section>
     </div>
 
     <script>
-      var nextitt = document.getElementById("nextit");
-      nextitt.disabled = true;
-      var itRadio = document.getElementById("iTOverall");
-      var erpRadio = document.getElementById("openErpradio");
-      function myFunc() {
-      var checkBox = document.getElementById("accept1");
-      if (checkBox.checked == true){
-        itRadio.checked = true;
-        erpRadio.checked = true;
-        nextitt.disabled = false;
-      } else {
-        itRadio.checked = false;
-        nextitt.disabled = true;
+      var nextff = document.getElementById("nextit");
+      var status = document.getElementById("getitvrstatus").value;
+      var openerp = document.getElementById("openErpradio");
+      var rd = document.getElementById("iTOverall");
 
+      if(status == "true"){
+        rd.checked = true;
+        nexff.disabled = false;
+      }else{
+        rd.checked = false;
+        nexff.disabled = true;
       }
-      }
+
     </script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
-    <script>
-      document.getElementById("itFName").innerHTML=localStorage.getItem("firstNameValue");
-      var itv = localStorage.getItem("firstNameValue");
-      document.getElementById("itFName").defaultValue = itv;
-
-      document.getElementById("itLName").innerHTML=localStorage.getItem("lastNameValue");
-      var itv1 = localStorage.getItem("lastNameValue");
-      document.getElementById("itLName").defaultValue = itv1;
-
-      document.getElementById("itMName").innerHTML=localStorage.getItem("middleNameValue");
-      var itv2 = localStorage.getItem("middleNameValue");
-      document.getElementById("itMName").defaultValue = itv2;
-
-</script>
-    
-    
 </body>
 
+<%- include('include/_footer')%>
 
 

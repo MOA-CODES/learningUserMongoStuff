@@ -42,6 +42,16 @@ exports.housing = (req, res)=>{
     res.render('housing')
 }
 
+exports.itpage = (req, res)=>{
+    axios.get('http://localhost:3001/api/student/retrieve',{params:{StudID:req.query.StudID}})
+    .then(function(response){
+        res.render("IT",{stud:response.data})
+    })
+    .catch(err=>{
+        res.send(err);
+    })
+}
+
 exports.health = (req, res)=>{
     res.render('health')
 }

@@ -46,7 +46,11 @@
       <P> <br> <br> <br> </P>
         <h1 style="color: 103908; font-family: Lucida Fax; font-size: 30px;"  >STEP II: FINANCE</h1>
         <P> </P>
-        <form action="" method="POST"  onsubmit="return false">
+        <form action="" method="POST" id="financeform"  onsubmit="return false">
+          <div class="form-group">
+            <label class="now1" for="exampleInputEmail1">StudID:</label>
+            <input type="text" class="form-control" name="StudID" id="firstName" value="<%- stud.StudID%>" aria-describedby="emailHelp" placeholder="Enter First Name"  readonly>
+          </div>
           <div class="form-group">
             <label class="now1" for="exampleInputEmail1">First Name:</label>
             <input type="text" value="<%- stud.Firstname%>" class="form-control" name="Firstname" id="firstt" aria-describedby="emailHelp" placeholder="Enter First Name"  style="background-color: FAF3F5;" required>
@@ -75,7 +79,7 @@
           <div class="form-group">
               <label class="now1" for="admission-status">Payment Plan:</label>
               <P> </P>
-              <select style="background-color: FAF3F5;" name="PaymentPlan" id="admission-status" required>
+              <select style="background-color: FAF3F5;" name="PaymentPlan"  value="<%- stud.PaymentPlan%>"id="admission-status" required>
                   <option value="DPP">Deffered Payment Plan</option>
                   <option value="Full">Full Payment</option>
                   <option value="Founder Scholarship">Founder Scholarship</option>
@@ -87,17 +91,19 @@
             <p> </p>
             <div class="form-group">
               <label class="now1" for="exampleInputEmail1">Guardian Name:</label>
-              <input type="text" class="form-control" name="GuardianName" id="gName" aria-describedby="emailHelp" placeholder="Enter Guardian Name"  style="background-color: FAF3F5;" required>
+              <input type="text" class="form-control" value="<%- stud.GuardianName%>" name="GuardianName" id="gName" aria-describedby="emailHelp" placeholder="Enter Guardian Name"  style="background-color: FAF3F5;" required>
           </div>
           <P> </P>
           <div class="form-group">
               <label class="now1" class="now1"for="exampleInputEmail1">Guardian Relationship:</label>
-              <input type="text" class="form-control" name="GuardianRel" id="gRelationship" aria-describedby="emailHelp" placeholder="Enter Relationship" style="background-color: FAF3F5;" required>
+              <input type="text" class="form-control" value="<%- stud.GuardianRel%>" name="GuardianRel" id="gRelationship" aria-describedby="emailHelp" placeholder="Enter Relationship" style="background-color: FAF3F5;" required>
           </div>
             <p> </p>
             <P> </P>
             <button type="submit" class="btn btn-primary">Submit</button>
           </form>
+
+
           <div class="table-responsive">
               <table class="table table-hover">
                 <thead>
@@ -122,17 +128,14 @@
             </div>
             <a>
               <button class="previous" id="previousf" disabled>Previous</button>
-            </a>
-            <a href="/IT?StudID=<%- stud.StudID%>">
+            </a>            
+            <a href="/itstage?StudID=<%- stud.StudID%>">
               <button class="next" id="nextf">Next</button>
             </a>
-            <P> </P>
   </section>
     </div>
     <script>
       var nextff = document.getElementById("nextf");
-      nextff.disabled = true;
-
       var status = document.getElementById("getFinancevrstatus").value;
       var rd = document.getElementById("finanaceOverall");
 
@@ -146,31 +149,8 @@
 
     </script>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-    <script type="text/javascript">
-      $(document).ready(function() {
-        $('input[type="radio"]').click(function(e) {
-          e.preventDefault();
-          e.stopPropagation();
-        });
-      });
-    </script>
-     <script>
-      document.getElementById("firstt").innerHTML=localStorage.getItem("firstNameValue");
-      var xx1 = localStorage.getItem("firstNameValue");
-      // document.getElementById("firstt").defaultValue = xx1;
-
-      document.getElementById("lastt").innerHTML=localStorage.getItem("lastNameValue");
-      var xx2 = localStorage.getItem("lastNameValue");
-      // document.getElementById("lastt").defaultValue = xx2;
-
-      document.getElementById("midddle").innerHTML=localStorage.getItem("middleNameValue");
-      var xx3 = localStorage.getItem("middleNameValue");
-      // document.getElementById("midddle").defaultValue = xx3;
-
-      document.getElementById("fMajor").innerHTML=localStorage.getItem("majorValue");
-      var xx4 = localStorage.getItem("majorValue");
-      // document.getElementById("fMajor").defaultValue = xx4;
-
-</script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
   </body>
+
+  <%- include('include/_footer')%>
+

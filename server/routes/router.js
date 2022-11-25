@@ -28,6 +28,7 @@ route.get('/studAct',services.studact);
 route.get('/housing',services.housing);
 route.get('/health',services.health);
 route.get('/finance',services.finance);
+route.get('/itstage',services.itpage);
 route.get('/congrats',services.congrats);
 
 route.get('/mainadmin', services.mainadmin);
