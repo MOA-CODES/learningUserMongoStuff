@@ -10,6 +10,10 @@
     <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon.png">
     <link href="/vendor/jqvmap/css/jqvmap.min.css" rel="stylesheet">
 	<link rel="stylesheet" href="/vendor/chartist/css/chartist.min.css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
     <link href="/vendor/bootstrap-select/dist/css/bootstrap-select.min.css" rel="stylesheet">
 	<link href="/vendor/bootstrap-datetimepicker/css/bootstrap-datetimepicker.min.css" rel="stylesheet">
     <link href="/css/style.css" rel="stylesheet">
@@ -124,67 +128,56 @@
                         <table class="table table-hover">
                           <thead>
                             <tr>
+                              <th>No.</th>
+                              <th>StudID</th>
                               <th>First Name</th>
                               <th>Gender</th>
                               <th>Date of Birth</th>
                               <th>Nationality</th>
                               <th>House Address</th>
                               <th>Marital Status</th>
-                              <th>Date of Birth:</th>
                               <th>Blood Group</th>
                               <th>Genotype</th>
-                              <th>Medical Condition:</th>
-                              <th>Allergies:</th>
-                              <th>Date Registered</th>
+                              <th>Medical Condition</th>
+                              <th>Allergies</th>
+                              <!-- <th>Date Registered</th> -->
                               <th>Guardian Name</th>
                               <th>Guardian Relationship</th>
                               <th>Guardian Address</th>
-                              <th>Guardian Phone Number</th>                           
-                              <th></th>
+                              <th>Guardian Phone Number</th>      
+                              <th>Healthvr</th>                     
+                              <th>Action</th>
                               <!-- <th>Admin Verification</th> -->
                             </tr>
                           </thead>
                           <tbody>
+                            <%for (var i = 0; i<students.length; i++){%>
                             <tr>
-                                <td>Riman</td>
-                                <td>Clinton</td>
-                                <td>Magaji</td>
-                                <td>AB</td>
-                                <td>Male</td>
+                                <td><%= i+1 %></td>
+                                <td><%= students[i].StudID %></td>
+                                <td><%= students[i].Firstname %></td>
+                                <td><%= students[i].Gender %></td>
+                                <td><%= students[i].DOB %></td>
+                                <td><%= students[i].Nationality %></td>
+                                <td><%= students[i].Address %></td>
+                                <td><%= students[i].MaritalStatus %></td>
+                                <td><%= students[i].BG %></td>
+                                <td><%= students[i].GT %></td>
+                                <td><%= students[i].MedicalCond %></td>
+                                <td><%= students[i].Allergies %></td>
+                                <td><%= students[i].Parentname %></td>
+                                <td><%= students[i].ParentRel%></td>
+                                <td><%= students[i].ParentAddress%></td>
+                                <td><%= students[i].ParentPhone%></td>
+                                <td><%= students[i].Healthvr%></td>  
+
+                                <td>
+                                  <a href="/update-oohealth?StudID=<%= students[i].StudID%>" class="btn border-shadow update" title="1">
+                                    <span class="text-gradient"><i class="fas fa-pencil-alt"></i></span>
+                                  </a>
+                                </td>
                             </tr>
-                            <tr>
-                                <td>Chukwuani</td>
-                                <td>Elvis</td>
-                                <td>Simon</td>
-                                <td>O</td>
-                                <td>Male</td>
-                                <!-- <td>
-                                <label for="radio1"></label>
-                                <input type="radio"  class="larger1" name="radios2" id="finanaceOverall2" />
-                                </td> -->
-                            </tr>
-                            <tr>
-                                <td>Obumneme</td>
-                                <td>Chuka</td>
-                                <td>Leonard</td>
-                                <td>AB+</td>
-                                <td>Male</td>
-                                <!-- <td>
-                                <label for="radio1"></label>
-                                <input type="radio"  class="larger1" name="radios3" id="finanaceOverall3" />
-                                </td> -->
-                            </tr>
-                            <tr>
-                                <td>Ajala</td>
-                                <td>Moyo</td>
-                                <td>Moses</td>
-                                <td>B</td>
-                                <td>Female</td>
-                                <!-- <td>
-                                <label for="radio1"></label>
-                                <input type="radio"  class="larger1" name="radios4" id="finanaceOverall4" />
-                                </td> -->
-                            </tr>
+                            <%}%>
                           </tbody>
                         </table>
                     </div>
@@ -262,17 +255,6 @@
                                   </table>
                                   </thead>
                                   </tr>
-                            <!-- <label class="text-black font-w500">HEALTH</label>
-                            <input type="checkbox">
-                            <span class="checkmark"></span>
-                            <br><br><br>
-                            <label class="text-black font-w500">HOUSING</label>
-                            <input type="checkbox">
-                            <span class="checkmark"></span>
-                            <br><br><br>
-                            <label class="text-black font-w500">ACTIVITIES</label>
-                            <input type="checkbox">
-                            <span class="checkmark"></span> -->
                         </div>
               
                         <div class="form-group">
@@ -289,10 +271,6 @@
                 <br><br><br>
               
                 <br><br><br><br><br>
-                <!--**********************************
-                      Footer start
-                  ***********************************-->
-              
                 <div class="footer">
                   <div class="copyright">
                     <p>Copyright 2022© Designed &amp; Developed by SDP Team 2022</p>
@@ -301,14 +279,6 @@
 
 
     </div>
-    <!--**********************************
-        Main wrapper end
-    ***********************************-->
-
-    <!--**********************************
-        Scripts
-    ***********************************-->
-    <!-- Required vendors -->
     <script src="/vendor/global/global.min.js"></script>
 	<script src="/vendor/bootstrap-select/dist/js/bootstrap-select.min.js"></script>
 	<script src="/vendor/chart.js/Chart.bundle.min.js"></script>
@@ -316,13 +286,10 @@
 	<script src="/jsc/deznav-init.js"></script>
 	<script src="/vendor/bootstrap-datetimepicker/js/moment.js"></script>
 	<script src="/vendor/bootstrap-datetimepicker/js/bootstrap-datetimepicker.min.js"></script>
-	<!-- Chart piety plugin files -->
-    <script src="/vendor/peity/jquery.peity.min.js"></script>
+  <script src="/vendor/peity/jquery.peity.min.js"></script>
 
-	<!-- Apex Chart -->
 	<script src="/vendor/apexchart/apexchart.js"></script>
 
-	<!-- Dashboard 1 -->
 	<script src="/jsc/dashboard/dashboard-1.js"></script>
 	<script>
 		$(function () {

@@ -74,72 +74,76 @@
               <p> </p>
               <h1 style="color: 103908; font-family: Lucida Fax; font-size: 25px; text-align: left;"  >Below Are Student Activities Which You Can Select From</h1>
               <P> </P>
-              <form action="results.html" method="POST" onsubmit="return false">
-                  <label class="now1" for="faithB">Faith Based Organizations:</label>
-                  <p> </p>
-              <select name="Faith" id="faithB" style="background-color: FAF3F5;" required>
-                  <option value="Musilim Students Society">Musilim Students Society</option>
-                  <option value="AUN Catholic Society">AUN Catholic Society</option>
-                  <option value="Non Denominational Christian Fellowship">Non Denominational Christian Fellowship</option>
-              </select>
-            </div>
-            <div>
-              <p> </p>
-              <label class="now1" for="academic">Academic Interest Based Associations:</label>
-              <p> </p>
-              <select name="AcademicInt" id="academic" style="background-color: FAF3F5;" required>
-                  <option value=" Law Students Society">Law Students Society </option>
-                  <option value="Institute of Electrical Electronics Engineers">Institute of Electrical Electronics Engineers</option>
-                  <option value="AUN Chemical Society">AUN Chemical Society</option>
-                  <option value="Politics and Peace Studies Society">Politics and Peace Studies Society</option>
-                  <option value="Student Teams Advocating for Regional Sustainability (STARS)">Student Teams Advocating for Regional Sustainability (STARS)</option>
-                  <option value="Entrepreneurship and Leadership Society">Entrepreneurship and Leadership Society</option>
-              </select>
-            </div>
-            <P> </P>
-            <div>
-              <p> </p>
-              <label class="now1" for="sports">Sports Club:</label>
-              <p> </p>
-              <select name="SportsClub" id="sports" style="background-color: FAF3F5;" required>
-                  <option value="Aun Intramural Football League">Aun Intramural Football League</option>
-                  <option value="Badminton Club">Badminton Club</option>
-                  <option value="Tennis Club">Tennis Club</option>
-                  <option value="Martial Arts Club">Martial Arts Club</option>
-                  <option value="AUN Basketball League">AUN Basketball League</option>
-                  <option value="AUN Volleyball League">AUN Volleyball League</option>
-              </select>
-            </div>
-            <P> </P>
-            <div>
-              <p> </p>
-              <label class="now1" for="Hobbies">Hobbies Pssion and Interests:</label>
-              <p> </p>
-              <select name="Hobbies" id="hobbies" style="background-color: FAF3F5;" required>
-                  <option value="Art Club">Art Club</option>
-                  <option value="Theater Club">Theater Club</option>
-                  <option value="AUN Dance Troupe">AUN Dance Troupe</option>
-                  <option value="Spoken Word and Poetry Club">Spoken Word and Poetry Club</option>
-                  <option value="Stallion Radio">Stallion Radio</option>
-              </select>
-            </div>
-            <P> </P>
-            <div>
-              <p> </p>
-              <label class="now1" for="Governance">Governance Leadership Boards and Councils:</label>
-              <p> </p>
-              <select name="GovClubs" id="Governance" style="background-color: FAF3F5;" required>
-                  <option value="Women's Leadership Council">Women's Leadership Council</option>
-                  <option value="AUN Honor Society">AUN Honor Society</option>
-                  <option value="Campus Activities Board">Campus Activities Board</option>
-                  <option value="Student Government Association (SGA)">Student Government Association (SGA)</option>
-              </select>
-            </div>
-            <P> </P>
-            <P> </P>
-            <P> </P>
-            <button type="submit" class="btn btn-primary">Submit</button>
-          </form>
+              <form id="activitiesform" action="results.html" method="POST" onsubmit="return false">
+                <div class="form-group">
+                  <label class="now1" for="exampleInputEmail1">StudID:</label>
+                  <input type="text" class="form-control" name="StudID" value="<%- stud.StudID%>" aria-describedby="emailHelp" placeholder="Enter First Name"  readonly>
+                </div>
+                    <label class="now1" for="faithB">Faith Based Organizations:</label>
+                    <p> </p>
+                <select name="Faith" value="<%- stud.Faith%>" id="faithB" style="background-color: FAF3F5;" required>
+                    <option value="Musilim Students Society">Musilim Students Society</option>
+                    <option value="AUN Catholic Society">AUN Catholic Society</option>
+                    <option value="Non Denominational Christian Fellowship">Non Denominational Christian Fellowship</option>
+                </select>
+              </div>
+              <div>
+                <p> </p>
+                <label class="now1" for="academic">Academic Interest Based Associations:</label>
+                <p> </p>
+                <select name="AcademicInt" value="<%- stud.AcademicInt%>" id="academic" style="background-color: FAF3F5;" required>
+                    <option value=" Law Students Society">Law Students Society </option>
+                    <option value="Institute of Electrical Electronics Engineers">Institute of Electrical Electronics Engineers</option>
+                    <option value="AUN Chemical Society">AUN Chemical Society</option>
+                    <option value="Politics and Peace Studies Society">Politics and Peace Studies Society</option>
+                    <option value="Student Teams Advocating for Regional Sustainability (STARS)">Student Teams Advocating for Regional Sustainability (STARS)</option>
+                    <option value="Entrepreneurship and Leadership Society">Entrepreneurship and Leadership Society</option>
+                </select>
+              </div>
+              <P> </P>
+              <div>
+                <p> </p>
+                <label class="now1" for="sports">Sports Club:</label>
+                <p> </p>
+                <select name="SportsClub"  value="<%- stud.SportsClub%>" id="sports" style="background-color: FAF3F5;" required>
+                    <option value="Aun Intramural Football League">Aun Intramural Football League</option>
+                    <option value="Badminton Club">Badminton Club</option>
+                    <option value="Tennis Club">Tennis Club</option>
+                    <option value="Martial Arts Club">Martial Arts Club</option>
+                    <option value="AUN Basketball League">AUN Basketball League</option>
+                    <option value="AUN Volleyball League">AUN Volleyball League</option>
+                </select>
+              </div>
+              <P> </P>
+              <div>
+                <p> </p>
+                <label class="now1" for="Hobbies">Hobbies Pssion and Interests:</label>
+                <p> </p>
+                <select name="Hobbies" value="<%- stud.Hobbies%>" id="hobbies" style="background-color: FAF3F5;" required>
+                    <option value="Art Club">Art Club</option>
+                    <option value="Theater Club">Theater Club</option>
+                    <option value="AUN Dance Troupe">AUN Dance Troupe</option>
+                    <option value="Spoken Word and Poetry Club">Spoken Word and Poetry Club</option>
+                    <option value="Stallion Radio">Stallion Radio</option>
+                </select>
+              </div>
+              <P> </P>
+              <div>
+                <p> </p>
+                <label class="now1" for="Governance">Governance Leadership Boards and Councils:</label>
+                <p> </p>
+                <select name="GovClubs" value="<%- stud.GovClubs%>" id="Governance" style="background-color: FAF3F5;" required>
+                    <option value="Women's Leadership Council">Women's Leadership Council</option>
+                    <option value="AUN Honor Society">AUN Honor Society</option>
+                    <option value="Campus Activities Board">Campus Activities Board</option>
+                    <option value="Student Government Association (SGA)">Student Government Association (SGA)</option>
+                </select>
+              </div>
+              <P> </P>
+              <P> </P>
+              <P> </P>
+              <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
             <P> </P>
             <div class="table-responsive">
               <table class="table table-hover">
@@ -156,8 +160,11 @@
                       <td>APPROVED</td>
                       <td>
                       <label for="radio1"></label>
-                      <input type="radio"  class="larger1" name="radios" id="studActOverall" />
+                      <input type="radio"  class="larger1" name="radios" id="studActOverall" disabled />
                       </td>
+                  </tr>
+                  <tr>
+                    <td colspan="3"><input type="text" name="" id="statusStudactvr" value="<%-stud.Studactvr%>" hidden> </td>
                   </tr>
                 </tbody>
               </table>
@@ -166,34 +173,32 @@
               <button class="previous" id="previous" disabled>Previous</button>
             </a>
             <a href="/congrats">
-              <button class="next" id="nextst">Next</button>
-            </a>
-            <P> </P>
-            <label for="accept">
-              <input type="checkbox" id="accept1" onclick="myFunc()">
-           </label>    
+              <button class="next" id="nextstudAct" disabled>Next</button>
+            </a> 
       </div>
       </section>
     </div>
-    <script>
-      var nextstt = document.getElementById("nextst");
-      nextstt.disabled = true;
-      var stRadio = document.getElementById("studActOverall");
-      function myFunc() {
-      var checkBox = document.getElementById("accept1");
-      if (checkBox.checked == true){
-        stRadio.checked = true;
-        nextst.disabled = false;
-      } else {
-        stRadio.checked = false;
-        nextst.disabled = true;
 
+    <script>
+      var nextbutton = document.getElementById("nextstudAct"); 
+
+      var studastatus = document.getElementById("statusStudactvr").value;
+
+      var sstudastatus = document.getElementById("studActOverall");
+
+      
+      if(studastatus == "true"){
+        sstudastatus.checked = true;
+        nextbutton.disabled = false;
+      }else{
+        nextbutton.disabled = true;
       }
-      }
+
     </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
   </body>
       
+  <%- include('include/_footer')%>
 
         
 

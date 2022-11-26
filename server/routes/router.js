@@ -42,6 +42,9 @@ route.get('/ooit',services.ooit);
 route.get('/update-ooadmissions',services.oofin_update);
 route.get('/update-ooit',services.ooit_update);
 route.get('/update-oohousing',services.oohouse_update);
+route.get('/update-oohealth',services.oohealth_update);
+route.get('/update-ooactivities',services.ooactivities_update);
+
 
 
 

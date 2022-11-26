@@ -1,0 +1,15 @@
+<%- include('include/header')%>
+
+
+<form id="oohealthupdate_user" method ="POST">
+    <label for="StudID">StudID</label>
+    <input type="text" name="StudID" value="<%- stud.StudID%>" ><br>
+
+    <label for="Financevr">Healthvr</label>
+    <input type="text" name="Healthvr" value="<%- stud.Healthvr%>" ><br>
+
+    <button type="submit">Save</button>
+</form>
+
+<%- include('include/footer')%>
+

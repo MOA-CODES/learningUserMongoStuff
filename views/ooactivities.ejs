@@ -10,6 +10,10 @@
     <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon.png">
     <link href="/vendor/jqvmap/css/jqvmap.min.css" rel="stylesheet">
 	<link rel="stylesheet" href="/vendor/chartist/css/chartist.min.css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
     <link href="/vendor/bootstrap-select/dist/css/bootstrap-select.min.css" rel="stylesheet">
 	<link href="/vendor/bootstrap-datetimepicker/css/bootstrap-datetimepicker.min.css" rel="stylesheet">
     <link href="/css/style.css" rel="stylesheet">
@@ -126,6 +130,7 @@
                         <table class="table table-hover">
                           <thead>
                             <tr>
+                              <th>No.</th>
                               <th>ID</th>
                               <th>First Name</th>
                               <th>Last Name</th>
@@ -134,58 +139,31 @@
                               <th>Academic Interest </th>
                               <th>Hobbies, Passion </th>`
                               <th>Goverance Leadership </th>
-                              <!-- <th>Admin Verification</th> -->
+                              <th>Studactvr</th>
+                              <th>Action</th>
                             </tr>
                           </thead>
                           <tbody>
+                            <%for (var i = 0; i<students.length; i++){%>
                             <tr>
-                                <td>Riman</td>
-                                <td>A00022012</td>
-                                <td>Football</td>
-                                <td>FF</td>
-                                <td>3</td>
+                              <td><%= i+1 %></td>
+                              <td><%= students[i].StudID %></td>
+                              <td><%= students[i].Firstname %></td>
+                              <td><%= students[i].Lastname %></td>
+                              <td><%= students[i].Faith %></td>
+                              <td><%= students[i].SportsClub %></td>
+                              <td><%= students[i].AcademicInt %></td>
+                              <td><%= students[i].Hobbies %></td>
+                              <td><%= students[i].GovClubs %></td>
+                              <td><%= students[i].Studactvr %></td>
 
-                                <!-- <td>
-                                <label for="radio1"></label>
-                                <input type="radio"  class="larger1" name="radios1" id="finanaceOverall1" />
-                                </td> -->
+                                <td>
+                                  <a href="/update-ooactivities?StudID=<%= students[i].StudID%>" class="btn border-shadow update" title="1">
+                                    <span class="text-gradient"><i class="fas fa-pencil-alt"></i></span>
+                                  </a>
+                                </td>
                             </tr>
-                            <tr>
-                                <td>Chukwuani</td>
-                                <td>A00022282</td>
-                                <td>Badminton</td>
-                                <td>BB</td>
-                                <td>2</td>
-
-                                <!-- <td>
-                                <label for="radio1"></label>
-                                <input type="radio"  class="larger1" name="radios2" id="finanaceOverall2" />
-                                </td> -->
-                            </tr>
-                            <tr>
-                                <td>Chuka</td>
-                                <td>A00023457</td>
-                                <td>Basketball</td>
-                                <td>BB</td>
-                                <td>3</td>
-
-                                <!-- <td>
-                                <label for="radio1"></label>
-                                <input type="radio"  class="larger1" name="radios3" id="finanaceOverall3" />
-                                </td> -->
-                            </tr>
-                            <tr>
-                                <td>Ajala</td>
-                                <td>A00023905</td>
-                                <td>Badminton</td>
-                                <td>Gabrielle Volpi</td>
-                                <td>4</td>
-
-                                <!-- <td>
-                                <label for="radio1"></label>
-                                <input type="radio"  class="larger1" name="radios4" id="finanaceOverall4" />
-                                </td> -->
-                            </tr>
+                            <%}%>
                           </tbody>
                         </table>
                     </div>

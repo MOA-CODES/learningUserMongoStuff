@@ -35,7 +35,13 @@ exports.welfare = (req, res)=>{
 }
 
 exports.studact = (req, res)=>{
-    res.render('studAct')
+    axios.get('http://localhost:3001/api/student/retrieve',{params:{StudID:req.query.StudID}})
+    .then(function(response){
+        res.render("studAct",{stud:response.data})
+    })
+    .catch(err=>{
+        res.send(err);
+    })
 }
 
 exports.housing = (req, res)=>{
@@ -92,7 +98,13 @@ exports.mainadmin = (req, res)=>{
 }
 
 exports.ooactivities = (req, res)=>{
-    res.render('ooactivities')
+    axios.get('http://localhost:3001/api/student/retrieve')
+    .then(function(response){
+        res.render('ooactivities', {students:response.data})
+    })
+    .catch(err=>{
+        res.send(err);
+    })
 }
 
 exports.ooadmissions = (req, res)=>{
@@ -111,7 +123,13 @@ exports.oofinance = (req, res)=>{
 }
 
 exports.oohealth = (req, res)=>{
-    res.render('oohealth')
+    axios.get('http://localhost:3001/api/student/retrieve')
+    .then(function(response){
+        res.render('oohealth', {students:response.data})
+    })
+    .catch(err=>{
+        res.send(err);
+    })
 }
 
 exports.oohousing = (req, res)=>{
@@ -175,6 +193,36 @@ exports.oohouse_update = (req, res)=>{
     .catch(err=>{
         res.send(err);
     })
+}
+
+exports.oohealth_update = (req, res)=>{
+
+    axios.get('http://localhost:3001/api/student/retrieve',{params:{StudID:req.query.StudID}})
+    
+    .then(function(response){
+        console.log(req.query.StudID);
+        console.log(response.data);
+        res.render("oohealth_upd",{stud:response.data})
+    })
+    .catch(err=>{
+        res.send(err);
+    })
+}
+
+exports.ooactivities_update = (req, res) => {
+
+    axios.get('http://localhost:3001/api/student/retrieve',{params:{StudID:req.query.StudID}})
+    
+    .then(function(response){
+        console.log(req.query.StudID);
+        console.log(response.data);
+        res.render("ooactivities_upd",{stud:response.data})
+    })
+    .catch(err=>{
+        res.send(err);
+    })
+
+
 }
 
 

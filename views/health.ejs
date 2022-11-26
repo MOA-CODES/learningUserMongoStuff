@@ -125,7 +125,7 @@
               <p> </p>
               <div class="form-group">
                   <label  class="now1" for="allergies">Allergies:</label>
-                  <input type="text" value="<%- stud.MedicalCond%>" class="form-control" id="allergies" name="Allergies" aria-describedby="emailHelp" placeholder="Enter Allergies If Any" style="background-color: FAF3F5;" required>
+                  <input type="text" value="<%- stud.Allergies%>" class="form-control" id="allergies" name="Allergies" aria-describedby="emailHelp" placeholder="Enter Allergies If Any" style="background-color: FAF3F5;" required>
               </div>
               <P> </P>
                 <p> </p>
@@ -190,7 +190,7 @@
                 </div>
                 <button class="previous" id="previoush" disabled>Previous</button>
                 <a href="/studAct?StudID=<%- stud.StudID%>">
-                  <button class="next" id="nextheal">Next</button>
+                  <button class="next" id="nextheal" disabled>Next</button>
                 </a>
               </div>
       </section>
@@ -199,7 +199,7 @@
     <script>
       var nextbutton = document.getElementById("nextheal"); 
 
-      var housingstatus = document.getElementById("statushousing").value;
+      var housingstatus = document.getElementById("statushealth").value;
 
       var hhousingstatus = document.getElementById("healthOverall");
       

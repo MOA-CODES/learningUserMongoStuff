@@ -139,6 +139,62 @@ $("#oohousingupdate_user").submit( function (event){
 
 })
 
+$("#oohealthupdate_user").submit( function (event){
+    event.preventDefault();
+
+    var unindexed_array = $(this).serializeArray();
+    var data ={}
+
+    $.map(unindexed_array, function(n,i){
+        data[n['name']]=n['value']
+    })
+
+    console.log(data);
+
+    var request ={
+        "url":`http://localhost:3001/api/student/update`,
+        "method": "PUT",
+        "data":data
+    }
+
+    $.ajax(request).done(function(response){
+        console.log(response)
+        if(response == "Student updated"){
+            location.assign("http://localhost:3001/oohealth")
+        }
+    })
+
+
+})
+
+$("#ooactivitiesupdate_user").submit( function (event){
+    event.preventDefault();
+
+    var unindexed_array = $(this).serializeArray();
+    var data ={}
+
+    $.map(unindexed_array, function(n,i){
+        data[n['name']]=n['value']
+    })
+
+    console.log(data);
+
+    var request ={
+        "url":`http://localhost:3001/api/student/update`,
+        "method": "PUT",
+        "data":data
+    }
+
+    $.ajax(request).done(function(response){
+        console.log(response)
+        if(response == "Student updated"){
+            location.assign("http://localhost:3001/ooactivities")
+        }
+    })
+
+
+})
+
 
 
 
@@ -231,15 +287,40 @@ $("#healthform").submit(function(event){
 
     console.log(data);
 
-    // var request ={
-    //     "url":`http://localhost:3001/api/student/update`,
-    //     "method": "PUT",
-    //     "data":data
-    // }
+    var request ={
+        "url":`http://localhost:3001/api/student/update`,
+        "method": "PUT",
+        "data":data
+    }
 
-    // $.ajax(request).done(function(response){
-    //    alert("submitted successfully")
-    // })
+    $.ajax(request).done(function(response){
+       alert("submitted successfully")
+    })
+
+
+})
+
+$("#activitiesform").submit(function(event){
+    event.preventDefault();
+
+    var unindexed_array = $(this).serializeArray();
+    var data ={}
+
+    $.map(unindexed_array, function(n,i){
+        data[n['name']]=n['value']
+    })
+
+    console.log(data);
+
+    var request ={
+        "url":`http://localhost:3001/api/student/update`,
+        "method": "PUT",
+        "data":data
+    }
+
+    $.ajax(request).done(function(response){
+       alert("submitted successfully")
+    })
 
 
 })
