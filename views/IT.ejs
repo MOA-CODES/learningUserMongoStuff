@@ -48,18 +48,22 @@
         <P> </P> 
         <form action="results.html" method="POST" onsubmit="return false">
           <div class="form-group">
+            <label class="now1" for="exampleInputEmail1">StudID:</label>
+            <input type="text" class="form-control" name="StudID" value="<%- stud.StudID%>" aria-describedby="emailHelp" placeholder="Enter First Name"  readonly>
+          </div>
+          <div class="form-group">
             <label class="now1" for="exampleInputEmail1">First Name:</label>
-            <input type="text" class="form-control" name="Firstname" id="itFName" aria-describedby="emailHelp" placeholder="Enter First Name" style="background-color: FAF3F5;" required>
+            <input type="text" class="form-control" value="<%- stud.Firstname%>" name="Firstname" id="itFName" aria-describedby="emailHelp" placeholder="Enter First Name" style="background-color: FAF3F5;" required>
           </div>
           <P> </P>
           <div class="form-group">
               <label class="now1" for="exampleInputEmail1">Last Name:</label>
-              <input type="text" class="form-control" name="Lastname" id="itLName" aria-describedby="emailHelp" placeholder="Enter Last Name" style="background-color: FAF3F5;" required>
+              <input type="text" class="form-control" value="<%- stud.Lastname%>" name="Lastname" id="itLName" aria-describedby="emailHelp" placeholder="Enter Last Name" style="background-color: FAF3F5;" required>
           </div>
           <P> </P>
           <div class="form-group">
               <label class="now1" for="exampleInputEmail1">Middle Name:</label>
-              <input type="text" class="form-control" name="Middlename" id="itMName" aria-describedby="emailHelp" placeholder="Enter Middle Name" style="background-color: FAF3F5;" required>
+              <input type="text" class="form-control" value="<%- stud.Middlename%>" name="Middlename" id="itMName" aria-describedby="emailHelp" placeholder="Enter Middle Name" style="background-color: FAF3F5;" required>
           </div>
           <P> <br> </P>
           <P> </P>
@@ -88,8 +92,8 @@
                   <td>OPENERP CREATION</td>
                   <td>APPROVED</td>
                   <td>
-                      <label for="radio1"></label>
-                      <input type="radio"  class="larger1" name="radios" id="openErpradio" />
+                      <label for="radio"></label>
+                      <input type="radio"  class="larger1" name="radios" id="openErpradio" disabled />
                   </td>
                   
               </tr>
@@ -106,12 +110,12 @@
                   <td>APPROVED</td>
                   <td>
                       <label for="radio1"></label>
-                      <input type="radio"  class="larger1" name="radios1" id="iTOverall" />
+                      <input type="radio"  class="larger1" name="radios1" id="iTOverall" disabled/>
                   </td>
               </tr>
               <tr>
-                <td><input type="text" name="Financevr" id="getitvrstatus" value="<%- stud.Financevr%>" hidden> </td>
-                <td><input type="text" name="Financevr" id="openerpstatus" value="<%- stud.OpenerpStatus%>" hidden> </td>
+                <td><input type="text" name="" id="statusit" value="<%-stud.Itvr%>" hidden> </td>
+                <td colspan="2"><input type="text" name="" id="statusoe" value="<%-stud.OpenerpStatus%>" hidden> </td>
               </tr>
             </tbody>
           </table>
@@ -120,7 +124,7 @@
         <a>
           <button class="previous" id="previousit" disabled>Previous</button>
         </a>
-        <a href="housing.html">
+        <a href="/housing?StudID=<%- stud.StudID%>">
           <button class="next" id="nextit">Next</button>
         </a>
     </div>
@@ -128,20 +132,32 @@
     </div>
 
     <script>
-      var nextff = document.getElementById("nextit");
-      var status = document.getElementById("getitvrstatus").value;
-      var openerp = document.getElementById("openErpradio");
-      var rd = document.getElementById("iTOverall");
+      var nextbutton = document.getElementById("nextit"); 
 
-      if(status == "true"){
-        rd.checked = true;
-        nexff.disabled = false;
+      var itstatus = document.getElementById("statusit").value;
+      var oestatus = document.getElementById("statusoe").value;
+
+      var iitstatus = document.getElementById("iTOverall");
+      var openerpstatus = document.getElementById("openErpradio");
+
+      
+      if(itstatus == "true"){
+        iitstatus.checked = true;
+      }
+      if(oestatus == "true"){
+        openerpstatus.checked = true;
+      }
+
+      if(oestatus == "true" && itstatus == "true" ){
+        nextbutton.disabled = false;
       }else{
-        rd.checked = false;
-        nexff.disabled = true;
+        nextbutton.disabled = true;
       }
 
     </script>
+    
+     <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script> 
 </body>
 
 <%- include('include/_footer')%>

@@ -1,0 +1,22 @@
+<%- include('include/header')%>
+
+
+<form id="ooitupdate_user" method ="POST">
+
+    <label for="StudID">StudID</label>
+    <input type="text" name="StudID" value="<%- stud.StudID%>" ><br>
+
+    <label for="SchoolEmail">SchoolEmail</label>
+    <input type="text" name="SchoolEmail" value="<%- stud.SchoolEmail%>" ><br>
+
+    <label for="OpenerpStatus">OpenerpStatus</label>
+    <input type="text" name="OpenerpStatus" value="<%- stud.OpenerpStatus%>" ><br>
+
+    <label for="Financevr">Itvr</label>
+    <input type="text" name="Itvr" value="<%- stud.Itvr%>" ><br>
+
+    <button type="submit">Save</button>
+</form>
+
+<%- include('include/footer')%>
+
