@@ -44,8 +44,7 @@ const studentSchema = new Schema({
         type: String
     },
     SchoolEmail :{
-        type: Boolean,
-        default: false,
+        type: String
     },
     OpenerpStatus :{
         type: Boolean,

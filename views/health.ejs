@@ -48,48 +48,48 @@
               <P> </P>
               <form action="results.html" method="POST"  onsubmit="return false">
                 <div class="form-group">
-                  <label  class="now1" for="exampleInputEmail1">ID Number:</label>
-                  <input type="text" class="form-control" name="StudID" id="healthIdNo" aria-describedby="emailHelp" placeholder="Enter ID Number" style="background-color: FAF3F5;" required>
+                  <label class="now1" for="exampleInputEmail1">StudID:</label>
+                  <input type="text" class="form-control" name="StudID" value="<%- stud.StudID%>" aria-describedby="emailHelp" placeholder="Enter First Name"  readonly>
                 </div>
                 <P> </P>
                 <div>
                   <label  class="now1" for="exampleInputEmail1">Gender:&nbsp;&nbsp;&nbsp;</label>
             
-                  <input type="radio" id="healthMale" name="gender" value="Male">
+                  <input type="radio" id="healthMale" name="gender" value="Male" <%= stud.Gender == 'Male'?'checked':'' %>>
                   <label for="Male">Male</label>
-                  <input type="radio" id="healthFemale" name="gender" value="Female">
+                  <input type="radio" id="healthFemale" name="gender" value="Female" <%= stud.Gender == 'Female'?'checked':'' %>>
                   <label for="Female">Female</label>
               </div>
               <P> </P>
               <div class="form-group">
                   <label  class="now1" for="DOB">Date of Birth:</label>
-                  <input type="date" class="form-control" id="DOB" name="DOB" style="background-color: FAF3F5;" required>
+                  <input type="date" value="<%- stud.DOB%>" class="form-control" id="DOB" name="DOB" style="background-color: FAF3F5;" required>
                 </div>
                 <P> </P>
                 <div class="form-group">
                   <label  class="now1" for="nationality">Nationality: </label>
-                    <input type="text" class="form-control" name="Nationality" id="nationality" aria-describedby="emailHelp" placeholder="Enter Nationality" style="background-color: FAF3F5;" required>
+                    <input type="text" value="<%- stud.Nationality%>" class="form-control" name="Nationality" id="nationality" aria-describedby="emailHelp" placeholder="Enter Nationality" style="background-color: FAF3F5;" required>
                 </div>
                 <P> </P>
                 <div class="form-group">
                     <label  class="now1" for="exampleInputEmail1">House Address:</label>
-                    <input type="text" class="form-control" name="Address" id="houseAddress" aria-describedby="emailHelp" placeholder="Enter House Address" style="background-color: FAF3F5;" required>
+                    <input type="text" value="<%- stud.Address%>" class="form-control" name="Address" id="houseAddress" aria-describedby="emailHelp" placeholder="Enter House Address" style="background-color: FAF3F5;" required>
                 </div>
                 <P> </P>
                 <div class="form-group">
                     <label  class="now1" for="exampleInputEmail1">Email:</label>
-                    <input type="email" class="form-control" name="SchoolEmail" id="healthEmail" aria-describedby="emailHelp" placeholder="Enter Email Adress" style="background-color: FAF3F5;" required>
+                    <input type="email" value="<%- stud.SchoolEmail%>" class="form-control" name="SchoolEmail" id="healthEmail" aria-describedby="emailHelp" placeholder="Enter Email Adress" style="background-color: FAF3F5;" required>
                 </div>
                 <P> </P>
                 <div class="form-group">
                   <label  class="now1" for="exampleInputEmail1">Mobile No:</label>
-                  <input type="number" class="form-control" id="mobileNo" aria-describedby="emailHelp" name="Phonenumber" placeholder="Enter Mobile Number" style="background-color: FAF3F5;" required>
+                  <input type="number" value="<%- stud.Phonenumber%>" class="form-control" id="mobileNo" aria-describedby="emailHelp" name="Phonenumber" placeholder="Enter Mobile Number" style="background-color: FAF3F5;" required>
               </div>
                 <P> </P>
                 <div>
                   <label  class="now1" for="marital-status">Marital Status:</label>
                   <P> </P>
-                  <select name="MaritalStatus" id="marital-status" style="background-color: FAF3F5;" required>
+                  <select name="MaritalStatus" value="<%- stud.MaritalStatus%>" id="marital-status" style="background-color: FAF3F5;" required>
                       <option value="Single">Single</option>
                       <option value="Married">Married</option>
                       <option value="Divorced">Divorced</option>
@@ -99,7 +99,7 @@
                 <div>
                   <label  class="now1" for="blood-group">Blood Group:</label>
                   <P> </P>
-                  <select name="BG" id="blood-group" style="background-color: FAF3F5;" required>
+                  <select name="BG" value="<%- stud.BG%>" id="blood-group" style="background-color: FAF3F5;" required>
                       <option value="A+">A+</option><option value="A-">A-</option>
                       <option value="B+">B+</option><option value="B-">B-</option>
                       <option value="O+">O+</option><option value="O-">O-</option>
@@ -110,7 +110,7 @@
                 <div>
                   <label  class="now1" for="genotype">Genotype:</label>
                   <P> </P>
-                  <select name="GT" id="genotype" style="background-color: FAF3F5;" required>
+                  <select name="GT" value="<%- stud.GT%>" id="genotype" style="background-color: FAF3F5;" required>
                       <option value="AA">AA</option><option value="AB">AB</option>
                       <option value="AO">AO</option><option value="OO">OO</option>
                       <option value="BB">BB</option>
@@ -120,19 +120,19 @@
                 <P> </P>
               <div class="form-group">
                   <label  class="now1" for="medicalCondition">Medical Condition:</label>
-                  <input type="text" class="form-control" id="medicalCondition" name="MedicalCond" aria-describedby="emailHelp" placeholder="Enter If Any" style="background-color: FAF3F5;" required>
+                  <input type="text" value="<%- stud.MedicalCond%>" class="form-control" id="medicalCondition" name="MedicalCond" aria-describedby="emailHelp" placeholder="Enter If Any" style="background-color: FAF3F5;" required>
               </div>
               <p> </p>
               <div class="form-group">
                   <label  class="now1" for="allergies">Allergies:</label>
-                  <input type="text" class="form-control" id="allergies" name="Allergies" aria-describedby="emailHelp" placeholder="Enter Allergies If Any" style="background-color: FAF3F5;" required>
+                  <input type="text" value="<%- stud.MedicalCond%>" class="form-control" id="allergies" name="Allergies" aria-describedby="emailHelp" placeholder="Enter Allergies If Any" style="background-color: FAF3F5;" required>
               </div>
               <P> </P>
                 <p> </p>
-                <div class="form-group">
+                <!-- <div class="form-group">
                   <label  class="now1" for="dateRegistered">Date Registered:</label>
                   <input type="date" class="form-control" id="registerDate" name="DateReg" style="background-color: FAF3F5;" required>
-                </div>
+                </div> -->
                 <P> </P>
                 <P> </P>
                 <P> <br> </P>
@@ -140,17 +140,17 @@
                 <P> </P>
                 <div class="form-group">
                   <label  class="now1" for="parentName">Name:</label>
-                  <input type="text" class="form-control" id="parentName" name="Parentname" aria-describedby="emailHelp" placeholder="Enter Parent Name" style="background-color: FAF3F5;" required>
+                  <input type="text" value="<%- stud.Parentname%>"class="form-control" id="parentName" name="Parentname" aria-describedby="emailHelp" placeholder="Enter Parent Name" style="background-color: FAF3F5;" required>
               </div>
               <P> </P>
               <div class="form-group">
                   <label  class="now1" for="parentRelationship">Relationship:</label>
-                  <input type="text" class="form-control" id="parentRelationship" name="ParentRel" aria-describedby="emailHelp" placeholder="Enter Relationship" style="background-color: FAF3F5;" required>
+                  <input type="text" value="<%- stud.ParentRel%> class="form-control" id="parentRelationship" name="ParentRel" aria-describedby="emailHelp" placeholder="Enter Relationship" style="background-color: FAF3F5;" required>
               </div>
               <P> </P>
               <div class="form-group">
                   <label  class="now1" for="parentAddress">Parent Address:</label>
-                  <input type="text" class="form-control" id="parentAddress"  name="ParentAddress" aria-describedby="emailHelp" placeholder="Enter Parent Address" style="background-color: FAF3F5;" required>
+                  <input type="text" value="<%- stud.ParentAddress%> class="form-control" id="parentAddress"  name="ParentAddress" aria-describedby="emailHelp" placeholder="Enter Parent Address" style="background-color: FAF3F5;" required>
               </div>
               <P> </P>
               <div class="form-group">
@@ -182,62 +182,39 @@
                           <input type="radio"  class="larger1" name="radios" id="healthOverall" />
                           </td>
                       </tr>
+                      <tr>
+                        <td colspan="3"><input type="text" name="" id="statushealth" value="<%-stud.Healthvr%>" hidden> </td>
+                      </tr>
                     </tbody>
                   </table>
                 </div>
                 <button class="previous" id="previoush" disabled>Previous</button>
-                <a href="/studAct">
-                  <button class="next" id="nexth">Next</button>
+                <a href="/studAct?StudID=<%- stud.StudID%>">
+                  <button class="next" id="nextheal">Next</button>
                 </a>
-                <P> </P>
-                <label for="accept">
-                  <input type="checkbox" id="accept1" onclick="myFunc()">
-               </label>
               </div>
       </section>
     </div>
-    <script>
-      var nexthh = document.getElementById("nexth");
-      nexthh.disabled = true;
-      var hRadio = document.getElementById("healthOverall");
-      function myFunc() {
-      var checkBox = document.getElementById("accept1");
-      if (checkBox.checked == true){
-        hRadio.checked = true;
-        nexthh.disabled = false;
-      } else {
-        hRadio.checked = false;
-        nexthh.disabled = true;
 
+    <script>
+      var nextbutton = document.getElementById("nextheal"); 
+
+      var housingstatus = document.getElementById("statushousing").value;
+
+      var hhousingstatus = document.getElementById("healthOverall");
+      
+      if(housingstatus == "true"){
+        hhousingstatus.checked = true;
+        nextbutton.disabled = false;
+      }else{
+        nextbutton.disabled = true;
       }
-}
+
     </script>
+
+
     <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-    <script type="text/javascript">
-      $(document).ready(function() {
-        $('input[type="radio"]').click(function(e) {
-          e.preventDefault();
-          e.stopPropagation();
-        });
-      });
-    </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
-    <script>
-      document.getElementById("hFName").innerHTML=localStorage.getItem("firstNameValue");
-      var xx1 = localStorage.getItem("firstNameValue");
-      document.getElementById("hFName").defaultValue = xx1;
-
-      document.getElementById("hlName").innerHTML=localStorage.getItem("lastNameValue");
-      var xx2 = localStorage.getItem("lastNameValue");
-      document.getElementById("hlName").defaultValue = xx2;
-
-      document.getElementById("hmName").innerHTML=localStorage.getItem("middleNameValue");
-      var xx3 = localStorage.getItem("middleNameValue");
-      document.getElementById("hmName").defaultValue = xx3;
-
-      document.getElementById("hMajor").innerHTML=localStorage.getItem("majorValue");
-      var xx4 = localStorage.getItem("majorValue");
-      document.getElementById("hMajor").defaultValue = xx4;
- 
-</script>
 </body>
+
+<%- include('include/_footer')%>

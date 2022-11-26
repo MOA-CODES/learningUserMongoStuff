@@ -111,6 +111,36 @@ $("#ooitupdate_user").submit( function (event){
 
 })
 
+$("#oohousingupdate_user").submit( function (event){
+    event.preventDefault();
+
+    var unindexed_array = $(this).serializeArray();
+    var data ={}
+
+    $.map(unindexed_array, function(n,i){
+        data[n['name']]=n['value']
+    })
+
+    console.log(data);
+
+    var request ={
+        "url":`http://localhost:3001/api/student/update`,
+        "method": "PUT",
+        "data":data
+    }
+
+    $.ajax(request).done(function(response){
+        console.log(response)
+        if(response == "Student updated"){
+            location.assign("http://localhost:3001/oohousing")
+        }
+    })
+
+
+})
+
+
+
 
 $("#infoform").submit(function(event){
     event.preventDefault();
@@ -140,6 +170,31 @@ $("#infoform").submit(function(event){
 
 
 $("#financeform").submit(function(event){
+    event.preventDefault();
+
+    var unindexed_array = $(this).serializeArray();
+    var data ={}
+
+    $.map(unindexed_array, function(n,i){
+        data[n['name']]=n['value']
+    })
+
+    console.log(data);
+
+    var request ={
+        "url":`http://localhost:3001/api/student/update`,
+        "method": "PUT",
+        "data":data
+    }
+
+    $.ajax(request).done(function(response){
+       alert("submitted successfully")
+    })
+
+
+})
+
+$("#housingform").submit(function(event){
     event.preventDefault();
 
     var unindexed_array = $(this).serializeArray();

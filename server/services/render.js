@@ -59,7 +59,14 @@ exports.itpage = (req, res)=>{
 }
 
 exports.health = (req, res)=>{
-    res.render('health')
+    axios.get('http://localhost:3001/api/student/retrieve',{params:{StudID:req.query.StudID}})
+    
+    .then(function(response){
+        res.render("health",{stud:response.data})
+    })
+    .catch(err=>{
+        res.send(err);
+    })
 }
 
 exports.finance = (req, res)=>{
@@ -156,6 +163,19 @@ exports.ooit_update = (req, res)=>{
     })
 }
 
+exports.oohouse_update = (req, res)=>{
+
+    axios.get('http://localhost:3001/api/student/retrieve',{params:{StudID:req.query.StudID}})
+    
+    .then(function(response){
+        console.log(req.query.StudID);
+        console.log(response.data);
+        res.render("oohouse_upd",{stud:response.data})
+    })
+    .catch(err=>{
+        res.send(err);
+    })
+}
 
 
 

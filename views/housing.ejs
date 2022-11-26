@@ -46,41 +46,45 @@
       <div class="container">
         <P> <br> <br> <br> </P>
           <h1 style="color: 103908; font-family: Lucida Fax; font-size: 30px;"  >STEP IV: HOUSING & ID </h1>
-          <form action="results.html" method="POST"  onsubmit="return false">
+          <form id="housingform"  action="results.html" method="POST"  onsubmit="return false">
+            <div class="form-group">
+              <label class="now1" for="exampleInputEmail1">StudID:</label>
+              <input type="text" class="form-control" name="StudID" value="<%- stud.StudID%>" aria-describedby="emailHelp" placeholder="Enter First Name"  readonly>
+            </div>
               <div class="form-group">
                 <label class="now1" for="exampleInputEmail1">First Name:</label>
-                <input type="text" class="form-control" name="Firstname" id="hFName" aria-describedby="emailHelp" placeholder="Enter First Name" style="background-color: FAF3F5;" required>
+                <input type="text" value="<%-stud.Firstname%>" class="form-control" name="Firstname" id="hFName" aria-describedby="emailHelp" placeholder="Enter First Name" style="background-color: FAF3F5;" required>
               </div>
               <P> </P>
               <div class="form-group">
                   <label class="now1" for="exampleInputEmail1">Last Name:</label>
-                  <input type="text" class="form-control" id="hlName" name="Lastname" aria-describedby="emailHelp" placeholder="Enter Last Name" style="background-color: FAF3F5;" required>
+                  <input type="text" value="<%-stud.Lastname%>" class="form-control" id="hlName" name="Lastname" aria-describedby="emailHelp" placeholder="Enter Last Name" style="background-color: FAF3F5;" required>
               </div>
               <P> </P>
               <div class="form-group">
                   <label  class="now1"for="exampleInputEmail1">Middle Name:</label>
-                  <input type="text" class="form-control" id="hmName" name="Middlename" aria-describedby="emailHelp" placeholder="Enter Middle Name" style="background-color: FAF3F5;" required>
+                  <input type="text" value="<%-stud.Middlename%>" class="form-control" id="hmName" name="Middlename" aria-describedby="emailHelp" placeholder="Enter Middle Name" style="background-color: FAF3F5;" required>
               </div>
               <P> </P>
               <div class="form-group">
                   <label class="now1" for="exampleInputEmail1">Phone Number:</label>
-                  <input type="text" class="form-control" name="Phonenumber" id="hPhoneNumber" aria-describedby="emailHelp" placeholder="Enter Phone Number" style="background-color: FAF3F5;" required>
+                  <input type="text" value="<%-stud.Phonenumber%>" class="form-control" name="Phonenumber" id="hPhoneNumber" aria-describedby="emailHelp" placeholder="Enter Phone Number" style="background-color: FAF3F5;" required>
               </div>
               <P> </P>
               <div class="form-group">
                   <label class="now1" for="exampleInputEmail1">Major:</label>
-                  <input type="text" class="form-control" id="hMajor" name="Major" aria-describedby="emailHelp" placeholder="Enter Major" style="background-color: FAF3F5;" required>
+                  <input type="text" value="<%-stud.Major%>"  class="form-control" id="hMajor" name="Major" aria-describedby="emailHelp" placeholder="Enter Major" style="background-color: FAF3F5;" required>
               </div>
               <P> </P>
               <div class="form-group">
                   <label class="now1" for="exampleInputEmail1">Email:</label>
-                  <input type="email" class="form-control" id="hEmail" name="SchoolEmail" aria-describedby="emailHelp" placeholder="Enter Email Address" style="background-color: FAF3F5;" required>
+                  <input type="email" value="<%-stud.SchoolEmail%>" class="form-control" id="hEmail" name="SchoolEmail" aria-describedby="emailHelp" placeholder="Enter Email Address" style="background-color: FAF3F5;" required>
               </div>
               <P> </P>
               <div>
                 <label class="now1" for="housing-types">Housing Types:</label>
                 <P> </P>
-                <select name="HousingType" id="housing-types" style="background-color: FAF3F5;" required>
+                <select name="HousingType"  value="<%-stud.HousingType%>" id="housing-types" style="background-color: FAF3F5;" required>
                     <option value="3-in-1">3 - in - 1 with facilities</option>
                     <option value="2-in-1-with">2 - in - 1 with facilities</option>
                     <option value="2-in-1-without">2 - in - 1 without facilities</option>
@@ -90,19 +94,19 @@
               <div>
                   <label  class="now1" for="meal-plan">Preffered Meal Plan:</label>
                   <P> </P>
-                  <select name="MealPlan" id="meal-plan" style="background-color: FAF3F5;" required>
+                  <select name="MealPlan"  value="<%-stud.MealPlan%>" id="meal-plan" style="background-color: FAF3F5;" required>
                       <option value="7 Days Meal Plan">7 Days Meal Plan</option>
-                      <option value="14 Days Meal Plan">14  Days Meal Plan</option>
+                      <option value="14 Days Meal Plan">14 Days Meal Plan</option>
                       <option value="28 Days Meal Plan">28 Days Meal Plan</option>
                   </select>
                 </div>
                 <p> </p>
-              <div>
+              <!-- <div>
                   <label class="now1" for="file">Passport Photograph:</label>
                   <p> </p>
                   <input id="PassportID" type="file" name="Pic_Passport">
                 </div>
-              <p> </p>
+              <p> </p> -->
               
               <button type="submit" class="btn btn-primary">Submit</button>
           </form>
@@ -121,8 +125,11 @@
                       <td>APPROVED</td>
                       <td>
                       <label for="radio1"></label>
-                      <input type="radio"  class="larger1" name="radios" id="housingOverall" />
+                      <input type="radio"  class="larger1" name="radios" id="housingOverall" disabled/>
                       </td>
+                  </tr>
+                  <tr>
+                    <td colspan="3"><input type="text" name="" id="statushousing" value="<%-stud.Housingvr%>" hidden> </td>
                   </tr>
                 </tbody>
               </table>
@@ -130,65 +137,37 @@
             <a>
               <button class="previous" id="previoushs" disabled>Previous</button>
             </a>
-            <a href="/health">
-              <button class="next" id="nexths">Next</button>
+            <a href="/health?StudID=<%- stud.StudID%>">
+              <button class="next" id="nexths" disabled>Next</button>
             </a>
             <P> </P>
-            <label for="accept">
-              <input type="checkbox" id="accept1" onclick="myFunc()">
-           </label>
       </div>
   </section>
     </div>
-    <script>
-      var nexthss = document.getElementById("nexths");
-      nexthss.disabled = true;
-      var hsRadio = document.getElementById("housingOverall");
-      function myFunc() {
-      var checkBox = document.getElementById("accept1");
-      if (checkBox.checked == true){
-        hsRadio.checked = true;
-        nexths.disabled = false;
-      } else {
-        hsRadio.checked = false;
-        nexths.disabled = true;
 
+    <script>
+      var nextbutton = document.getElementById("nexths"); 
+
+      var housingstatus = document.getElementById("statushousing").value;
+
+      var hhousingstatus = document.getElementById("housingOverall");
+
+      
+      if(housingstatus == "true"){
+        hhousingstatus.checked = true;
+        nextbutton.disabled = false;
+      }else{
+        nextbutton.disabled = true;
       }
-}
+
     </script>
+    
     <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-    <script type="text/javascript">
-      $(document).ready(function() {
-        $('input[type="radio"]').click(function(e) {
-          e.preventDefault();
-          e.stopPropagation();
-        });
-      });
-    </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
-    <script>
-      document.getElementById("hFName").innerHTML=localStorage.getItem("firstNameValue");
-      var xx1 = localStorage.getItem("firstNameValue");
-      document.getElementById("hFName").defaultValue = xx1;
-
-      document.getElementById("hlName").innerHTML=localStorage.getItem("lastNameValue");
-      var xx2 = localStorage.getItem("lastNameValue");
-      document.getElementById("hlName").defaultValue = xx2;
-
-      document.getElementById("hmName").innerHTML=localStorage.getItem("middleNameValue");
-      var xx3 = localStorage.getItem("middleNameValue");
-      document.getElementById("hmName").defaultValue = xx3;
-
-      document.getElementById("hMajor").innerHTML=localStorage.getItem("majorValue");
-      var xx4 = localStorage.getItem("majorValue");
-      document.getElementById("hMajor").defaultValue = xx4;
-
-</script>
-
-
 </body>
 
+<%- include('include/_footer')%>
 
-              
+
 
 
