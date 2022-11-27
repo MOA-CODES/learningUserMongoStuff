@@ -10,16 +10,15 @@
     <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon.png">
     <link href="/vendor/jqvmap/css/jqvmap.min.css" rel="stylesheet">
 	<link rel="stylesheet" href="/vendor/chartist/css/chartist.min.css">
-    <link href="/vendor/bootstrap-select/dist/css/bootstrap-select.min.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <link href="/vendor/bootstrap-select/dist/css/bootstrap-select.min.css" rel="stylesheet">
 	<link href="/vendor/bootstrap-datetimepicker/css/bootstrap-datetimepicker.min.css" rel="stylesheet">
     <link href="/css/style.css" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
 </head>
 <body>
-
-    <!--*******************
-        Preloader start
-    ********************-->
     <div id="preloader">
         <div class="sk-three-bounce">
             <div class="sk-child sk-bounce1"></div>
@@ -27,18 +26,7 @@
             <div class="sk-child sk-bounce3"></div>
         </div>
     </div>
-    <!--*******************
-        Preloader end
-    ********************-->
-
-    <!--**********************************
-        Main wrapper start
-    ***********************************-->
     <div id="main-wrapper">
-
-        <!--**********************************
-            Nav header start
-        ***********************************-->
         <div class="nav-header">
             <!-- <a href="index2.html" class="brand-logo"> -->
               <p class="Orien1">Orientation <span class="blue">Guide App</span></p>
@@ -53,14 +41,7 @@
                 </div>
             </div>
         </div>
-        <!--**********************************
-            Nav header end
-        ***********************************-->
 
-
-		<!--**********************************
-            Header start
-        ***********************************-->
         <div class="header">
             <div class="header-content">
                 <nav class="navbar navbar-expand">
@@ -79,7 +60,7 @@
                             <li class="nav-item dropdown header-profile">
                                 <a class="nav-link" href="javascript:void(0)" role="button" data-toggle="dropdown">
 									<div class="header-info">
-										<span class="text-black">Hello, <strong>Chuka-Utazi</strong></span>
+										<span class="text-black">Hello, <strong>OO-Admissions</strong></span>
 										<p class="fs-12 mb-0">Admin</p>
 									</div>
                                     <!-- <img src="images/profile/17.jpg" width="20" alt=""/> -->
@@ -162,7 +143,15 @@
 														</span>
 														<div>
 															<p class="fs-18 mb-2">Total Student that have passed this stage:</p>
-															<span class="fs-26 text-primary font-w600">250/500</span>
+                              <%
+                                var x = 0;
+                                for (var i = 0; i<students.length; i++){
+                                if (students[i].Adminvr == true){
+                                   x = x + 1;
+                                }
+                              }
+                              %>
+															<span class="fs-26 text-primary font-w600"><%= x%>/<%= students.length %></span>
 														</div>
 													</div>
 													<!-- <ul class="users pl-3 py-2">
@@ -176,6 +165,7 @@
 												<div class="row align-items-center">
 													<div class="col-xl-6 col-xxl-12 col-md-6">
 														<div id="radialBar"></div>
+                            <!-- chukas displaying info -->
 													</div>
 													<div class="col-xl-6 col-xxl-12 col-md-6">
 														<div class="d-flex mb-4 align-items-center">
@@ -183,7 +173,7 @@
 																<svg class="mr-3" width="8" height="30" viewBox="0 0 8 30" fill="none" xmlns="http://www.w3.org/2000/svg">
 																	<rect width="7.65957" height="30" fill="#BDA25C"/>
 																</svg>
-																50%
+																<%= (x/students.length) * 100%>%
 															</span>
 
 												</div>
@@ -192,67 +182,48 @@
 									</div>
 								</div>
 							</div>
-
-        <!--**********************************
-            Content body end
-        ***********************************-->
         <div class="table-responsive">
                         <table class="table table-hover">
                           <thead>
                             <tr>
+                              <th>No.</th>
                               <th>ID</th>
                               <th>First Name</th>
                               <th>Major</th>
+                              <th>Personalemail</th>
                               <th>Jamb File</th>
                               <th>Waec File</th>
-                              <th>Transcript File</th>
+                              <th>Transcript</th>
+                              <th>Rec_letter</th>
+                              <th>Pic_Passport</th>
+                              <th>P_essay</th>
+                              <th>Admissionvr</th>
+                              <th>Action</th>
                             </tr>
                           </thead>
                           <tbody>
+                            <%for (var i = 0; i<students.length; i++){%>
                             <tr>
-                                <td>A00023905</td>
-                                <td>Riman</td>
-                                <td>Economics</td>
-                                <td>rimanmagaji@aun.edu.ng</td>
-                                <td>07010021914</td>
+                                <td><%= i+1 %></td>
+                                <td><%= students[i].StudID %></td>
+                                <td><%= students[i].Firstname %></td>
+                                <td><%= students[i].Major %></td>
+                                <td><%= students[i].Personalemail %></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td><%= students[i].Adminvr %></td>
+                                
                                 <td>
-                                <label for="radio1"></label>
-                                <input type="radio"  class="larger1" name="radios1" id="finanaceOverall1" />
+                                  <a href="/update-ooadmissions?StudID=<%= students[i].StudID%>" class="btn border-shadow update" title="1">
+                                    <span class="text-gradient"><i class="fas fa-pencil-alt"></i></span>
+                                  </a>
                                 </td>
                             </tr>
-                            <tr>
-                                <td>A00022012</td>
-                                <td>Elvis</td>
-                                <td>Computer</td>
-                                <td>elvischukwu@aun.edu.ng</td>
-                                <td>09057361373</td>
-                                <td>
-                                <label for="radio1"></label>
-                                <input type="radio"  class="larger1" name="radios2" id="finanaceOverall2" />
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>A00023457</td>
-                                <td>Chuka</td>
-                                <td>Engineering</td>
-                                <td>chukautazi@aun.edu.ng</td>
-                                <td>08168329568</td>
-                                <td>
-                                <label for="radio1"></label>
-                                <input type="radio"  class="larger1" name="radios3" id="finanaceOverall3" />
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>A00022282</td>
-                                <td>Moyo</td>
-                                <td>Law</td>
-                                <td>moyoajala@aun.edu.ng</td>
-                                <td>08056721921</td>
-                                <td>
-                                <label for="radio1"></label>
-                                <input type="radio"  class="larger1" name="radios4" id="finanaceOverall4" />
-                                </td>
-                            </tr>
+                            <%}%>
                           </tbody>
                         </table>
                       </div>

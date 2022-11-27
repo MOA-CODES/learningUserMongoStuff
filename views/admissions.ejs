@@ -153,67 +153,34 @@
                       <input type="radio"  class="larger1" name="radios" id="admissionOverall" />
                       </td>
                   </tr>
+                  <tr>
+                    <td colspan="3"><input type="text" name="" id="statusAdminvr" value="<%-stud.Adminvr%>" hidden> </td>
+                  </tr>
                 </tbody>
               </table>
             </div>
             <button class="previous" id="previousa" disabled>Previous</button>
-            <a href="/finance">
-              <button class="next" id="nexta">Next</button>
+            <a href="/finance?StudID=<%- stud.StudID%>">
+              <button class="next" id="nexta" disabled>Next</button>
             </a>
-            <P> </P>
-            <label for="accept">
-              <input type="checkbox" id="accept12" onclick="myFunc()")> 
-           </label>
       </section>
     </div>
+   
     <script>
-      var acc = document.getElementById("jambCheck"); 
-      acc.checked = fasle;
-      function valid(){
-        var vef = document.getElementById("jambFile");
-        if(document.getElementById("jambFile").value != ""){
-          jambCheck.checked = true;
-        }else{
-          jambCheck.checked = false;
-        }if(document.getElementById("waecFile").value != ""){
-          waecCheck.checked = true;
-        }else{
-          waecCheck.checked = false;
-        } if(document.getElementById("tscriptFile").value != ""){
-          tscriptCheck.checked = true;
-        }else{
-          tscriptCheck.checked = false;
-        }if(document.getElementById("rletterFile").value != ""){
-          rletterCheck.checked = true;
-        }else{
-          rletterCheck.checked = false;
-        }if(document.getElementById("idFile").value != ""){
-          idCheck.checked = true;
-        }else{
-          idCheck.checked = false;
-        }if(document.getElementById("pEssayFile").value != ""){
-          essayCheck.checked = true;
-        }else{
-          essayCheck.checked = false;
-        }
-      }
-    </script>
-    <script>
-      var nextaa = document.getElementById("nexta");
-      nextaa.disabled = true;
-      var aRadio = document.getElementById("admissionOverall");
-      aRadio.checked = false;
-      function myFunc() {
-      var checkBox = document.getElementById("accept12");
-      if (checkBox.checked == true){
-        aRadio.checked = true;
-        nextaa.disabled = false;
-      } else {
-        aRadio.checked = false;
-        nextaa.disabled = true;
+       var nextbutton = document.getElementById("nexta"); 
 
-      }
-}
+        var adminvrstatus = document.getElementById("statusAdminvr").value;
+
+        var aadminvrstatus = document.getElementById("admissionOverall");
+
+
+        if(adminvrstatus == "true"){
+          aadminvrstatus.checked = true;
+          nextbutton.disabled = false;
+        }else{
+          nextbutton.disabled = true;
+        }
+
     </script>
      
     

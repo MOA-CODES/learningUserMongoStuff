@@ -31,6 +31,7 @@ outline: none;
 cursor: pointer;
 width: 100px;
 float: right;
+margin-bottom: 20;
 }.checkst{
 padding: 15px 10px;
 border-radius: 6px;

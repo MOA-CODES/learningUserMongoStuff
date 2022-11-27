@@ -19,11 +19,16 @@ exports.info = (req, res)=>{
     .catch(err=>{
         res.send(err);
     })
-
 }
 
 exports.admissions = (req, res)=>{
-    res.render('admissions')
+    axios.get('http://localhost:3001/api/student/retrieve',{params:{StudID:req.query.StudID}})
+    .then(function(response){
+        res.render("admissions",{stud:response.data})
+    })
+    .catch(err=>{
+        res.send(err);
+    })
 }
 
 exports.viewsteps = (req, res)=>{
@@ -108,7 +113,13 @@ exports.ooactivities = (req, res)=>{
 }
 
 exports.ooadmissions = (req, res)=>{
-    res.render('ooadmissions')
+    axios.get('http://localhost:3001/api/student/retrieve')
+    .then(function(response){
+        res.render('ooadmissions', {students:response.data})
+    })
+    .catch(err=>{
+        res.send(err);
+    })
 }
 
 exports.oofinance = (req, res)=>{
@@ -217,6 +228,21 @@ exports.ooactivities_update = (req, res) => {
         console.log(req.query.StudID);
         console.log(response.data);
         res.render("ooactivities_upd",{stud:response.data})
+    })
+    .catch(err=>{
+        res.send(err);
+    })
+
+
+}
+
+exports.ooadmissions_update= (req, res) => {
+    axios.get('http://localhost:3001/api/student/retrieve',{params:{StudID:req.query.StudID}})
+    
+    .then(function(response){
+        console.log(req.query.StudID);
+        console.log(response.data);
+        res.render("ooadmission_upd",{stud:response.data})
     })
     .catch(err=>{
         res.send(err);
