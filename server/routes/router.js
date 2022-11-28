@@ -15,8 +15,6 @@ const UserController = require('../controller/UserController')
 const FileController = require('../controller/FileController')
 
 
-
-
 //connecting pages
 route.get('/',services.homeRoutes);
 route.get('/login',services.login);
@@ -30,6 +28,8 @@ route.get('/health',services.health);
 route.get('/finance',services.finance);
 route.get('/itstage',services.itpage);
 route.get('/congrats',services.congrats);
+route.get('/Map',services.map);
+
 
 route.get('/mainadmin', services.mainadmin);
 route.get('/ooactivities',services.ooactivities);
@@ -38,6 +38,7 @@ route.get('/oofinance',services.oofinance);
 route.get('/oohealth',services.oohealth);
 route.get('/oohousing',services.oohousing);
 route.get('/ooit',services.ooit);
+route.get('/ooleader',services.ooleader);
 
 route.get('/update-oofin',services.oofin_update);
 route.get('/update-ooadmissions',services.ooadmissions_update);
@@ -45,6 +46,8 @@ route.get('/update-ooit',services.ooit_update);
 route.get('/update-oohousing',services.oohouse_update);
 route.get('/update-oohealth',services.oohealth_update);
 route.get('/update-ooactivities',services.ooactivities_update);
+
+route.get('/report', services.report);
 
 
 
@@ -99,10 +102,10 @@ route.put('/api/user/update', UserController.update)    //update User
 
 const storage = multer.diskStorage({
 	destination: "./files/",
-	filename: function (req, file, cb) {
+	filename: function (req, Jamb, cb) {
 	  cb(
 		null,
-		file.fieldname + "-" + Date.now() + path.extname(file.originalname)
+		Jamb.fieldname + "-" + Date.now() + path.extname(Jamb.originalname)
 	  );
 	},
 });
@@ -113,8 +116,6 @@ const upload = multer({
 
 
 route.post('/api/file/register', upload.single("file"), FileController.create)  //create File
-route.post('/api/file/register', upload.array("files"), FileController.create)  //create Files
-
 
 route.put('/api/file/update', FileController.update)    //update File
 
