@@ -9,7 +9,7 @@ exports.create = (req,res)=>{
         // new file
         const F = new File({
             StudID:req.body.StudID,
-            Jamb:req.file.filename,
+            Jamb:req.Jamb.filename
         })
         F.save();
         return res.status(200).send({ success: true, message:"Success upload successful" });
@@ -30,7 +30,6 @@ exports.update = (req,res)=>{
         if(!data){
             res.status(404).send({message:`Cannot Update user with ${id}. Maybe user not found!`})
         }else{
-            // res.send(data)
             res.json({
                 message:'File: '+id+ ' updated'
             })
@@ -39,5 +38,4 @@ exports.update = (req,res)=>{
     .catch(err=>{
         res.status(500).send({message:"Error Update user information"})
     })
-    
 }

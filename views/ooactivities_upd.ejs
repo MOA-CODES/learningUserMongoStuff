@@ -1,15 +1,34 @@
 <%- include('include/header')%>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orientation App</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <style>
+    body{
+        background-color: beige;
+    }
+    </style>
+</head>
 
-
-<form id="ooactivitiesupdate_user" method ="POST">
-    <label for="StudID">StudID</label>
-    <input type="text" name="StudID" value="<%- stud.StudID%>" ><br>
-
-    <label for="Financevr">Studactvr</label>
-    <input type="text" name="Studactvr" value="<%- stud.Studactvr%>" ><br>
-
-    <button type="submit">Save</button>
-</form>
+<body>
+    <p> <p>
+    <div class="container card border-dark" style="margin-top: 10; text-align: center;">
+        <h1 style="color: #293a33; font-family: Lucida Fax; font-size: 20px;">Student Activities Verification Stage</h1>
+        <p> <p>
+        <form id="ooactivitiesupdate_user" method ="POST">
+        <label for="StudID">Student ID:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+        <input type="text" name="StudID" value="<%- stud.StudID%>" style="margin-left: 100px;"><br>
+        <p> <p>
+        <label for="Financevr" >Student Activities Verificattion:</label>
+        <input type="text" name="Studactvr" value="<%- stud.Studactvr%>" ><br>
+        <p> <p>
+        <button type="submit" class="btn btn-primary">Update Now</button>
+        <p> <p>
+        </form>
+    </div>
+</body>
 
 <%- include('include/footer')%>
 

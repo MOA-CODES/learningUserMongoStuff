@@ -1,4 +1,6 @@
 const User = require('../models/User')
+const Student = require('../models/Student')
+
 
 exports.create = (req,res)=>{
     //validate request
@@ -14,7 +16,20 @@ exports.create = (req,res)=>{
         password:req.body.password
     })
 
-    //save file in database
+    var x = req.body.User_id;
+    
+    if(x == "1111" || x == "0151" || x == "0152" || x == "0153" || x == "0154" || x == "0155" || x == "0156" || x == "0127"){
+
+    }else{
+        const stud = new Student({
+            StudID:req.body.User_id,
+            Firstname:req.body.name
+        })
+    
+        //save file in database
+        stud.save()
+    }
+
     U.save()
     .then(data =>{
         res.json({

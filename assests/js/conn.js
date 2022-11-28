@@ -45,8 +45,35 @@ $("#OGAlogin").submit(function(event){
                 alert("Log in successful")
                 alert("chuka never do am")
             }else{ //student user
-                alert("Log in successful")
-                location.assign(`http://localhost:3001/info?StudID=${id}`)
+                
+                var request2 ={
+                    "url":`http://localhost:3001/api/student/retrieve?StudID=${id}`,
+                    "method": "GET",
+                }
+
+                $.ajax(request2).done(function(response){
+                    alert("Log in successful")
+
+                    var one = response.Adminvr.toString(); var two = response.Adminvr.toString();
+                    var three = response.Adminvr.toString(); var four = response.Adminvr.toString();
+                    var five = response.Adminvr.toString(); var six = response.Adminvr.toString();
+
+                    if(one == "true" && two == "true" && three == "true" && four == "true" && five == "true" && six == "true"){
+                        location.assign("http://localhost:3001/congrats")
+                    }else if(one == "true" && two == "true" && three == "true" && four == "true" && five == "true"){
+                        location.assign(`http://localhost:3001/studAct?StudID=${id}`)
+                    }else if(one == "true" && two == "true" && three == "true" && four == "true" ){
+                        location.assign(`http://localhost:3001/health?StudID=${id}`)
+                    }else if(one == "true" && two == "true" && three == "true"){
+                        location.assign(`http://localhost:3001/housing?StudID=${id}`)
+                    }else if(one == "true" && two == "true"){
+                        location.assign(`http://localhost:3001/itstage?StudID=${id}`)
+                    }else if(one == "true"){
+                        location.assign(`http://localhost:3001/finance?StudID=${id}`)
+                    }else{
+                        location.assign(`http://localhost:3001/info?StudID=${id}`)
+                    }
+                });
             }
 
         }else{

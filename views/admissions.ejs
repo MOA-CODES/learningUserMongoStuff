@@ -21,7 +21,7 @@
           <div class="collapse navbar-collapse justify-content-end align-center" id="main-nav">
             <ul class="navbar-nav">
               <li class="nav-item">
-                <a style="color: black;" class="nav-link" href="/index">Home</a>
+                <a style="color: black;" class="nav-link" href="/">Home</a>
               </li>
               <li class="nav-item">
                 <a style="color: black;" class="nav-link" href="/admissions">Guide</a>
@@ -33,7 +33,7 @@
                 <a style="color:black" class="nav-link" href="/Welfare">Welfare</a>
               </li>
               <li class="nav-item ms-2 d-none d-md-inline">
-                <a style ="margin-top: 6%;" class="btn btn-danger btn-sm" href="/index">Log Out</a>
+                <a style ="margin-top: 6%;" class="btn btn-danger btn-sm" href="/">Log Out</a>
               </li>
               
             </ul>
@@ -47,7 +47,6 @@
               <P> </P>
               <h1 style="color: 103908; font-family: Lucida Fax; font-size: 30px;"  >STEP I: ADMISSIONS</h1>
               <p> </p>
-              <form action="" method="" onsubmit="return false">
                   <div class="table-responsive">
                       <table class="table table-hover">
                         <thead>
@@ -55,6 +54,7 @@
                             <th>No.</th>
                             <th>Activities</th>
                             <th>Files</th>
+                            <th>Submit</th>
                             <th>Check</th>
                           </tr>
                         </thead>
@@ -62,10 +62,14 @@
                           <tr>
                               <td>1</td>
                               <td>Submit Jamb Result Here</td>
-                              <td> 
+                              <form>
+                              <td>
                                   <input type="file" name="Jamb" id="jambFile">
-                                 
                               </td>
+                              <td>
+                                <button type="submit" class="btn btn-primary" onclick="valid()">Submit</button>
+                              </td>
+                              <form>
                               <td>
                                   <input type="checkbox" name="admindoc" class="larger" id="jambCheck" required>
                             </td>
@@ -73,10 +77,15 @@
                           <tr>
                               <td>3</td>
                               <td>Submit Your WAEC Result Or Any Other Alternative Here</td>
+                              <form>
                               <td> 
                                   <input type="file" name="Waec" id="waecFile">
                                   
                               </td>
+                              <td>
+                                <button type="submit" class="btn btn-primary" onclick="valid()">Submit</button>
+                              </td>
+                              <form>
                               <td>
                                   <input type="checkbox" name="admindoc" class="larger" id="waecCheck" required>
                             </td>
@@ -84,10 +93,15 @@
                           <tr>
                               <td>4</td>
                               <td>Submit Your Transcript (University/High School/Transfer)</td>
+                              <form>
                               <td> 
                                   <input type="file" name="Transcript" id="tscriptFile">
                           
                               </td>
+                              <td>
+                                <button type="submit" class="btn btn-primary" onclick="valid()">Submit</button>
+                              </td>
+                              <form>
                               <td>
                                   <input type="checkbox" name="admindoc" class="larger" id="tscriptCheck" required>
                             </td>
@@ -95,10 +109,15 @@
                           <tr>
                               <td>5</td>
                               <td>Submit Your Recommendation Letter</td>
+                              <form>
                               <td> 
                                   <input type="file" name="Rec_letter" id="rletterFile">
                               
                               </td>
+                              <td>
+                                <button type="submit" class="btn btn-primary" onclick="valid()">Submit</button>
+                              </td>
+                              <form>
                               <td>
                                   <input type="checkbox" name="admindoc" class="larger" id="rletterCheck" required>
                             </td>
@@ -106,10 +125,15 @@
                           <tr>
                               <td>6</td>
                               <td>Submit ID (International Passpoert/ Drivers License/ NIN)</td>
+                              <form>
                               <td> 
                                   <input type="file" name="Passport" id="idFile">
                                   
                               </td>
+                              <td>
+                                <button type="submit" class="btn btn-primary" onclick="valid()">Submit</button>
+                              </td>
+                              <form>
                               <td>
                                   <input type="checkbox" name="admindoc" class="larger" id="idCheck" required>
                             </td>
@@ -117,10 +141,15 @@
                           <tr>
                               <td>7</td>
                               <td>Submit Your Personal Essay</td>
+                              <form>
                               <td> 
                                   <input type="file" name="P_essay" id="pEssayFile">
                             
                               </td>
+                              <td>
+                                <button type="submit" class="btn btn-primary" onclick="valid()">Submit</button>
+                              </td>
+                              <form>
                               <td>
                                   <input type="checkbox" name="admindoc" class="larger" id="essayCheck" required>
                             </td>
@@ -128,9 +157,6 @@
                         </tbody>
                       </table>
                       <P> </P>
-                      <button type="submit" class="btn btn-primary" onclick="valid()">Submit</button>
-
-
                     </div>
                     <p> <br> <br> </p>
 

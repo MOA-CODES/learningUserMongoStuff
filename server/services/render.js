@@ -39,6 +39,10 @@ exports.welfare = (req, res)=>{
     res.render('Welfare')
 }
 
+exports.map = (req, res)=>{
+    res.render('Map')
+}
+
 exports.studact = (req, res)=>{
     axios.get('http://localhost:3001/api/student/retrieve',{params:{StudID:req.query.StudID}})
     .then(function(response){
@@ -96,11 +100,11 @@ exports.congrats = (req, res)=>{
     res.render('congrats')
 }
 
-
-
-exports.mainadmin = (req, res)=>{
-    res.render('mainadmin')
+exports.report = (req, res)=>{
+    res.render('report')
 }
+
+
 
 exports.ooactivities = (req, res)=>{
     axios.get('http://localhost:3001/api/student/retrieve')
@@ -163,6 +167,19 @@ exports.ooit = (req, res)=>{
     })
 }
 
+exports.ooleader = (req, res)=>{
+    axios.get('http://localhost:3001/api/student/retrieve')
+    .then(function(response){
+        res.render('ooleader', {students:response.data})
+    })
+    .catch(err=>{
+        res.send(err);
+    })
+}
+
+exports.mainadmin = (req, res)=>{
+    res.render('mainadmin')
+}
 
 
 exports.oofin_update = (req, res)=>{
@@ -250,6 +267,7 @@ exports.ooadmissions_update= (req, res) => {
 
 
 }
+
 
 
 

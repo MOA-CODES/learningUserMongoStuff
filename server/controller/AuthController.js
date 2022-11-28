@@ -83,7 +83,7 @@ exports.login2 = (req, res, next) =>{
             res.send(err);
         }else{
             // console.log(user.password);
-            if(user.password==password){
+            if(user.password == password){
                 console.log("Logged in ")
                 res.send("Logged in")
                 // res.redirect("/admissions");
