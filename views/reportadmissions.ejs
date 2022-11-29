@@ -50,24 +50,18 @@ src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
       <th>ID FILE</th>
       <th>PERSONAL ESSAY</th>
     </tr>
-    <tr>
-      <td>A00022394</td>
-      <td>Elvis</td>
-      <td>Chukwuani</td>
-      <td>DPP</td>
-      <td>elvis.chukwuani@aun.edu.ng</td>
-      <td>Mr. Nnaemeka</td>
-     
-    </tr>
-    <tr>
-      <td>A00066789</td>
-      <td>Moyo</td>
-      <td>Ajala</td>
-      <td>moyo.ajala@aun.edu.ng</td>
-      <td>Full</td>
-      <td>Mrs Ajala</td>
-     
-    </tr>
+    <!-- I dont think its neccessary (this page)
+    <%for (var i = 0; i<students.length; i++){%>
+      <tr>
+        <td><%= students[i].StudID %></td>
+        <td><%= students[i].Firstname %></td>
+        <td><%= students[i].Lastname %></td>
+        <td><%= students[i].Faith %></td>
+        <td><%= students[i].SportsClub %></td>
+        <td><%= students[i].Hobbies %></td>
+        <td><%= students[i].GovClubs %></td>
+      </tr>
+      <%}%> -->
   </tbody>
 </table>
 <button id="csv" class="btn btn-info">Download Sheet</button>

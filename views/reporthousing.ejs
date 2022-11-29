@@ -52,16 +52,18 @@ src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
       <th>Housing Types</th>
       <th>Preffered Meal Plan</th>
     </tr>
-    <tr>
-      <td>A00022394</td>
-      <td>Elvis</td>
-      <td>Chukwuani</td>
-      <td>08098151119</td>
-      <td>Software Engineering</td>
-      <td>elvis.chukwuani@aun.edu.ng</td>
-      <td>2-In-1 Without Facilities</td>
-      <td>1 Meal Plan</td>
-    </tr>
+    <%for (var i = 0; i<students.length; i++){%>
+      <tr>
+        <td><%= students[i].StudID %></td>
+        <td><%= students[i].Firstname %></td>
+        <td><%= students[i].Lastname %></td>
+        <td><%= students[i].Phonenumber %></td>
+        <td><%= students[i].Major %></td>
+        <td><%= students[i].SchoolEmail %></td>
+        <td><%= students[i].HousingType %></td>
+        <td><%= students[i].MealPlan %></td>
+      </tr>
+      <%}%>
   </tbody>
 </table>
 <button id="csv" class="btn btn-info">Download Sheet</button>

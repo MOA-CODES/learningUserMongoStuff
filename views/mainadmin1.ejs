@@ -266,21 +266,56 @@
                           <th>Housingvr</th>
                           <th>Healthvr</th>
                           <th>Studactvr</th>
+
+                          <th>Action</th>
                         </tr>
                       </thead>
                       <tbody>
                         <%for (var i = 0; i<students.length; i++){%>
                         <tr>
                           <td><%= i+1 %></td>
-                          <td><%= students[i].StudID %></td>
+                          <td><%students[i].StudID %></td>
+                          <td><%= students[i].Firstname %></td>
+                          <td><%= students[i].Middlename %></td>
+                          <td><%= students[i].Lastname %></td>
+                          <td><%= students[i].Gender %></td>
+                          <td><%= students[i].DOB %></td>
+                          <td><%= students[i].Phonenumber %></td>
                           <td><%= students[i].Major %></td>
-                          <td>Economics</td>
-                          <td>rimanmagaji@aun.edu.ng</td>
-                          <td>07010021914</td>
-                          <td>
-                            <label for="radio1"></label>
-                            <input type="radio" class="larger1" name="radios1" id="finanaceOverall1" />
-                          </td>
+                          <td><%= students[i].Nationality %></td>
+                          <td><%= students[i].Address %></td>
+                          <td><%= students[i].Personalemail %></td>
+                          <td><%= students[i].Schoolemail %></td>
+                          <td><%= students[i].ArrivalDate %></td>
+                          <td><%= students[i].MaritalStatus %></td>
+                          <td><%= students[i].GuardianName %></td>
+                          <td><%= students[i].GuardianRel %></td>
+                          <td><%= students[i].PaymentPlan %></td>
+                          <td><%= students[i].HousingType %></td>
+                          <td><%= students[i].MealPlan %></td>
+
+                          <td><%= students[i].BG %></td>
+                          <td><%= students[i].GT %></td>
+                          <td><%= students[i].MedicalCond %></td>
+                          <td><%= students[i].Allergies %></td>
+                          <td><%= students[i].ParentRel %></td>
+                          <td><%= students[i].ParentAddress %></td>
+                          <td><%= students[i].ParentPhone %></td>
+
+                          <td><%= students[i].Faith %></td>
+                          <td><%= students[i].AcademicInt %></td>
+                          <td><%= students[i].SportsClub %></td>
+                          <td><%= students[i].Hobbies %></td>
+                          <td><%= students[i].GovClubs %></td>
+
+                          <td><%= students[i].OpenerpStatus %></td>
+                          <td><%= students[i].Adminvr %></td>
+                          <td><%= students[i].Financevr %></td>
+                          <td><%= students[i].Itvr %></td>
+                          <td><%= students[i].Housingvr %></td>
+                          <td><%= students[i].Healthvr %></td>
+                          <td><%= students[i].Studactvr %></td>
+                          
                         </tr>
                         <%}%>
                       </tbody>

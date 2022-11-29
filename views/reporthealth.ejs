@@ -57,34 +57,34 @@ src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
       <th>Genotype</th>
       <th>Medical Condition</th>
       <th>Allergies</th>
-      <th>Guardian Name</th>
-      <th>Guardian Relationship</th>
-      <th>Guardian Address</th>
-      <th>Guardian Phone Number</th>
+      <th>Parent Name</th>
+      <th>Parent Relationship</th>
+      <th>Parent Address</th>
+      <th>Parent Phone Number</th>
 
     </tr>
-    <tr>
-      <td>A00022394</td>
-      <td>Elvis</td>
-      <td>Chukwuani</td>
-      <td>DPP</td>
-      <td>elvis.chukwuani@aun.edu.ng</td>
-      <td>Mr. Nnaemeka</td>
-      <td>Father</td>
-      <td>Father</td>
-      <td>Father</td>
-      <td>Father</td>
-      <td>Father</td>
-      <td>Father</td>
-      <td>Father</td>
-      <td>Father</td>
-      <td>Father</td>
-      <td>Father</td>
-      <td>Father</td>
-      <td>Father</td>
-
-    </tr>
-   
+    <%for (var i = 0; i<students.length; i++){%>
+      <tr>
+        <td><%= students[i].StudID %></td>
+        <td><%= students[i].Firstname %></td>
+        <td><%= students[i].Lastname %></td>
+        <td><%= students[i].Gender %></td>
+        <td><%= students[i].DOB %></td>
+        <td><%= students[i].Nationality %></td>
+        <td><%= students[i].Address %></td>
+        <td><%= students[i].SchoolEmail %></td>
+        <td><%= students[i].Phonenumber %></td>
+        <td><%= students[i].MaritalStatus %></td>
+        <td><%= students[i].BG %></td>
+        <td><%= students[i].GT %></td>
+        <td><%= students[i].MedicalCond %></td>
+        <td><%= students[i].Allergies %></td>
+        <td><%= students[i].Parentname %></td>
+        <td><%= students[i].ParentRel %></td>
+        <td><%= students[i].ParentAddress %></td>
+        <td><%= students[i].ParentPhone %></td>
+      </tr>
+      <%}%>
   </tbody>
 </table>
 <button id="csv" class="btn btn-info">Download Sheet</button>

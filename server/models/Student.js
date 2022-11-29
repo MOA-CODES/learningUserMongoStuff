@@ -56,9 +56,6 @@ const studentSchema = new Schema({
     MealPlan :{
         type: String
     },
-    HousingType :{
-        type: String
-    },
     DOB :{
         type: String
     },

@@ -100,10 +100,6 @@ exports.congrats = (req, res)=>{
     res.render('congrats')
 }
 
-exports.report = (req, res)=>{
-    res.render('report')
-}
-
 
 
 exports.ooactivities = (req, res)=>{
@@ -210,19 +206,53 @@ exports.mainadmin1 = (req, res)=>{
 }
 
 exports.reportadmissions = (req, res)=>{
-    res.render('reportadmissions',)
+    axios.get('http://localhost:3001/api/student/retrieve')
+    .then(function(response){
+        res.render('reportadmissions', {students:response.data})
+    })
+    .catch(err=>{
+        res.send(err);
+    })
 }
 
 exports.reporthealth = (req, res)=>{
-    res.render('reporthealth',)
+    axios.get('http://localhost:3001/api/student/retrieve')
+    .then(function(response){
+        res.render('reporthealth', {students:response.data})
+    })
+    .catch(err=>{
+        res.send(err);
+    })
 }
 
 exports.reporthousing = (req, res)=>{
-    res.render('reporthousing',)
+    axios.get('http://localhost:3001/api/student/retrieve')
+    .then(function(response){
+        res.render('reporthousing', {students:response.data})
+    })
+    .catch(err=>{
+        res.send(err);
+    })
 }
 
 exports.reportstudAct = (req, res)=>{
-    res.render('reportstudAct',)
+    axios.get('http://localhost:3001/api/student/retrieve')
+    .then(function(response){
+        res.render('reportstudAct', {students:response.data})
+    })
+    .catch(err=>{
+        res.send(err);
+    })
+}
+
+exports.report = (req, res)=>{
+    axios.get('http://localhost:3001/api/student/retrieve')
+    .then(function(response){
+        res.render('report', {students:response.data})
+    })
+    .catch(err=>{
+        res.send(err);
+    })
 }
 
 

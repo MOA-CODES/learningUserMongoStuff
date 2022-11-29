@@ -51,24 +51,18 @@ src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
       <th>Guardian Name</th>
       <th>Guardian Relationship</th>
     </tr>
+    <%for (var i = 0; i<students.length; i++){%>
+
     <tr>
-      <td>A00022394</td>
-      <td>Elvis</td>
-      <td>Chukwuani</td>
-      <td>DPP</td>
-      <td>elvis.chukwuani@aun.edu.ng</td>
-      <td>Mr. Nnaemeka</td>
-      <td>Father</td>
+      <td><%= students[i].StudID %></td>
+      <td><%= students[i].Firstname %></td>
+      <td><%= students[i].Lastname %></td>
+      <td><%= students[i].PaymentPlan %></td>
+      <td><%= students[i].SchoolEmail %></td>
+      <td><%= students[i].GuardianName %></td>
+      <td><%= students[i].GuardianRel %></td>
     </tr>
-    <tr>
-      <td>A00066789</td>
-      <td>Moyo</td>
-      <td>Ajala</td>
-      <td>moyo.ajala@aun.edu.ng</td>
-      <td>Full</td>
-      <td>Mrs Ajala</td>
-      <td>Mother</td>
-    </tr>
+    <%}%>
   </tbody>
 </table>
 <button id="csv" class="btn btn-info">Download Sheet</button>
