@@ -112,13 +112,13 @@ exports.retrieve = (req, res) => {
         Student.findOne({StudID: id})
             .then(data=>{
                 if(!data){
-                    res.status(404).send({message: "User not Found with"+id+"id"})
+                    res.status(404).send({message: "Student not Found with"+id+"id"})
                 }else{
                     res.send(data)
                 }
             })
             .catch(err=>{
-                res.status(500).send({ message:"Eroor retrieving user with id "+id })
+                res.status(500).send({ message:"Eroor retrieving Student with id "+id })
             })
 
     }else{
@@ -132,25 +132,6 @@ exports.retrieve = (req, res) => {
                 });
             });
     }
-}
-
-
-exports.retrieve2 = (req, res) => {
-        const id = req.params.StudID;
-
-        console.log("hello")
-
-        Student.findById({StudID: id}, req.params, {useFindAndModify: false})
-            .then(data=>{
-                if(!data){
-                    res.status(404).send({message: "User not Found with"+id+"id"})
-                }else{
-                    res.send(data)
-                }
-            })
-            .catch(err=>{
-                res.status(500).send({ message:"Eroor retrieving user with id"+id })
-            })    
 }
 
 exports.filter = async (req, res) => { //because i do .then i didnt use async

@@ -90,3 +90,32 @@ exports.find = (req,res)=>{
             })
 
 }
+
+exports.retrieve = (req, res) => {
+    if(req.query.StudID){
+        const id = req.query.StudID;
+
+        User.findOne({StudID: id})
+            .then(data=>{
+                if(!data){
+                    res.status(404).send({message: "User not Found with "+id+" id"})
+                }else{
+                    res.send(data)
+                }
+            })
+            .catch(err=>{
+                res.status(500).send({ message:"Eroor retrieving user with id "+id })
+            })
+
+    }else{
+        User.find()
+        .then(data => {
+                res.send(data)
+            })
+            .catch(err=>{
+                res.status(500).send({
+                    message:err.message||"Error occured while retrieving User info"
+                });
+            });
+    }
+}

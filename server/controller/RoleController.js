@@ -61,3 +61,33 @@ exports.update = (req,res)=>{
     })
     
 }
+
+
+exports.retrieve = (req, res) => {
+    if(req.query.Role_id){
+        const id = req.query.Role_id;
+
+        Role.findOne({Role_id: id})
+            .then(data=>{
+                if(!data){
+                    res.status(404).send({message: "Role not Found with "+id+" id"})
+                }else{
+                    res.send(data)
+                }
+            })
+            .catch(err=>{
+                res.status(500).send({ message:"Eroor retrieving Role with id "+id })
+            })
+
+    }else{
+        Role.find()
+        .then(data => {
+                res.send(data)
+            })
+            .catch(err=>{
+                res.status(500).send({
+                    message:err.message||"Error occured while retrieving Role info"
+                });
+            });
+    }
+}

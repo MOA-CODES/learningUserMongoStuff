@@ -181,6 +181,55 @@ exports.mainadmin = (req, res)=>{
     res.render('mainadmin')
 }
 
+exports.adminfiles = (req, res)=>{
+    res.render('adminfiles')
+}
+
+exports.adminroles = (req, res)=>{
+    res.render('adminroles')
+}
+
+exports.adminusers = (req, res)=>{
+    axios.get('http://localhost:3001/api/user/retrieve')
+    .then(function(response){
+        res.render('adminusers', {users:response.data})
+    })
+    .catch(err=>{
+        res.send(err);
+    })
+}
+
+exports.mainadmin1 = (req, res)=>{
+    axios.get('http://localhost:3001/api/student/retrieve')
+    .then(function(response){
+        res.render('mainadmin1', {students:response.data})
+    })
+    .catch(err=>{
+        res.send(err);
+    })
+}
+
+exports.reportadmissions = (req, res)=>{
+    res.render('reportadmissions',)
+}
+
+exports.reporthealth = (req, res)=>{
+    res.render('reporthealth',)
+}
+
+exports.reporthousing = (req, res)=>{
+    res.render('reporthousing',)
+}
+
+exports.reportstudAct = (req, res)=>{
+    res.render('reportstudAct',)
+}
+
+
+
+
+
+
 
 exports.oofin_update = (req, res)=>{
     axios.get('http://localhost:3001/api/student/retrieve',{params:{StudID:req.query.StudID}})

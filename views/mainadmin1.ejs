@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Orientation Guide Admin Dashboard</title>
+  <!-- Favicon icon -->
+  <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon.png">
+  <link href="/vendor/jqvmap/css/jqvmap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="/vendor/chartist/css/chartist.min.css">
+  <link href="/vendor/bootstrap-select/dist/css/bootstrap-select.min.css" rel="stylesheet">
+  <link href="/vendor/bootstrap-datetimepicker/css/bootstrap-datetimepicker.min.css" rel="stylesheet">
+  <link href="/css/style.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <!--*******************
+        Preloader start
+    ********************-->
+  <div id="preloader">
+    <div class="sk-three-bounce">
+      <div class="sk-child sk-bounce1"></div>
+      <div class="sk-child sk-bounce2"></div>
+      <div class="sk-child sk-bounce3"></div>
+    </div>
+  </div>
+  <!--*******************
+        Preloader end
+    ********************-->
+
+  <!--**********************************
+        Main wrapper start
+    ***********************************-->
+  <div id="main-wrapper">
+
+    <!--**********************************
+            Nav header start
+        ***********************************-->
+    <div class="nav-header">
+      <!-- <a href="index2.html" class="brand-logo"> -->
+      <p class="Orien1">Orientation <span class="blue">Guide App</span></p>
+      <!-- <img class="logo-abbr" src="./images/logo.png" alt="">
+                <img class="logo-compact" src="./images/logo-text.png" alt="">
+                <img class="brand-title" src="./images/logo-text.png" alt=""> -->
+      <!-- </a> -->
+
+      <div class="nav-control">
+        <div class="hamburger">
+          <span class="line"></span><span class="line"></span><span class="line"></span>
+        </div>
+      </div>
+    </div>
+    <!--**********************************
+            Nav header end
+        ***********************************-->
+
+    <!--**********************************
+            Chat box start
+        ***********************************-->
+    <!--**********************************
+            Header start
+        ***********************************-->
+    <div class="header">
+      <div class="header-content">
+        <nav class="navbar navbar-expand">
+          <div class="collapse navbar-collapse justify-content-between">
+            <div class="header-left">
+              <div class="dashboard_bar">
+                <div class="input-group search-area d-lg-inline-flex d-none">
+                  <input type="text" class="form-control" placeholder="Search here...">
+                  <div class="input-group-append">
+                    <span class="input-group-text"><a href="javascript:void(0)"><i class="flaticon-381-search-2"></i></a></span>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+<strong>
+  <li class="nav-item">
+    <a style="color: black;" class="nav-link" href="/mainadmin1">Student</a>
+  </li>
+</strong>
+<strong>
+  <li class="nav-item">
+    <a style="color: black;" class="nav-link" href="/adminusers">Users</a>
+  </li>
+</strong>
+<strong>
+  <li class="nav-item">
+    <a style="color: black;" class="nav-link" href="/adminfiles">Files</a>
+  </li>
+</strong>
+<strong>
+  <li class="nav-item">
+    <a style="color: black;" class="nav-link" href="/adminroles">Roles</a>
+  </li>
+</strong>
+<!-- <li class="text-black"><strong>Users</strong></li>
+<li class="text-black"><strong>Files</strong></li></li>
+<li class="text-black"><strong>Student</strong></li> -->
+            <li class="nav-item dropdown header-profile">
+              <a class="nav-link" href="javascript:void(0)" role="button" data-toggle="dropdown">
+                <div class="header-info">
+
+                  <span class="text-black">Hello, <strong>Chief Admin</strong></span>
+                  <p class="fs-12 mb-0">Admin</p>
+                </div>
+                <!-- <img src="images/profile/17.jpg" width="20" alt=""/> -->
+              </a>
+              <div class="dropdown-menu dropdown-menu-right">
+
+
+                <a href="/login" class="dropdown-item ai-icon">
+                  <svg id="icon-logout" xmlns="http://www.w3.org/2000/svg" class="text-danger" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
+                    <polyline points="16 17 21 12 16 7"></polyline>
+                    <line x1="21" y1="12" x2="9" y2="12"></line>
+                  </svg>
+                  <span class="ml-2">Logout </span>
+                </a>
+              </div>
+            </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </div>
+    <!--**********************************
+            Header end ti-comment-alt
+        ***********************************-->
+
+    <!--**********************************
+            Sidebar start
+        ***********************************-->
+
+    <!--**********************************
+            Content body start
+        ***********************************-->
+    <div class="content-body">
+      <!-- row -->
+      <div class="container-fluid">
+        <div class="form-head d-flex align-items-center mb-sm-4 mb-3">
+          <div class="mr-auto">
+            <h2 class="text-black font-w600">Dashboard</h2>
+            <p class="mb-0">Orientation Admin Dashboard</p>
+          </div>
+          <!-- <a href="" class="btn btn-outline-primary"><i class=""></i>Generate Report</a> -->
+        </div>
+
+
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="row">
+              <div class="col-xl-12">
+                <div class="card">
+                  <div class="card-header d-sm-flex d-block pb-0 border-0">
+                    <div class="mr-auto pr-3">
+                      <h4 class="text-black fs-20 mb-0">Student Percentage</h4>
+                    </div>
+                    <div class="card-action card-tabs mt-3 mt-sm-0 mt-3 mb-sm-0 mb-3 mt-sm-0">
+                      <ul class="nav nav-tabs" role="tablist">
+                        <li class="nav-item">
+                          <a class="nav-link active" data-toggle="tab" href="#Daily" role="tab">
+                            Today
+                          </a>
+                        </li>
+                        <!-- <li class="nav-item">
+													<a class="nav-link" data-toggle="tab" href="#Weekly" role="tab">
+														Weekly
+													</a>
+												</li>
+												<li class="nav-item">
+													<a class="nav-link" data-toggle="tab" href="#Monthly" role="tab">
+														Monthly
+													</a>
+												</li> -->
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="card-body">
+                    <div class="tab-content">
+                      <div class="tab-pane fade show active" id="Daily" role="tabpanel">
+                        <div class="d-flex flex-wrap align-items-center px-4 bg-light">
+                          <div class="mr-auto d-flex align-items-center py-3">
+                            <span class="heart-ai bg-primary mr-3">
+                              <i class="fa fa-heart-o" aria-hidden="true"></i>
+                            </span>
+                            <div>
+                              <p class="fs-18 mb-2">Total Student that have passed this stage:</p>
+                              <span class="fs-26 text-primary font-w600">250/500</span>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row align-items-center">
+                          <div class="col-xl-6 col-xxl-12 col-md-6">
+                            <div id="radialBar"></div>
+                          </div>
+                          <div class="col-xl-6 col-xxl-12 col-md-6">
+                            <div class="d-flex mb-4 align-items-center">
+                              <span class="mr-auto pr-3 font-w500 fs-30 text-black">
+                                <svg class="mr-3" width="8" height="30" viewBox="0 0 8 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <rect width="7.65957" height="30" fill="#BDA25C" />
+                                </svg>
+                                50%
+                              </span>
+
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!--**********************************
+            Content body end
+        ***********************************-->
+                  <div class="table-responsive">
+                    <table class="table table-hover">
+                      <thead>
+                        <tr>
+                          <th>No.</th>
+                          <th>ID</th>
+                          <th>Firstname</th>
+                          <th>Middlename</th>
+                          <th>Lastname</th>
+                          <th>Gender</th>
+                          <th>DOB</th>
+                          <th>Phone Number</th>
+                          <th>Major</th>
+                          <th>Nationality</th>
+                          <th>Address</th>
+                          <th>Personal Email</th>
+                          <th>School Email</th>
+                          <th>ArrivalDate</th>
+                          <th>MaritalStatus</th>
+                          <th>Gaurdian Name</th>
+                          <th>Gaurdian Rel</th>
+                          <th>Payment Plan</th>
+                          <th>HousingType</th>
+                          <th>MealPlan</th>
+
+                          <th>BG</th>
+                          <th>GT</th>
+                          <th>MedicalCond</th>
+                          <th>Allergies</th>
+                          <th>ParentRel</th>
+                          <th>ParentAddress</th>
+                          <th>ParentPhone</th>
+
+                          <th>Faith</th>
+                          <th>AcademicInt</th>
+                          <th>SportsClub</th>
+                          <th>Hobbies</th>
+                          <th>GovClubs</th>
+
+                          <th>OpenerpStatus</th>
+                          <th>Admissionvr</th>
+                          <th>Financevr</th>
+                          <th>Itvr</th>
+                          <th>Housingvr</th>
+                          <th>Healthvr</th>
+                          <th>Studactvr</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <%for (var i = 0; i<students.length; i++){%>
+                        <tr>
+                          <td><%= i+1 %></td>
+                          <td><%= students[i].StudID %></td>
+                          <td><%= students[i].Major %></td>
+                          <td>Economics</td>
+                          <td>rimanmagaji@aun.edu.ng</td>
+                          <td>07010021914</td>
+                          <td>
+                            <label for="radio1"></label>
+                            <input type="radio" class="larger1" name="radios1" id="finanaceOverall1" />
+                          </td>
+                        </tr>
+                        <%}%>
+                      </tbody>
+                    </table>
+                    <div class="">
+                      <br>
+                      <a href="" class="btn btn-outline-primary"><i class=""></i>Generate Report</a>
+                    </div>
+                  </div>
+                  <br>
+                  <br>
+                  <br><br><br>
+                    <!--**********************************
+            Footer start
+        ***********************************-->
+                    <div class="footer">
+                      <div class="copyright">
+                        <p>Copyright 2022© Designed &amp; Developed by SDP Team 2022</p>
+                      </div>
+                    </div>
+                    <!--**********************************
+            Footer end
+        ***********************************-->
+
+                    <!--**********************************
+           Support ticket button start
+        ***********************************-->
+
+                    <!--**********************************
+           Support ticket button end
+        ***********************************-->
+
+
+                  </div>
+                  <!--**********************************
+        Main wrapper end
+    ***********************************-->
+
+                  <!--**********************************
+        Scripts
+    ***********************************-->
+                  <!-- Required vendors -->
+                  <script src="/vendor/global/global.min.js"></script>
+                  <script src="/vendor/bootstrap-select/dist/js/bootstrap-select.min.js"></script>
+                  <script src="/vendor/chart.js/Chart.bundle.min.js"></script>
+                  <script src="/jsc/custom.min.js"></script>
+                  <script src="/jsc/deznav-init.js"></script>
+                  <script src="/vendor/bootstrap-datetimepicker/js/moment.js"></script>
+                  <script src="/vendor/bootstrap-datetimepicker/js/bootstrap-datetimepicker.min.js"></script>
+                  <!-- Chart piety plugin files -->
+                  <script src="/vendor/peity/jquery.peity.min.js"></script>
+
+                  <!-- Apex Chart -->
+                  <script src="/vendor/apexchart/apexchart.js"></script>
+
+                  <!-- Dashboard 1 -->
+                  <script src="/jsc/dashboard/dashboard-1.js"></script>
+                  <script>
+                    $(function() {
+                      $('#datetimepicker1').datetimepicker({
+                        inline: true,
+                      });
+                    });
+                  </script>
+</body>
+
+</html>
