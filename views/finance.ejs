@@ -24,7 +24,7 @@
                 <a style="color: black;" class="nav-link" href="/">Home</a>
               </li>
               <li class="nav-item">
-                <a style="color: black;" class="nav-link" href="/admissions">Guide</a>
+                <a style="color: black;" class="nav-link" href="">Guide</a>
               </li>
               <li class="nav-item">
                 <a style="color:black;" class="nav-link" href="/Map">Map</a>
@@ -48,8 +48,8 @@
         <P> </P>
         <form action="" method="POST" id="financeform"  onsubmit="return false">
           <div class="form-group">
-            <label class="now1" for="exampleInputEmail1">StudID:</label>
-            <input type="text" class="form-control" name="StudID" id="firstName" value="<%- stud.StudID%>" aria-describedby="emailHelp" placeholder="Enter First Name"  readonly>
+            <label class="now1" for="exampleInputEmail1" hidden readonly>StudID:</label>
+            <input type="text" class="form-control" name="StudID" id="firstName" value="<%- stud.StudID%>" aria-describedby="emailHelp" placeholder="Enter First Name"  hidden readonly>
           </div>
           <div class="form-group">
             <label class="now1" for="exampleInputEmail1">First Name:</label>
@@ -119,7 +119,7 @@
                       <td>APPROVED</td>
                       <td>
                       <label for="radio1"></label>
-                      <input type="radio"  class="larger1" name="radios" id="finanaceOverall" />
+                      <input type="radio"  class="larger1" name="radios" id="finanaceOverall" disabled/>
                       </td>
                   </tr>
                   <tr><td colspan="3"><input type="text" name="Financevr" id="getFinancevrstatus" value="<%- stud.Financevr%>" hidden> </td> </tr>
@@ -130,12 +130,12 @@
               <button class="previous" id="previousf" disabled>Previous</button>
             </a>            
             <a href="/itstage?StudID=<%- stud.StudID%>">
-              <button class="next" id="nextf" disabled>Next</button>
+              <button class="next" id="nextf" >Next</button>
             </a>
   </section>
     </div>
     <script>
-      var nextff = document.getElementById("nextf");
+      var nextbutton = document.getElementById("nextf");
       var status = document.getElementById("getFinancevrstatus").value;
       var rd = document.getElementById("finanaceOverall");
 
@@ -143,7 +143,6 @@
         rd.checked = true;
         nexff.disabled = false;
       }else{
-        rd.checked = false;
         nexff.disabled = true;
       }
 

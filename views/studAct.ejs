@@ -24,7 +24,7 @@
                 <a style="color: black;" class="nav-link" href="/">Home</a>
               </li>
               <li class="nav-item">
-                <a style="color: black;" class="nav-link" href="/admissions">Guide</a>
+                <a style="color: black;" class="nav-link" href="">Guide</a>
               </li>
               <li class="nav-item">
                 <a style="color:black;" class="nav-link" href="/Map">Map</a>
@@ -76,8 +76,8 @@
               <P> </P>
               <form id="activitiesform" action="results.html" method="POST" onsubmit="return false">
                 <div class="form-group">
-                  <label class="now1" for="exampleInputEmail1">StudID:</label>
-                  <input type="text" class="form-control" name="StudID" value="<%- stud.StudID%>" aria-describedby="emailHelp" placeholder="Enter First Name"  readonly>
+                  <label class="now1" for="exampleInputEmail1" readonly hidden>StudID:</label>
+                  <input type="text" class="form-control" name="StudID" value="<%- stud.StudID%>" aria-describedby="emailHelp" placeholder="Enter First Name"  readonly hidden>
                 </div>
                     <label class="now1" for="faithB">Faith Based Organizations:</label>
                     <p> </p>

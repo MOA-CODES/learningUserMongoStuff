@@ -21,10 +21,10 @@
           <div class="collapse navbar-collapse justify-content-end align-center" id="main-nav">
             <ul class="navbar-nav">
               <li class="nav-item">
-                <a style="color: black;" class="nav-link" href="/index">HOME</a>
+                <a style="color: black;" class="nav-link" href="/">HOME</a>
               </li>
               <li class="nav-item">
-                <a style="color: black;" class="nav-link" href="/info">GUIDE</a>
+                <a style="color: black;" class="nav-link" href="">GUIDE</a>
               </li>
               <li class="nav-item">
                 <a style="color:black;" class="nav-link" href="/Map">MAP</a>
@@ -53,8 +53,8 @@
                       <div class="card-body">                      
                                 <form action="" method="POST"  id="infoform" onsubmit="return false">
                                   <div class="form-group">
-                                    <label class="now1" for="exampleInputEmail1">StudID:</label>
-                                    <input type="text" class="form-control" name="StudID" id="firstName" value="<%- stud.StudID%>"  placeholder="Enter First Name"  readonly>
+                                    <label class="now1" for="exampleInputEmail1" readonly hidden>StudID:</label>
+                                    <input type="text" class="form-control" name="StudID" id="firstName" value="<%- stud.StudID%>"  placeholder="Enter First Name"  readonly hidden>
                                   </div>
                                   <div class="form-group">
                                     <label class="now1" for="exampleInputEmail1">First Name:</label>

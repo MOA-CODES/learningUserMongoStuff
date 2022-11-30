@@ -24,7 +24,7 @@
                 <a style="color: black;" class="nav-link" href="/">Home</a>
               </li>
               <li class="nav-item">
-                <a style="color: black;" class="nav-link" href="/admissions">Guide</a>
+                <a style="color: black;" class="nav-link" href="">Guide</a>
               </li>
               <li class="nav-item">
                 <a style="color:black;" class="nav-link" href="/Map">Map</a>
@@ -48,8 +48,8 @@
               <P> </P>
             <form id="healthform" action="results.html" method="POST"  onsubmit="return false">
                 <div class="form-group">
-                  <label class="now1" for="exampleInputEmail1">StudID:</label>
-                  <input type="text" class="form-control" name="StudID" value="<%- stud.StudID%>" aria-describedby="emailHelp" placeholder="Enter First Name"  readonly>
+                  <label class="now1" for="exampleInputEmail1"  readonly hidden>StudID:</label>
+                  <input type="text" class="form-control" name="StudID" value="<%- stud.StudID%>" aria-describedby="emailHelp" placeholder="Enter First Name"   readonly hidden>
                 </div>
                 <P> </P>
                 <div>
@@ -120,12 +120,12 @@
                 <P> </P>
               <div class="form-group">
                   <label  class="now1" for="medicalCondition">Medical Condition:</label>
-                  <input type="text" value="<%- stud.MedicalCond%>" class="form-control" id="medicalCondition" name="MedicalCond" aria-describedby="emailHelp" placeholder="Enter If Any" style="background-color: FAF3F5;" required>
+                  <input type="text" value="<%- stud.MedicalCond%>" class="form-control" id="medicalCondition" name="MedicalCond" aria-describedby="emailHelp" placeholder="Enter If Any or specify 'none'" style="background-color: FAF3F5;" required>
               </div>
               <p> </p>
               <div class="form-group">
                   <label  class="now1" for="allergies">Allergies:</label>
-                  <input type="text" value="<%- stud.Allergies%>" class="form-control" id="allergies" name="Allergies" aria-describedby="emailHelp" placeholder="Enter Allergies If Any" style="background-color: FAF3F5;" required>
+                  <input type="text" value="<%- stud.Allergies%>" class="form-control" id="allergies" name="Allergies" aria-describedby="emailHelp" placeholder="Enter If Any or specify 'none'" style="background-color: FAF3F5;" required>
               </div>
               <P> </P>
                 <p> </p>
@@ -179,7 +179,7 @@
                           <td>APPROVED</td>
                           <td>
                           <label for="radio1"></label>
-                          <input type="radio"  class="larger1" name="radios" id="healthOverall" />
+                          <input type="radio"  class="larger1" name="radios" id="healthOverall" disabled/>
                           </td>
                       </tr>
                       <tr>

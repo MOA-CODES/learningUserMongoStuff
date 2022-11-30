@@ -24,7 +24,7 @@
                 <a style="color: black;" class="nav-link" href="/">HOME</a>
               </li>
               <li class="nav-item">
-                <a style="color: black;" class="nav-link" href="/admissions">GUIDE</a>
+                <a style="color: black;" class="nav-link" href="">GUIDE</a>
               </li>
               <li class="nav-item">
                 <a style="color:black;" class="nav-link" href="/Map">MAP</a>
@@ -48,26 +48,31 @@
         <P> </P> 
         <form action="results.html" method="POST" onsubmit="return false">
           <div class="form-group">
-            <label class="now1" for="exampleInputEmail1">StudID:</label>
-            <input type="text" class="form-control" name="StudID" value="<%- stud.StudID%>" aria-describedby="emailHelp" placeholder="Enter First Name"  readonly>
+            <label class="now1" for="exampleInputEmail1" hidden readonly>StudID:</label>
+            <input type="text" class="form-control" name="StudID" value="<%- stud.StudID%>" aria-describedby="emailHelp" placeholder="Enter First Name"  hidden readonly>
           </div>
           <div class="form-group">
             <label class="now1" for="exampleInputEmail1">First Name:</label>
-            <input type="text" class="form-control" value="<%- stud.Firstname%>" name="Firstname" id="itFName" aria-describedby="emailHelp" placeholder="Enter First Name" style="background-color: FAF3F5;" required>
+            <input type="text" class="form-control" value="<%- stud.Firstname%>" name="Firstname" id="itFName" aria-describedby="emailHelp" placeholder="Enter First Name" style="background-color: FAF3F5;" >
           </div>
           <P> </P>
           <div class="form-group">
               <label class="now1" for="exampleInputEmail1">Last Name:</label>
-              <input type="text" class="form-control" value="<%- stud.Lastname%>" name="Lastname" id="itLName" aria-describedby="emailHelp" placeholder="Enter Last Name" style="background-color: FAF3F5;" required>
+              <input type="text" class="form-control" value="<%- stud.Lastname%>" name="Lastname" id="itLName" aria-describedby="emailHelp" placeholder="Enter Last Name" style="background-color: FAF3F5;" >
           </div>
           <P> </P>
           <div class="form-group">
               <label class="now1" for="exampleInputEmail1">Middle Name:</label>
-              <input type="text" class="form-control" value="<%- stud.Middlename%>" name="Middlename" id="itMName" aria-describedby="emailHelp" placeholder="Enter Middle Name" style="background-color: FAF3F5;" required>
+              <input type="text" class="form-control" value="<%- stud.Middlename%>" name="Middlename" id="itMName" aria-describedby="emailHelp" placeholder="Enter Middle Name" style="background-color: FAF3F5;" >
           </div>
+          <P> </P>
+          <div class="form-group">
+            <label class="now1" for="exampleInputEmail1" readonly>Created Email:</label>
+            <input type="text" class="form-control" value="<%- stud.SchoolEmail%>" name="SchoolEmail" id="itMName" aria-describedby="emailHelp" placeholder="It will be created for you refresh page" style="background-color: FAF3F5;" readonly>
+        </div>
           <P> <br> </P>
           <P> </P>
-          <button type="submit" class="btn btn-primary">Submit</button>
+          <!-- <button type="submit" class="btn btn-primary">Submit</button> -->
         </form>
         <div>
         <P> </P>

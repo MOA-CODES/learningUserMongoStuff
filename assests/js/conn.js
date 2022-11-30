@@ -54,9 +54,9 @@ $("#OGAlogin").submit(function(event){
                 $.ajax(request2).done(function(response){
                     alert("Log in successful")
 
-                    var one = response.Adminvr.toString(); var two = response.Adminvr.toString();
-                    var three = response.Adminvr.toString(); var four = response.Adminvr.toString();
-                    var five = response.Adminvr.toString(); var six = response.Adminvr.toString();
+                    var one = response.Adminvr.toString(); var two = response.Financevr.toString();
+                    var three = response.Itvr.toString(); var four = response.Housingvr.toString();
+                    var five = response.Healthvr.toString(); var six = response.Studactvr.toString();
 
                     if(one == "true" && two == "true" && three == "true" && four == "true" && five == "true" && six == "true"){
                         location.assign("http://localhost:3001/congrats")
@@ -302,6 +302,7 @@ $("#financeform").submit(function(event){
 
     $.ajax(request).done(function(response){
        alert("submitted successfully")
+       document.getElementById('nextf').removeAttribute('disabled');
     })
 
 
@@ -449,6 +450,8 @@ $("#adduserform").submit(function(event){
 
 })
 
+// $(".deleterow").click(function () {    
+// })
 
 //SEARCH
 $('#OOLSEARCH').on('click', function(event){
