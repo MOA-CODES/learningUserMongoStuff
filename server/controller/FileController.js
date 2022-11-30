@@ -2,21 +2,25 @@ const File = require('../models/File')
 
 exports.create = (req,res)=>{
     //validate request
-    console.log(req.file);
-    if (!req.file) {
+    let filenames = {};
+    console.log(req.files);
+    if (!req.files) {
 		return res.status(400).send({ success: false, message:"Error uploading file, try again" });
 	} else {
         // new file
+        console.log(Object.keys(req.files));
+        Object.keys(req.files).map((file,index)=>{
+            filenames[file] = req.files[file][0].filename;
+        });
+    
         const F = new File({
             StudID:req.body.StudID,
-            Jamb:req.Jamb.filename
+            ...filenames
         })
         F.save();
         return res.status(200).send({ success: true, message:"Success upload successful" });
     }
 }
-
-
 
 exports.update = (req,res)=>{
     if(!req.body){

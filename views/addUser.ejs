@@ -11,18 +11,16 @@
   <main id="main-holder">
     <h1 id="login-header">ADD NEW USER</h1>
 
-    <form id="login-form">
-      <input type="text" name="username" id="username-field" class="login-form-field" placeholder="User ID">
+    <form id="adduserform">
+      <input type="text" name="User_id"  id="username-field" class="login-form-field" placeholder="User ID">
       <p> </p>
-      <input type="text" name="username" id="username-field" class="login-form-field" placeholder="Full Name">
+      <input type="text" name="name" id="username-field" class="login-form-field" placeholder="Name">
       <p> </p>
       <input type="password" name="password" id="password-field" class="login-form-field" placeholder="Password">
       <p> </p>
-      <input type="submit" value="Add New User" id="login-form-submit">
+      <button type="submit" id="login-form-submit">Add New User</button>
     </form>
   
   </main>
-</body>
 
-</html>
-</body>
+<%- include('include/footer')%>

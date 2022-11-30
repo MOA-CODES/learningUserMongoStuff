@@ -92,10 +92,10 @@ exports.find = (req,res)=>{
 }
 
 exports.retrieve = (req, res) => {
-    if(req.query.StudID){
-        const id = req.query.StudID;
+    if(req.query.User_id){
+        const id = req.query.User_id;
 
-        User.findOne({StudID: id})
+        User.findOne({User_id: id})
             .then(data=>{
                 if(!data){
                     res.status(404).send({message: "User not Found with "+id+" id"})

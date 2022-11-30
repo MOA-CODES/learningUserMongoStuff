@@ -354,6 +354,11 @@ exports.ooadmissions_update= (req, res) => {
 }
 
 
+exports.adduserform = (req, res) => {
+    res.render("addUser")
+}
+
+
 
 
 

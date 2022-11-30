@@ -2,27 +2,9 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Orientation App</title>
+  <title>Info Stage</title>
   <link rel="stylesheet" href="/css/info.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
-  <script>
-    // document.getElementById('#next').setAttribute('disabled','false');
-    function test(){
-      var firstname = document.getElementById("firstName").value;
-      localStorage.setItem("firstNameValue", firstname);
-
-      var lastname = document.getElementById("lastName").value;
-      localStorage.setItem("lastNameValue", lastname);
-
-      var middleName = document.getElementById("middleName").value;
-      localStorage.setItem("middleNameValue", middleName);
-
-      var major = document.getElementById("major").value;
-      localStorage.setItem("majorValue", middleName);
-      
-      return fasle;
-    }
-  </script>
 </head>
 <body>
       <nav class="navbar fixed-top navbar-expand-md navbar-light pt-2 ">
@@ -76,47 +58,47 @@
                                   </div>
                                   <div class="form-group">
                                     <label class="now1" for="exampleInputEmail1">First Name:</label>
-                                    <input type="text" class="form-control" name="Firstname" id="firstName" placeholder="Enter First Name"  required>
+                                    <input type="text" class="form-control" name="Firstname" id="firstName" value="<%- stud.Firstname%>"placeholder="Enter First Name"  required>
                                   </div>
                                   <P> </P>
                                   <div class="form-group">
                                       <label class="now1" for="exampleInputEmail1">Last Name:</label>
-                                      <input type="text" class="form-control" name="Lastname" id="lastName"  placeholder="Enter Last Name"  required>
+                                      <input type="text" class="form-control" name="Lastname" id="lastName" value="<%- stud.Lastname%>"  placeholder="Enter Last Name"  required>
                                   </div>
                                   <P> </P>
                                   <div class="form-group">
                                       <label class="now1" for="exampleInputEmail1">Middle Name:</label>
-                                      <input type="text" class="form-control" name="Middlename" id="middleName"  placeholder="Enter Middle Name"  required>
+                                      <input type="text" class="form-control" name="Middlename" id="middleName" value="<%- stud.Middlename%>" placeholder="Enter Middle Name"  required>
                                   </div>
                                   <P> </P>
                                   <div class="form-group">
                                       <label class="now1" for="exampleInputEmail1">Major:</label>
-                                      <input type="text" class="form-control" name="Major" id="major" placeholder="Enter Major"  required>
+                                      <input type="text" class="form-control" name="Major" id="major" value="<%- stud.Major%>" placeholder="Enter Major"  required>
                                   </div>
                                   <P> </P>
                                   <div class="form-group">
                                     <label class="now1" for="exampleInputEmail1">Personal Email:</label>
-                                    <input type="email" class="form-control" name="Personalemail" id="pEmail"  placeholder="Enter Personal Email Address"  required>
+                                    <input type="email" class="form-control" name="Personalemail" id="pEmail" value="<%- stud.Personalemail%>"  placeholder="Enter Personal Email Address"  required>
                                 </div>
                                 <P> </P>
                                 <div class="form-group">
                                   <label class="now1" for="exampleInputEmail1">Phone Number:</label>
-                                  <input type="text" class="form-control" name="Phonenumber" id="PhoneNo"  placeholder="Enter Phone Number"  required>
+                                  <input type="text" class="form-control" name="Phonenumber" id="PhoneNo" value="<%- stud.Phonenumber%>"  placeholder="Enter Phone Number"  required>
                               </div>
                               <p> <p>
                                 <div>
                                     <label class="now1" for="exampleInputEmail1">Gender:&nbsp;&nbsp;&nbsp;</label>
                               
-                                    <input type="radio" id="infoMale" name="Gender" value="Male">
+                                    <input type="radio" id="infoMale" name="Gender" value="Male" <%= stud.Gender == 'Male'?'checked':'' %>>
                                     <label for="Male">Male</label>
-                                    <input type="radio" id="infoFemale" name="Gender" value="Female">
+                                    <input type="radio" id="infoFemale" name="Gender" value="Female" <%= stud.Gender == 'Female'?'checked':'' %>>
                                     <label for="Female">Female</label>
                                 </div>
                                 <P> </P>
                                 <div class="form-group">
                                   <label class="now1" for="birthday">Arrival Date:</label>
                                   <p> </p>
-                                  <input type="date" class="form-control" id="arrivalDate" name="ArrivalDate"  required>
+                                  <input type="date" class="form-control" value="<%- stud.ArrivalDate%>" id="arrivalDate" name="ArrivalDate"  required>
                                 </div>
                                 <P> </P>
                                 <P> </P>

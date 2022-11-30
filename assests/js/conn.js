@@ -382,6 +382,73 @@ $("#activitiesform").submit(function(event){
 
 })
 
+$("#admissionsform").submit(function(event){
+    event.preventDefault();
+
+    var unindexed_array = $(this).serializeArray();
+    var data = new FormData();
+    let myform = document.getElementById("admissionsform");
+    let fd = new FormData(myform);
+
+    // console.log(fd);
+    // $.map(unindexed_array, function(n,i){
+    //     data.append(n['name'], n['value']);
+    // })
+    // var studid = document.getElementById("firstName").value;
+
+    // var req = {
+    //     "url":`http://localhost:3001/api/file/retrieve`,
+    //     "method": "POST",
+    // }
+    // $.ajax(req).done(function(response){});
+    //     //    alert("submitted successfully")
+    //     // })
+
+    // console.log(data);
+
+    var request ={
+        "url":`http://localhost:3001/api/file/register`,
+        "method": "POST",
+        cache: false,
+        processData: false,
+        contentType: false,
+        "data":fd
+    }
+
+    $.ajax(request).done(function(response){
+       alert("submitted successfully")
+    })
+})
+
+
+
+$("#adduserform").submit(function(event){
+    event.preventDefault();
+
+    var unindexed_array = $(this).serializeArray();
+    var data ={}
+
+    $.map(unindexed_array, function(n,i){
+        data[n['name']]=n['value']
+    })
+
+    console.log(data);
+
+    var request ={
+        "url":`http://localhost:3001/api/user/register`,
+        "method": "POST",
+        "data":data
+    }
+
+    $.ajax(request).done(function(response){
+        alert("submitted successfully");
+        location.assign("http://localhost:3001/adminusers")
+
+    })
+
+
+})
+
 
 //SEARCH
 $('#OOLSEARCH').on('click', function(event){
@@ -401,6 +468,4 @@ $('#OOLSEARCH').on('click', function(event){
         alert("yo");
     
     })
-
-    
 })

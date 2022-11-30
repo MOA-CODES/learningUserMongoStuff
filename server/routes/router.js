@@ -59,6 +59,9 @@ route.get('/reporthousing', services.reporthousing);
 route.get('/reportstudAct', services.reportstudAct);
 route.get('/reporthealth', services.reporthealth);
 
+route.get('/adduserform', services.adduserform);
+
+
 
 
 
@@ -115,10 +118,10 @@ route.get('/api/user/retrieve', UserController.retrieve)    //retrieve User
 
 const storage = multer.diskStorage({
 	destination: "./files/",
-	filename: function (req, Jamb, cb) {
+	filename: function (req, x, cb) {
 	  cb(
 		null,
-		Jamb.fieldname + "-" + Date.now() + path.extname(Jamb.originalname)
+		x.fieldname + "-" + Date.now() + path.extname(x.originalname)
 	  );
 	},
 });
@@ -127,12 +130,29 @@ const upload = multer({
 	storage: storage
 });
 
-
-route.post('/api/file/register', upload.single("file"), FileController.create)  //create File
+route.post('/api/file/register', 
+	upload.fields([{
+			name: 'Jamb', maxCount: 1
+		}, {
+			name: 'Waec', maxCount: 1
+		}, {
+			name: 'Passport', maxCount: 1
+		},{
+			name: 'Pic_Passport', maxCount: 1
+		},{
+			name: 'Transcript', maxCount: 1
+		},{
+			name: 'Rec_letter', maxCount: 1
+		},{
+			name: 'P_essay', maxCount: 1
+		},]
+	),
+  
+  FileController.create)  //create File
 
 route.put('/api/file/update', FileController.update)    //update File
 route.get('/api/file/retrieve', FileController.retrieve)    //retrieve Role
 
 
 
-module.exports = route
+module.exports = route;
