@@ -182,7 +182,13 @@ exports.adminfiles = (req, res)=>{
 }
 
 exports.adminroles = (req, res)=>{
-    res.render('adminroles')
+    axios.get('http://localhost:3001/api/role/retrieve')
+    .then(function(response){
+        res.render('adminroles', {roles:response.data})
+    })
+    .catch(err=>{
+        res.send(err);
+    })
 }
 
 exports.adminusers = (req, res)=>{

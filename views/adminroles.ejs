@@ -10,6 +10,9 @@
   <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon.png">
   <link href="/vendor/jqvmap/css/jqvmap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="/vendor/chartist/css/chartist.min.css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
   <link href="/vendor/bootstrap-select/dist/css/bootstrap-select.min.css" rel="stylesheet">
   <link href="/vendor/bootstrap-datetimepicker/css/bootstrap-datetimepicker.min.css" rel="stylesheet">
   <link href="/css/style.css" rel="stylesheet">
@@ -73,11 +76,11 @@
                 <a style="color: black;" class="nav-link" href="/adminusers">Users</a>
               </li>
             </strong>
-            <strong>
+            <!-- <strong>
               <li class="nav-item">
                 <a style="color: black;" class="nav-link" href="/adminfiles">Files</a>
               </li>
-            </strong>
+            </strong> -->
             <strong>
               <li class="nav-item">
                 <a style="color: black;" class="nav-link" href="/adminroles">Roles</a>
@@ -134,71 +137,41 @@
           </div>
           <!-- <a href="" class="btn btn-outline-primary"><i class=""></i>Generate Report</a> -->
         </div>
-
-
-
-        <!--**********************************
-            Content body end
-        ***********************************-->
-        <br>
-        <br>
-        <!-- Add Order -->
-        <br>
-
+        <div class="">
+          <div>
+            <a href="javascript:void(0)" class="btn btn-primary mr-3" data-toggle="modal" data-target="#addOrderModal">+New Role</a>
+          </div><br><br>
+        </div>
         <div class="table-responsive">
-          <h2 class="text-black font-w600">HEALTH</h2>
+          <h2 class="text-black font-w600">ROLES</h2>
           <table class="table table-hover">
             <thead>
               <tr>
-                <th>FN</th>
-                <th>MN</th>
-                <th>LN</th>
-                <th>BG</th>
-                <th>Gender</th>
+                <th>No.</th>
+                <th colspan="2">ROLE_ID</th>
+                <th>TITLE</th>
+                <th colspan="4">DESCRIPTION</th>
+                <th>ACTION</th>
                 <!-- <th>Admin Verification</th> -->
               </tr>
             </thead>
             <tbody>
+              <%for (var i = 0; i<roles.length; i++){%>
               <tr>
-                <td>Riman</td>
-                <td>Clinton</td>
-                <td>Magaji</td>
-                <td>AB</td>
-                <td>Male</td>
+                <td><%= i+1 %></td>
+                <td colspan="2"><%= roles[i].Role_id %></td>
+                <td><%= roles[i].Title %></td>
+                <td colspan="4"><%= roles[i].Description %></td>
+                <td>
+                  <a href="" class="btn border-shadow update" title="1">
+                      <span class="text-gradient"><i class="fas fa-pencil-alt"></i></span>
+                  </a>
+                  <a class="btn border-shadow delete" data-id="">
+                      <span class="text-gradient"><i class="fas fa-times"></i></span>
+                  </a>
+              </td>
               </tr>
-              <tr>
-                <td>Chukwuani</td>
-                <td>Elvis</td>
-                <td>Simon</td>
-                <td>O</td>
-                <td>Male</td>
-                <!-- <td>
-                                            <label for="radio1"></label>
-                                            <input type="radio"  class="larger1" name="radios2" id="finanaceOverall2" />
-                                            </td> -->
-              </tr>
-              <tr>
-                <td>Obumneme</td>
-                <td>Chuka</td>
-                <td>Leonard</td>
-                <td>AB+</td>
-                <td>Male</td>
-                <!-- <td>
-                                            <label for="radio1"></label>
-                                            <input type="radio"  class="larger1" name="radios3" id="finanaceOverall3" />
-                                            </td> -->
-              </tr>
-              <tr>
-                <td>Ajala</td>
-                <td>Moyo</td>
-                <td>Moses</td>
-                <td>B</td>
-                <td>Female</td>
-                <!-- <td>
-                                            <label for="radio1"></label>
-                                            <input type="radio"  class="larger1" name="radios4" id="finanaceOverall4" />
-                                            </td> -->
-              </tr>
+              <%}%>
             </tbody>
           </table>
           <div class="">

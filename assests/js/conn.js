@@ -22,7 +22,7 @@ $("#OGAlogin").submit(function(event){
         if(response == "Logged in"){
             if(id == "1111"){ 
                 alert("Log in successful")
-                location.assign("http://localhost:3001/mainadmin")
+                location.assign("http://localhost:3001/mainadmin1")
             }else if(id == "0151"){
                 alert("Log in successful")
                 location.assign("http://localhost:3001/ooadmissions")
@@ -43,7 +43,7 @@ $("#OGAlogin").submit(function(event){
                 location.assign("http://localhost:3001/ooactivities")
             }else if(id == "0127"){
                 alert("Log in successful")
-                alert("chuka never do am")
+                location.assign("http://localhost:3001/ooleader")
             }else{ //student user
                 
                 var request2 ={
@@ -380,4 +380,27 @@ $("#activitiesform").submit(function(event){
     })
 
 
+})
+
+
+//SEARCH
+$('#OOLSEARCH').on('click', function(event){
+    event.preventDefault();
+
+    var id = document.getElementById("OOLSEARCHID").value;
+
+    var request ={
+        "url":`http://localhost:3001/api/student/retrieve?StudID=${id}`,
+        "method": "GET",
+    }
+
+    $.ajax(request).done(function(response){
+        var x = response.toString();
+
+        console.log(x);
+        alert("yo");
+    
+    })
+
+    
 })

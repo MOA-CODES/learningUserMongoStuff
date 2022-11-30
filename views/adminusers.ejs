@@ -10,6 +10,9 @@
   <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon.png">
   <link href="/vendor/jqvmap/css/jqvmap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="/vendor/chartist/css/chartist.min.css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
   <link href="/vendor/bootstrap-select/dist/css/bootstrap-select.min.css" rel="stylesheet">
   <link href="/vendor/bootstrap-datetimepicker/css/bootstrap-datetimepicker.min.css" rel="stylesheet">
   <link href="/css/style.css" rel="stylesheet">
@@ -91,11 +94,11 @@
                 <a style="color: black;" class="nav-link" href="/adminusers">Users</a>
               </li>
             </strong>
-            <strong>
+            <!-- <strong>
               <li class="nav-item">
                 <a style="color: black;" class="nav-link" href="/adminfiles">Files</a>
               </li>
-            </strong>
+            </strong> -->
             <strong>
               <li class="nav-item">
                 <a style="color: black;" class="nav-link" href="/adminroles">Roles</a>
@@ -153,20 +156,11 @@
           <!-- <a href="" class="btn btn-outline-primary"><i class=""></i>Generate Report</a> -->
         </div>
 
-
-
-        <!--**********************************
-            Content body end
-        ***********************************-->
-
-        <br>
-        <br>
         <div class="">
-          <h2 class="text-black font-w600">USERS</h2>
           <div>
             <a href="javascript:void(0)" class="btn btn-primary mr-3" data-toggle="modal" data-target="#addOrderModal">+New User</a>
-            <!-- <a href="index.html" class="btn btn-outline-primary"><i class="las la-calendar-plus scale5 mr-3"></i>Filter Date</a> -->
-          </div>
+          </div><br><br>
+          <h2 class="text-black font-w600">USERS</h2>
         </div>
         <!-- Add Order -->
         <div class="modal fade" id="addOrderModal">
@@ -210,29 +204,32 @@
           <table class="table table-hover">
             <thead>
               <tr>
+                <th>No.</th>
                 <th>USER ID</th>
-                <th>ROLE ID</th>
                 <th>NAME</th>
                 <th>PASSWORD</th>
-                <th>Admin Verification</th>
+                <th>ROLE ID</th>
+                <th>ACTION</th>
               </tr>
             </thead>
-
+            <%for (var i = 0; i<users.length; i++){%>
             <tr>
-              <td>A00023457</td>
-              <td>R105</td>
-              <td>Chuka-Utazi Obumneme</td>
-              <td>chuka1234</td>
+              <td><%= i+1 %></td>
+              <td><%= users[i].User_id %></td>
+              <td><%= users[i].name %></td>
+              <td><%= users[i].password %></td>
+              <td><%= users[i].Role_id %></td>
               <td>
-                <label for="radio1"></label>
-                <input type="radio" class="larger1" name="radios3" id="finanaceOverall3" />
-              </td>
+                <a href="" class="btn border-shadow update" title="1">
+                    <span class="text-gradient"><i class="fas fa-pencil-alt"></i></span>
+                </a>
+                <a class="btn border-shadow delete" data-id="">
+                    <span class="text-gradient"><i class="fas fa-times"></i></span>
+                </a>
+            </td>
             </tr>
+            <%}%>
           </table><br><br>
-          <div class="">
-            <br>
-            <a href="" class="btn btn-outline-primary"><i class=""></i>Generate Report</a>
-          </div>
           <br><br><br>
 
           <br><br><br><br><br>

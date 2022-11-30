@@ -1,15 +1,21 @@
 <%- include('include/header')%>
 
 
-<form id="oohealthupdate_user" method ="POST">
-    <label for="StudID">StudID</label>
-    <input type="text" name="StudID" value="<%- stud.StudID%>" ><br>
+<p> <p>
+    <div class="container card border-dark" style="margin-top: 10; text-align: center;">
+        <h1 style="color: #293a33; font-family: Lucida Fax; font-size: 20px;">Student Activities Verification Stage</h1>
+        <p> <p>
+            <form id="oohealthupdate_user" method ="POST">
+                <label for="StudID">Student ID:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                 <input type="text" name="StudID" value="<%- stud.StudID%>" ><br>
 
-    <label for="Financevr">Healthvr</label>
-    <input type="text" name="Healthvr" value="<%- stud.Healthvr%>" ><br>
+                <label for="Financevr">Healthvr</label>
+                <input type="text" name="Healthvr" value="<%- stud.Healthvr%>" ><br>
 
-    <button type="submit">Save</button>
-</form>
+                <p> <p>
+                    <button type="submit" class="btn btn-primary">Update Now</button>
+                <p> <p>
+            </form>
 
 <%- include('include/footer')%>
 
