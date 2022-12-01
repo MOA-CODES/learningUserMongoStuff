@@ -68,12 +68,30 @@
                                   <P> </P>
                                   <div class="form-group">
                                       <label class="now1" for="exampleInputEmail1">Middle Name:</label>
-                                      <input type="text" class="form-control" name="Middlename" id="middleName" value="<%- stud.Middlename%>" placeholder="Enter Middle Name"  required>
+                                      <input type="text" class="form-control" name="Middlename" id="middleName" value="<%- stud.Middlename%>" placeholder="Enter Middle Name"  >
                                   </div>
                                   <P> </P>
-                                  <div class="form-group">
-                                      <label class="now1" for="exampleInputEmail1">Major:</label>
-                                      <input type="text" class="form-control" name="Major" id="major" value="<%- stud.Major%>" placeholder="Enter Major"  required>
+                                  <div>
+                                    <label class="now1" for="major">Major:</label>
+                                    <P> </P>
+                                    <select name="Major" value="<%- stud.Major%>" id="major" style="background-color: FAF3F5;" required>
+                                        <option value="Accounting">Accounting</option>
+                                        <option value="Business Administration">Business Administration</option>
+                                        <option value="Chemical Engineering">Chemical Engineering</option>
+                                        <option value="Communications and Multimedia Design">Communications and Multimedia Design&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</option>
+                                        <option value="Computer Engineering">Computer Engineering</option>
+                                        <option value="Computer Science">Computer Science</option>
+                                        <option value="Economics">Economics</option>
+                                        <option value="Electrical/Electronics Engineering">Electrical/Electronics Engineering</option>
+                                        <option value="English Language">English Language</option>
+                                        <option value="Entrepreneurship & Management">Entrepreneurship & Management</option>
+                                        <option value="Information Systems">Information Systems</option>
+                                        <option value="Natural and Environmental Sciences">Natural and Environmental Science</option>
+                                        <option value="Petroleum Chemistry Systems">Petroleum Chemistry Systems</option>
+                                        <option value="Software Engineering">Software Engineering</option>
+                                        <option value="Telecommunication Engineering">Telecommunication Engineering</option>
+                                        <option value="Bachelor of Laws">Bachelor of Laws</option>
+                                    </select>
                                   </div>
                                   <P> </P>
                                   <div class="form-group">

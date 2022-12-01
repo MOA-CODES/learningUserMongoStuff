@@ -3,36 +3,50 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">   
   <title>Update Student</title>
   <link rel="stylesheet" href="/css/addUser.css">
 </head>
 
 <body>
-  <main id="main-holder">
-    <h1 id="login-header">UPDATE STUDENT</h1>
+  <div class="container1" style="margin-top: -250; margin-left: -1300;">
+    <a href="/mainadmin1">
+      <div class="btn btn-light" ><span class="bi bi-box-arrow-left" ></span>&nbsp;Go Back</div>
+    </a>
+  </div>
 
-    <form id="login-form">
-      <input type="text" name="username" id="username-field" class="login-form-field" placeholder="Student ID">
+  <main id="main-holder" style="margin-top: -350;">
+    <p> <p>
+    <h1 id="login-header">UPDATE STUDENT</h1> 
+    <P> </P>
+
+    <form id="updatestudentform">
+      <label for="SchoolEmail" style="margin-right:40;">SchoolEmail :</label>
+      <input type="text" value="<%- stud.StudID%>" name="StudID" id="username-field" class="login-form-field" placeholder="School Email">
       <p> </p>
-      <input type="text" name="username" id="username-field" class="login-form-field" placeholder="Admissions Verification">
+      <label for="Adminvr" style="margin-right:40;">Admission Verification :</label>
+      <input type="text" value="<%- stud.Adminvr%>" name="Adminvr" id="username-field" class="login-form-field" placeholder="Admissions Verification">
       <p> </p>
-      <input type="password" name="password" id="password-field" class="login-form-field" placeholder="Finance Verification">
+      <label for="Financevr"  style="margin-right:40;">Finance Verification :</label>
+      <input type="text" value="<%- stud.Financevr%>" name="Financevr" id="password-field" class="login-form-field" placeholder="Finance Verification">
       <p> </p>
-      <input type="password" name="password" id="password-field" class="login-form-field" placeholder="IT Verification">
+      <label for="Itvr" style="margin-right:40;">IT Verification :</label>
+      <input type="text" value="<%- stud.Itvr%>" name="Itvr" id="password-field" class="login-form-field" placeholder="IT Verification">
       <p> </p>
-      <input type="password" name="password" id="password-field" class="login-form-field" placeholder="OpebErp Verification">
+      <label for="OpenerpStatus" style="margin-right:40;">OpenerpStatus :</label>
+      <input type="text" value="<%- stud.OpenerpStatus%>" name="OpenerpStatus" id="password-field" class="login-form-field" placeholder="OpenErp Verification">
       <p> </p>
-      <input type="password" name="password" id="password-field" class="login-form-field" placeholder="Housing Verification">
+      <label for="Housingvr" style="margin-right:40;">Housing Verification :</label>
+      <input type="text" value="<%- stud.Housingvr%>" name="Housingvr" id="password-field" class="login-form-field" placeholder="Housing Verification">
       <p> </p>
-      <input type="password" name="password" id="password-field" class="login-form-field" placeholder="Health Verification">
+      <label for="Healthvr" style="margin-right:40;">Health Verification :</label>
+      <input type="text" value="<%- stud.Healthvr%>" name="Healthvr" id="password-field" class="login-form-field" placeholder="Health Verification">
       <p> </p>
-      <input type="password" name="password" id="password-field" class="login-form-field" placeholder="Student Activities Verification">
+      <label for="Studactvr" style="margin-right:40;">Studact Verification :</label>
+      <input type="text" value="<%- stud.Studactvr%>" name="Studactvr" id="password-field" class="login-form-field" placeholder="Student ACT Verification">
       <p> </p>
-      <input type="submit" value="Update Student" id="login-form-submit">
+      <button type="submit" class="btn btn-secondary" style="text-align: center; margin-left: 150;">Update</button>
     </form>
   
-  </main>
-</body>
-
-</html>
-</body>
+    <%- include('include/footer')%>

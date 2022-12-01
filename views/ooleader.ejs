@@ -9,7 +9,10 @@
     <!-- Favicon icon -->
     <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon.png">
     <link href="/vendor/jqvmap/css/jqvmap.min.css" rel="stylesheet">
-	<link rel="stylesheet" href="./vendor/chartist/css/chartist.min.css">
+	<link rel="stylesheet" href="/vendor/chartist/css/chartist.min.css">
+
+
+
     <link href="/vendor/bootstrap-select/dist/css/bootstrap-select.min.css" rel="stylesheet">
 	<link href="/vendor/bootstrap-datetimepicker/css/bootstrap-datetimepicker.min.css" rel="stylesheet">
     <link href="/css/style.css" rel="stylesheet">
@@ -25,7 +28,7 @@
     </div>
     <div id="main-wrapper">
         <div class="nav-header">
-              <p class="Orien1">Orientation <span class="blue">Guide App</span></p>
+              <p class="Orien1">Orientation <span class="blue">Guide</span></p>
             <div class="nav-control">
                 <div class="hamburger">
                     <span class="line"></span><span class="line"></span><span class="line"></span>
@@ -81,22 +84,48 @@
                 <div class="card-body">
                     <div class="tab-content">
                       <div class="tab-pane fade show active" id="Daily" role="tabpanel">
-                        <!-- <div class="d-flex flex-wrap align-items-center px-4 bg-light"> -->
                           <div class="mr-auto d-flex align-items-center py-3">
-                            <!-- <span class="heart-ai bg-primary mr-3">
-                              <i class="fa fa-heart-o" aria-hidden="true"></i>
-                            </span> -->
+                              <%
+                              var Ad = 0; var Fi = 0; var it = 0; var ho = 0; var he = 0; var st = 0;
+                              var Completed = 0;
+                              for (var i = 0; i<students.length; i++){
+                                if(students[i].Healthvr == true && students[i].Housingvr == true && students[i].Adminvr == true
+                                && students[i].Financevr == true && students[i].Studactvr == true && students[i].Itvr == true ){
+                                  Completed = Completed + 1;
+                                }
+
+
+                              if (students[i].Healthvr == true){
+                              he = he + 1;
+                              }
+                              if (students[i].Housingvr == true){
+                              ho = ho + 1;
+                              }
+                              if (students[i].Adminvr == true){
+                              Ad = Ad + 1;
+                              }
+                              if (students[i].Financevr == true){
+                              Fi = Fi + 1;
+                              }
+                              if (students[i].Studactvr == true){
+                              st = st + 1;
+                              }
+                              if (students[i].Itvr == true){
+                                it = it + 1;
+                                }
+                            }
+                          %>
                             <div class="col-lg-4">
-                              <p class="fs-18 mb-2">Total Student that have passed <strong style="color: black;">Admission:</strong></p>
-                              <span class="fs-26 text-primary font-w600">250/500</span>
+                              <p class="fs-18 mb-2">Total Students that have passed <strong style="color: black;">Admission:</strong></p>
+                              <span class="fs-26 text-primary font-w600"><%= Ad%>/<%= students.length %></span>
                             </div>
                             <div class="col-lg-4">
-                              <p class="fs-18 mb-2">Total Student that have passed <strong style="color: black;">Finance:</strong></p>
-                              <span class="fs-26 text-primary font-w600">250/500</span>
+                              <p class="fs-18 mb-2">Total Students that have passed <strong style="color: black;">Finance:</strong></p>
+                              <span class="fs-26 text-primary font-w600"><%= Fi%>/<%= students.length %></span>
                             </div>
                             <div class="col-lg-4">
-                              <p class="fs-18 mb-2">Total Student that have passed <strong style="color: black;"> I.T:</strong></p>
-                              <span class="fs-26 text-primary font-w600">250/500</span>
+                              <p class="fs-18 mb-2">Total Students that have passed <strong style="color: black;"> I.T:</strong></p>
+                              <span class="fs-26 text-primary font-w600"><%= it%>/<%= students.length %></span>
                             </div>
                           </div>
                         </div>
@@ -109,28 +138,27 @@
                           <i class="fa fa-heart-o" aria-hidden="true"></i>
                         </span> -->
                         <div class="col-lg-4">
-                          <p class="fs-18 mb-2">Total Student that have passed <strong style="color: black;">Housing/ID:</strong>:</p>
-                          <span class="fs-26 text-primary font-w600">250/500</span>
+                          <p class="fs-18 mb-2">Total Students that have passed <strong style="color: black;">Housing/ID:</strong>:</p>
+                          <span class="fs-26 text-primary font-w600"><%= ho%>/<%= students.length %></span>
                         </div>
                         <div class="col-lg-4">
-                          <p class="fs-18 mb-2">Total Student that have passed <strong style="color: black;">Health:</strong></p>
-                          <span class="fs-26 text-primary font-w600">250/500</span>
+                          <p class="fs-18 mb-2">Total Students that have passed <strong style="color: black;">Health:</strong></p>
+                          <span class="fs-26 text-primary font-w600"><%= he%>/<%= students.length %></span>
                         </div>
                         <div class="col-lg-4">
-                          <p class="fs-18 mb-2">Total Student that have passed <strong style="color: black;">StudAct:</strong></p>
-                          <span class="fs-26 text-primary font-w600">250/500</span>
+                          <p class="fs-18 mb-2">Total Students that have passed <strong style="color: black;">StudAct:</strong></p>
+                          <span class="fs-26 text-primary font-w600"><%= st%>/<%= students.length %></span>
                         </div>
                       </div>
   
                   </div>
-  
-  
-  
+                  <div class="row align-items-center">
+                        <div class="col-lg-4">
+                          <p class="fs-18 mb-2">Total Students that have Completed <strong style="color: black;">Orientation:</strong>:</p>
+                          <span class="fs-26 text-primary font-w600"><%= Completed%>/<%= students.length %></span>
+                        </div>
+                  </div>
   <br>
-  <br>
-  <br>
-
-
         <div class="table-responsive">
                         <table class="table table-hover">
                           <thead>

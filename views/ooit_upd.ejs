@@ -6,8 +6,14 @@
     <title>IT Verification</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
     <style>
-    body{
-        background-color: beige;
+     body {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    background-color: #3a3a3a;
     }
     </style>
 </head>
@@ -20,20 +26,29 @@
         <form id="ooitupdate_user" method ="POST">
         <label for="StudID">Student ID:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
         <input type="text" name="StudID" value="<%- stud.StudID%>" ><br>
-
+        <p> <p>
         <label for="SchoolEmail">SchoolEmail</label>
         <input type="text" name="SchoolEmail" value="<%- stud.SchoolEmail%>" style="margin-left: 45px;"><br>
-
-        <label for="OpenerpStatus">Openerp Status</label>
-        <input type="text" name="OpenerpStatus" value="<%- stud.OpenerpStatus%>" style="margin-left: 13px;"><br>
-
-        <label for="Financevr">It Verification</label>
-        <input type="text" name="Itvr" value="<%- stud.Itvr%>" style="margin-left: 20px;"><br>
-
+        <p> <p> 
+        <div>
+            <label  class="now1" for="Openerp Status">Openerp Status:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                        <select name="OpenerpStatus" value="<%- stud.OpenerpStatus%>"  required><br>
+                            <option value="true">True</option>
+                            <option value="false">False</option>
+                        </select>
+        </div>
+        <P> <P>
+        <div>
+            <label  class="now1" for="itVerify">IT Verification:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                        <select name="Itvr" value="<%- stud.Itvr%>"  required><br>
+                            <option value="true">True</option>
+                            <option value="false">False</option>
+                        </select>
+        </div>
         <p> <p>
             <button type="submit" class="btn btn-primary">Update Now</button>
         <p> <p>
-</form>
+       </form>
 
 <%- include('include/footer')%>
 

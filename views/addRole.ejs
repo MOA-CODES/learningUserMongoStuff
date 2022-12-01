@@ -3,20 +3,41 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">   
   <title>New role</title>
   <link rel="stylesheet" href="/css/addUser.css">
 </head>
 
 <body>
-  <main id="main-holder">
+  <div class="container1" style="margin-top: -370; margin-left: -1300;">
+  <a href="/mainadmin1">
+    <div class="btn btn-light" ><span class="bi bi-box-arrow-left" ></span>&nbsp;Go Back</div>
+  </a>
+</div>
+  <main id="main-holder" style="margin-top: -650;">
     <h1 id="login-header">ADD ROLE</h1>
 
     <form id="login-form">
-      <input type="text" name="username" id="username-field" class="login-form-field" placeholder="Role ID">
       <p> </p>
-      <input type="text" name="username" id="username-field" class="login-form-field" placeholder="Title">
+      <div>
+          <label  class="login-form-field" for="roleID" style="margin-left: -80;">Role ID</label>
+                  <select name="RoleId" value="" style="margin-left: 30; margin-top:10; margin-bottom:-50;"><br>
+                      <option value="0">0</option>
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                      <option value="5">5</option>
+                      <option value="6">6</option>
+                      <option value="7">7</option>
+                      <option value="8">8</option>
+                  </select>
+          </div>
+    <p> <p>
+      <input type="text" name="Title" id="username-field" class="login-form-field" placeholder="Title">
       <p> </p>
-      <input type="password" name="password" id="password-field" class="login-form-field" placeholder="Description">
+      <input type="password" name="Description" id="password-field" class="login-form-field" placeholder="Description">
       <p> </p>
       <input type="submit" value="Add New Role" id="login-form-submit">
     </form>

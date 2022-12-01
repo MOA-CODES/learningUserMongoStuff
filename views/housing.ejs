@@ -53,41 +53,59 @@
             </div>
               <div class="form-group">
                 <label class="now1" for="exampleInputEmail1">First Name:</label>
-                <input type="text" value="<%-stud.Firstname%>" class="form-control" name="Firstname" id="hFName" aria-describedby="emailHelp" placeholder="Enter First Name" style="background-color: FAF3F5;" required>
+                <input type="text" value="<%-stud.Firstname%>" class="form-control" name="Firstname" id="hFName" placeholder="Enter First Name" style="background-color: FAF3F5;" required>
               </div>
               <P> </P>
               <div class="form-group">
                   <label class="now1" for="exampleInputEmail1">Last Name:</label>
-                  <input type="text" value="<%-stud.Lastname%>" class="form-control" id="hlName" name="Lastname" aria-describedby="emailHelp" placeholder="Enter Last Name" style="background-color: FAF3F5;" required>
+                  <input type="text" value="<%-stud.Lastname%>" class="form-control" id="hlName" name="Lastname"  placeholder="Enter Last Name" style="background-color: FAF3F5;" required>
               </div>
               <P> </P>
               <div class="form-group">
                   <label  class="now1"for="exampleInputEmail1">Middle Name:</label>
-                  <input type="text" value="<%-stud.Middlename%>" class="form-control" id="hmName" name="Middlename" aria-describedby="emailHelp" placeholder="Enter Middle Name" style="background-color: FAF3F5;" required>
+                  <input type="text" value="<%-stud.Middlename%>" class="form-control" id="hmName" name="Middlename"  placeholder="Enter Middle Name" style="background-color: FAF3F5;" >
               </div>
               <P> </P>
               <div class="form-group">
                   <label class="now1" for="exampleInputEmail1">Phone Number:</label>
-                  <input type="text" value="<%-stud.Phonenumber%>" class="form-control" name="Phonenumber" id="hPhoneNumber" aria-describedby="emailHelp" placeholder="Enter Phone Number" style="background-color: FAF3F5;" required>
+                  <input type="text" value="<%-stud.Phonenumber%>" class="form-control" name="Phonenumber" id="hPhoneNumber"  placeholder="Enter Phone Number" style="background-color: FAF3F5;" required>
               </div>
               <P> </P>
-              <div class="form-group">
-                  <label class="now1" for="exampleInputEmail1">Major:</label>
-                  <input type="text" value="<%-stud.Major%>"  class="form-control" id="hMajor" name="Major" aria-describedby="emailHelp" placeholder="Enter Major" style="background-color: FAF3F5;" required>
+              <div>
+                <label class="now1" for="major">Major:</label>
+                <P> </P>
+                <select name="Major" value="<%- stud.Major%>" id="major" style="background-color: FAF3F5;" required>
+                    <option value="Accounting">Accounting</option>
+                    <option value="Business Administration">Business Administration</option>
+                    <option value="Chemical Engineering">Chemical Engineering</option>
+                    <option value="Communications and Multimedia Design">Communications and Multimedia Design&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</option>
+                    <option value="Computer Engineering">Computer Engineering</option>
+                    <option value="Computer Science">Computer Science</option>
+                    <option value="Economics">Economics</option>
+                    <option value="Electrical/Electronics Engineering">Electrical/Electronics Engineering</option>
+                    <option value="English Language">English Language</option>
+                    <option value="Entrepreneurship & Management">Entrepreneurship & Management</option>
+                    <option value="Information Systems">Information Systems</option>
+                    <option value="Natural and Environmental Sciences">Natural and Environmental Science</option>
+                    <option value="Petroleum Chemistry Systems">Petroleum Chemistry Systems</option>
+                    <option value="Software Engineering">Software Engineering</option>
+                    <option value="Telecommunication Engineering">Telecommunication Engineering</option>
+                    <option value="Bachelor of Laws">Bachelor of Laws</option>
+                </select>
               </div>
               <P> </P>
               <div class="form-group">
                   <label class="now1" for="exampleInputEmail1">Email:</label>
-                  <input type="email" value="<%-stud.SchoolEmail%>" class="form-control" id="hEmail" name="SchoolEmail" aria-describedby="emailHelp" placeholder="Enter Email Address" style="background-color: FAF3F5;" required>
+                  <input type="email" value="<%-stud.SchoolEmail%>" class="form-control" id="hEmail" name="SchoolEmail"  placeholder="Enter Email Address" style="background-color: FAF3F5;" required>
               </div>
               <P> </P>
               <div>
                 <label class="now1" for="housing-types">Housing Types:</label>
                 <P> </P>
                 <select name="HousingType"  value="<%-stud.HousingType%>" id="housing-types" style="background-color: FAF3F5;" required>
-                    <option value="3-in-1">3 - in - 1 with facilities</option>
-                    <option value="2-in-1-with">2 - in - 1 with facilities</option>
-                    <option value="2-in-1-without">2 - in - 1 without facilities</option>
+                    <option value="3-in-1 with facilities">3 - in - 1 with facilities</option>
+                    <option value="2-in-1-with facilities">2 - in - 1 with facilities</option>
+                    <option value="2-in-1-without facilities">2 - in - 1 without facilities</option>
                 </select>
               </div>
               <p> </p>
@@ -95,9 +113,9 @@
                   <label  class="now1" for="meal-plan">Preffered Meal Plan:</label>
                   <P> </P>
                   <select name="MealPlan"  value="<%-stud.MealPlan%>" id="meal-plan" style="background-color: FAF3F5;" required>
-                      <option value="7 Days Meal Plan">7 Meals Plan</option>
-                      <option value="14 Days Meal Plan">14 Meals Plan</option>
-                      <option value="28 Days Meal Plan">28 Meals Plan</option>
+                      <option value="7  Meals Plan">7 Meals Plan</option>
+                      <option value="14  Meals Plan">14 Meals Plan</option>
+                      <option value="28  Meals Plan">28 Meals Plan</option>
                   </select>
                 </div>
                 <p> </p>

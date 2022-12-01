@@ -60,6 +60,12 @@ route.get('/reportstudAct', services.reportstudAct);
 route.get('/reporthealth', services.reporthealth);
 
 route.get('/adduserform', services.adduserform);
+route.get('/addroleform', services.addroleform);
+
+route.get('/updaterole', services.addroleform);
+route.get('/updatestudent', services.updatestudent);
+route.get('/updateuser', services.addroleform);
+
 
 
 

@@ -358,6 +358,28 @@ exports.adduserform = (req, res) => {
     res.render("addUser")
 }
 
+exports.addroleform = (req, res) => {
+    res.render("addRole")
+}
+
+exports.updaterole = (req, res) => {
+    res.render("updaterole")
+}
+
+exports.updatestudent = (req, res) => {    
+    axios.get('http://localhost:3001/api/student/retrieve',{params:{StudID:req.query.StudID}})
+    .then(function(response){
+        res.render("updateStudents",{stud:response.data})
+    })
+    .catch(err=>{
+        res.send(err);
+    })
+}
+
+exports.updateuser = (req, res) => {
+    res.render("updateuser")
+}
+
 
 
 

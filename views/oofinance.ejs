@@ -40,7 +40,7 @@
             Nav header start
         ***********************************-->
         <div class="nav-header">
-              <p class="Orien1">Orientation <span class="blue">Guide App</span></p>
+              <p class="Orien1">Orientation <span class="blue">Guide</span></p>
             
 
             <div class="nav-control">
@@ -108,7 +108,15 @@
                   </span>
                   <div>
                     <p class="fs-18 mb-2">Total Student that have passed this stage:</p>
-                    <span class="fs-26 text-primary font-w600">250/500</span>
+                    <%
+                       var x = 0;
+                       for (var i = 0; i<students.length; i++){
+                       if (students[i].Financevr == true){
+                        x = x + 1;
+                         }
+                      }
+                    %>
+                    <span class="fs-26 text-primary font-w600"><%= x%>/<%= students.length %></span>
                   </div>
                 </div>
                 
@@ -124,7 +132,7 @@
                 <svg class="mr-3" width="8" height="30" viewBox="0 0 8 30" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <rect width="7.65957" height="30" fill="#BDA25C"/>
                 </svg>
-                50%
+                <%= (x/students.length) * 100%>%
               </span>
 
         </div>

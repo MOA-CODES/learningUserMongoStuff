@@ -49,31 +49,49 @@
         <form action="" method="POST" id="financeform"  onsubmit="return false">
           <div class="form-group">
             <label class="now1" for="exampleInputEmail1" hidden readonly>StudID:</label>
-            <input type="text" class="form-control" name="StudID" id="firstName" value="<%- stud.StudID%>" aria-describedby="emailHelp" placeholder="Enter First Name"  hidden readonly>
+            <input type="text" class="form-control" name="StudID" id="firstName" value="<%- stud.StudID%>"  placeholder="Enter First Name"  hidden readonly>
           </div>
           <div class="form-group">
             <label class="now1" for="exampleInputEmail1">First Name:</label>
-            <input type="text" value="<%- stud.Firstname%>" class="form-control" name="Firstname" id="firstt" aria-describedby="emailHelp" placeholder="Enter First Name"  style="background-color: FAF3F5;" required>
+            <input type="text" value="<%- stud.Firstname%>" class="form-control" name="Firstname" id="firstt"  placeholder="Enter First Name"  style="background-color: FAF3F5;" required>
           </div>
           <P> </P>
           <div class="form-group">
               <label class="now1" for="exampleInputEmail1">Last Name:</label>
-              <input type="text" value="<%- stud.Lastname%>" class="form-control" name="Lastname" id="lastt" aria-describedby="emailHelp" placeholder="Enter Last Name"  style="background-color: FAF3F5;"required>
+              <input type="text" value="<%- stud.Lastname%>" class="form-control" name="Lastname" id="lastt"  placeholder="Enter Last Name"  style="background-color: FAF3F5;"required>
           </div>
           <P> </P>
           <div class="form-group">
               <label class="now1" for="exampleInputEmail1">Middle Name:</label>
-              <input type="text" value="<%- stud.Middlename%>" class="form-control" name="Middlename" id="midddle" aria-describedby="emailHelp" placeholder="Enter Middle Name"  style="background-color: FAF3F5;" required>
+              <input type="text" value="<%- stud.Middlename%>" class="form-control" name="Middlename" id="midddle"  placeholder="Enter Middle Name"  style="background-color: FAF3F5;" >
           </div>
           <P> </P>
-          <div class="form-group">
-              <label class="now1" for="exampleInputEmail1">Major:</label>
-              <input type="text" value="<%- stud.Major%>" class="form-control" name="Major" id="fMajor" aria-describedby="emailHelp" placeholder="Enter Major"  style="background-color: FAF3F5;" required>
+          <div>
+            <label class="now1" for="major">Major:</label>
+            <P> </P>
+            <select name="Major" value="<%- stud.Major%>" id="major" style="background-color: FAF3F5;" required>
+                <option value="Accounting">Accounting</option>
+                <option value="Business Administration">Business Administration</option>
+                <option value="Chemical Engineering">Chemical Engineering</option>
+                <option value="Communications and Multimedia Design">Communications and Multimedia Design&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</option>
+                <option value="Computer Engineering">Computer Engineering</option>
+                <option value="Computer Science">Computer Science</option>
+                <option value="Economics">Economics</option>
+                <option value="Electrical/Electronics Engineering">Electrical/Electronics Engineering</option>
+                <option value="English Language">English Language</option>
+                <option value="Entrepreneurship & Management">Entrepreneurship & Management</option>
+                <option value="Information Systems">Information Systems</option>
+                <option value="Natural and Environmental Sciences">Natural and Environmental Science</option>
+                <option value="Petroleum Chemistry Systems">Petroleum Chemistry Systems</option>
+                <option value="Software Engineering">Software Engineering</option>
+                <option value="Telecommunication Engineering">Telecommunication Engineering</option>
+                <option value="Bachelor of Laws">Bachelor of Laws</option>
+            </select>
           </div>
           <P> </P>
           <div class="form-group">
               <label class="now1" for="exampleInputEmail1">Personal Email:</label>
-              <input type="email" value="<%- stud.Personalemail%>" class="form-control" name="Personalemail" id="fEmail" aria-describedby="emailHelp" placeholder="Enter Email Address"  style="background-color: FAF3F5;" required>
+              <input type="email" value="<%- stud.Personalemail%>" class="form-control" name="Personalemail" id="fEmail"  placeholder="Enter Email Address"  style="background-color: FAF3F5;" required>
           </div>
           <P> </P>
           <div class="form-group">

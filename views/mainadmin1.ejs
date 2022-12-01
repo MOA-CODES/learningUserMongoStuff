@@ -46,7 +46,7 @@
         ***********************************-->
     <div class="nav-header">
       <!-- <a href="index2.html" class="brand-logo"> -->
-      <p class="Orien1">Orientation <span class="blue">Guide App</span></p>
+      <p class="Orien1">Orientation <span class="blue">Guide</span></p>
       <!-- <img class="logo-abbr" src="./images/logo.png" alt="">
                 <img class="logo-compact" src="./images/logo-text.png" alt="">
                 <img class="brand-title" src="./images/logo-text.png" alt=""> -->
@@ -154,10 +154,72 @@
             <h2 class="text-black font-w600">Dashboard</h2>
             <p class="mb-0">Orientation Admin Dashboard</p>
           </div>
-          <!-- <a href="" class="btn btn-outline-primary"><i class=""></i>Generate Report</a> -->
         </div>
+        <% var Ad = 0; var Fi = 0; var it = 0; var ho = 0; var he = 0; var st = 0;
+            var Completed = 0;
+                              for (var i = 0; i<students.length; i++){
+                                if(students[i].Healthvr == true && students[i].Housingvr == true && students[i].Adminvr == true
+                                && students[i].Financevr == true && students[i].Studactvr == true && students[i].Itvr == true ){
+                                  Completed = Completed + 1;
+                                }
 
 
+                              if (students[i].Healthvr == true){
+                              he = he + 1;
+                              }
+                              if (students[i].Housingvr == true){
+                              ho = ho + 1;
+                              }
+                              if (students[i].Adminvr == true){
+                              Ad = Ad + 1;
+                              }
+                              if (students[i].Financevr == true){
+                              Fi = Fi + 1;
+                              }
+                              if (students[i].Studactvr == true){
+                              st = st + 1;
+                              }
+                              if (students[i].Itvr == true){
+                                it = it + 1;
+                                }
+                            }
+                          %>
+                        <div class="mr-auto d-flex align-items-center py-3">
+                          <div class="col-lg-4">
+                            <p class="fs-18 mb-2">Total Students that have passed <strong style="color: black;">Admission:</strong></p>
+                            <span class="fs-26 text-primary font-w600"><%= Ad%>/<%= students.length %></span>
+                          </div>
+                          <div class="col-lg-4">
+                            <p class="fs-18 mb-2">Total Students that have passed <strong style="color: black;">Finance:</strong></p>
+                            <span class="fs-26 text-primary font-w600"><%= Fi%>/<%= students.length %></span>
+                          </div>
+                          <div class="col-lg-4">
+                            <p class="fs-18 mb-2">Total Students that have passed <strong style="color: black;"> I.T:</strong></p>
+                            <span class="fs-26 text-primary font-w600"><%= it%>/<%= students.length %></span>
+                          </div>
+                        </div>
+
+                        <div class="mr-auto d-flex align-items-center py-3">
+                          <div class="col-lg-4">
+                            <p class="fs-18 mb-2">Total Students that have passed <strong style="color: black;">Housing/ID:</strong>:</p>
+                            <span class="fs-26 text-primary font-w600"><%= ho%>/<%= students.length %></span>
+                          </div>
+                          <div class="col-lg-4">
+                            <p class="fs-18 mb-2">Total Students that have passed <strong style="color: black;">Health:</strong></p>
+                            <span class="fs-26 text-primary font-w600"><%= he%>/<%= students.length %></span>
+                          </div>
+                          <div class="col-lg-4">
+                            <p class="fs-18 mb-2">Total Students that have passed <strong style="color: black;">StudAct:</strong></p>
+                            <span class="fs-26 text-primary font-w600"><%= st%>/<%= students.length %></span>
+                          </div>
+                        </div>
+                        <div class="row align-items-center">
+                          <div class="col-lg-4">
+                            <p class="fs-18 mb-2">Total Students that have Completed <strong style="color: black;">Orientation:</strong>:</p>
+                            <span class="fs-26 text-primary font-w600"><%= Completed%>/<%= students.length %></span>
+                          </div>
+                        </div>
+                        <br>
         <div class="row">
           <div class="col-lg-12">
             <div class="row">
@@ -262,7 +324,7 @@
                           <td><%= students[i].Studactvr %></td>
                           
                           <td>
-                            <a href="" class="btn border-shadow update" title="1">
+                            <a href="/updatestudent?StudID=<%= students[i].StudID%>" class="btn border-shadow update" title="1">
                                 <span class="text-gradient"><i class="fas fa-pencil-alt"></i></span>
                             </a>
                             <a class="btn border-shadow delete" data-id="">

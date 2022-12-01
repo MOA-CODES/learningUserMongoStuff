@@ -29,7 +29,7 @@
     <div id="main-wrapper">
         <div class="nav-header">
             <!-- <a href="index2.html" class="brand-logo"> -->
-              <p class="Orien1">Orientation <span class="blue">Guide App</span></p>
+              <p class="Orien1">Orientation <span class="blue">Guide</span></p>
                 <!-- <img class="logo-abbr" src="./images/logo.png" alt="">
                 <img class="logo-compact" src="./images/logo-text.png" alt="">
                 <img class="brand-title" src="./images/logo-text.png" alt=""> -->
@@ -129,14 +129,14 @@
 														</span>
 														<div>
 															<p class="fs-18 mb-2">Total Student that have passed this stage:</p>
-                              <%
-                                var x = 0;
-                                for (var i = 0; i<students.length; i++){
-                                if (students[i].Adminvr == true){
-                                   x = x + 1;
-                                }
-                              }
-                              %>
+                                                                <%
+                                                                    var x = 0;
+                                                                    for (var i = 0; i<students.length; i++){
+                                                                    if (students[i].Adminvr == true){
+                                                                    x = x + 1;
+                                                                    }
+                                                                }
+                                                                %>
 															<span class="fs-26 text-primary font-w600"><%= x%>/<%= students.length %></span>
 														</div>
 													</div>
@@ -159,7 +159,7 @@
 																<svg class="mr-3" width="8" height="30" viewBox="0 0 8 30" fill="none" xmlns="http://www.w3.org/2000/svg">
 																	<rect width="7.65957" height="30" fill="#BDA25C"/>
 																</svg>
-																 <%= (x/students.length) * 100%>%
+																 <%= (x/students.length) * 100%>
 															</span>
 
 												</div>
@@ -178,12 +178,12 @@
                               <th>First Name</th>
                               <th>Major</th>
                               <th>Personalemail</th>
-                              <th>Jamb File</th>
+                              <!-- <th>Jamb File</th>
                               <th>Waec File</th>
                               <th>Transcript</th>
                               <th>Rec_letter</th>
                               <th>Pic_Passport</th>
-                              <th>P_essay</th>
+                              <th>P_essay</th> -->
                               <th>Admissionvr</th>
                               <th>Action</th>
                             </tr>
@@ -196,12 +196,12 @@
                                 <td><%= students[i].Firstname %></td>
                                 <td><%= students[i].Major %></td>
                                 <td><%= students[i].Personalemail %></td>
+                                <!-- <td></td>
                                 <td></td>
                                 <td></td>
                                 <td></td>
                                 <td></td>
-                                <td></td>
-                                <td></td>
+                                <td></td> -->
                                 <td><%= students[i].Adminvr %></td>
                                 
                                 <td>
