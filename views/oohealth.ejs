@@ -70,9 +70,9 @@
                         <div class="header-left">
                             <div class="dashboard_bar">
 								<div class="input-group search-area d-lg-inline-flex d-none">
-									<input type="text" class="form-control" placeholder="Search here...">
+									<input type="text" id="OOLSEARCHID" class="form-control" placeholder="Search here...">
 									<div class="input-group-append">
-										<span class="input-group-text"><a href="javascript:void(0)"><i class="flaticon-381-search-2"></i></a></span>
+										<span id="OOLSEARCH" class="input-group-text"><a href="javascript:void(0)"><i class="flaticon-381-search-2"></i></a></span>
 									</div>
 								</div>
                             </div>
@@ -160,7 +160,7 @@
                 <svg class="mr-3" width="8" height="30" viewBox="0 0 8 30" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <rect width="7.65957" height="30" fill="#BDA25C"/>
                 </svg>
-                <%= (x/students.length) * 100%>
+                <%= Math.ceil((x/students.length) * 100) +"%" %>
               </span>
 
         </div>
@@ -196,23 +196,23 @@
                           <tbody>
                             <%for (var i = 0; i<students.length; i++){%>
                             <tr>
-                                <td><%= i+1 %></td>
-                                <td><%= students[i].StudID %></td>
-                                <td><%= students[i].Firstname %></td>
-                                <td><%= students[i].Gender %></td>
-                                <td><%= students[i].DOB %></td>
-                                <td><%= students[i].Nationality %></td>
-                                <td><%= students[i].Address %></td>
-                                <td><%= students[i].MaritalStatus %></td>
-                                <td><%= students[i].BG %></td>
-                                <td><%= students[i].GT %></td>
-                                <td><%= students[i].MedicalCond %></td>
-                                <td><%= students[i].Allergies %></td>
-                                <td><%= students[i].Parentname %></td>
-                                <td><%= students[i].ParentRel%></td>
-                                <td><%= students[i].ParentAddress%></td>
-                                <td><%= students[i].ParentPhone%></td>
-                                <td><%= students[i].Healthvr%></td>  
+                                <td  class="<%= students[i].StudID %>" ><%= i+1 %></td>
+                                <td class="<%= students[i].StudID %>" ><%= students[i].StudID %></td>
+                                <td class="<%= students[i].StudID %>" ><%= students[i].Firstname %></td>
+                                <td class="<%= students[i].StudID %>"><%= students[i].Gender %></td>
+                                <td class="<%= students[i].StudID %>"><%= students[i].DOB %></td>
+                                <td class="<%= students[i].StudID %>"><%= students[i].Nationality %></td>
+                                <td class="<%= students[i].StudID %>"><%= students[i].Address %></td>
+                                <td class="<%= students[i].StudID %>"><%= students[i].MaritalStatus %></td>
+                                <td class="<%= students[i].StudID %>"><%= students[i].BG %></td>
+                                <td class="<%= students[i].StudID %>"><%= students[i].GT %></td>
+                                <td class="<%= students[i].StudID %>"><%= students[i].MedicalCond %></td>
+                                <td class="<%= students[i].StudID %>"><%= students[i].Allergies %></td>
+                                <td class="<%= students[i].StudID %>"><%= students[i].Parentname %></td>
+                                <td class="<%= students[i].StudID %>"><%= students[i].ParentRel%></td>
+                                <td class="<%= students[i].StudID %>"><%= students[i].ParentAddress%></td>
+                                <td class="<%= students[i].StudID %>"><%= students[i].ParentPhone%></td>
+                                <td class="<%= students[i].StudID %>"><%= students[i].Healthvr%></td>  
 
                                 <td>
                                   <a href="/update-oohealth?StudID=<%= students[i].StudID%>" class="btn border-shadow update" title="1">
@@ -267,5 +267,7 @@
 			});
 		});
 	</script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="/js/conn.js"></script>
 </body>
 </html>

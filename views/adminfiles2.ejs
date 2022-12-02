@@ -10,9 +10,6 @@
   <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon.png">
   <link href="/vendor/jqvmap/css/jqvmap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="/vendor/chartist/css/chartist.min.css">
-
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
   <link href="/vendor/bootstrap-select/dist/css/bootstrap-select.min.css" rel="stylesheet">
   <link href="/vendor/bootstrap-datetimepicker/css/bootstrap-datetimepicker.min.css" rel="stylesheet">
   <link href="/css/style.css" rel="stylesheet">
@@ -39,8 +36,17 @@
         Main wrapper start
     ***********************************-->
   <div id="main-wrapper">
+
+    <!--**********************************
+            Nav header start
+        ***********************************-->
     <div class="nav-header">
+      <!-- <a href="index2.html" class="brand-logo"> -->
       <p class="Orien1">Orientation <span class="blue">Guide</span></p>
+      <!-- <img class="logo-abbr" src="./images/logo.png" alt="">
+                <img class="logo-compact" src="./images/logo-text.png" alt="">
+                <img class="brand-title" src="./images/logo-text.png" alt=""> -->
+      <!-- </a> -->
 
       <div class="nav-control">
         <div class="hamburger">
@@ -48,7 +54,16 @@
         </div>
       </div>
     </div>
-    
+    <!--**********************************
+            Nav header end
+        ***********************************-->
+
+    <!--**********************************
+            Chat box start
+        ***********************************-->
+    <!--**********************************
+            Header start
+        ***********************************-->
     <div class="header">
       <div class="header-content">
         <nav class="navbar navbar-expand">
@@ -68,15 +83,15 @@
 
             <strong>
               <li class="nav-item">
-                <a style="color: black;" class="nav-link" href="/mainadmin1">Student</a>
+                <a style="color: black;" class="nav-link" href="/ooadmissionfiles">Admission Files</a>
               </li>
             </strong>
             <strong>
               <li class="nav-item">
-                <a style="color: black;" class="nav-link" href="/adminusers">Users</a>
+                <a style="color: black;" class="nav-link" href="/ooadmissions">OOAdmission</a>
               </li>
             </strong>
-            <strong>
+            <!-- <strong>
               <li class="nav-item">
                 <a style="color: black;" class="nav-link" href="/adminfiles">Files</a>
               </li>
@@ -85,7 +100,7 @@
               <li class="nav-item">
                 <a style="color: black;" class="nav-link" href="/adminroles">Roles</a>
               </li>
-            </strong>
+            </strong> -->
             <!-- <li class="text-black"><strong>Users</strong></li>
 <li class="text-black"><strong>Files</strong></li></li>
 <li class="text-black"><strong>Student</strong></li> -->
@@ -137,46 +152,57 @@
           </div>
           <!-- <a href="" class="btn btn-outline-primary"><i class=""></i>Generate Report</a> -->
         </div>
-        <div class="">
-          <div>
-            <a href="/addroleform" class="btn btn-primary mr-3" >+New Role</a>
-          </div><br><br>
-        </div>
+
+
+
+        <!--**********************************
+            Content body end
+        ***********************************-->
+
+        <br>
+        <br>
+
+        <!-- Add Order -->
+
+        <br>
+
         <div class="table-responsive">
-          <h2 class="text-black font-w600">ROLES</h2>
+          <h2 class="text-black font-w600">FILES</h2>
           <table class="table table-hover">
             <thead>
               <tr>
                 <th>No.</th>
-                <th colspan="2">ROLE_ID</th>
-                <th>TITLE</th>
-                <th colspan="4">DESCRIPTION</th>
-                <th>ACTION</th>
-                <!-- <th>Admin Verification</th> -->
+                <th>StudID</th>
+                <th>Jamb</th>
+                <th>Passport</th>
+                <!-- <th>Pic_Passport</th> -->
+                <th>Waec</th>
+                <th>Transcript</th>
+                <th>Rec_letter</th>
+                <th>P_essay</th>
               </tr>
             </thead>
             <tbody>
-              <%for (var i = 0; i<roles.length; i++){%>
-              <tr>
-                <td class="<%=roles[i].Role_id%>"><%= i+1 %></td>
-                <td class="<%=roles[i].Role_id%>" colspan="2"><%= roles[i].Role_id %></td>
-                <td class="<%=roles[i].Role_id%>"><%= roles[i].Title %></td>
-                <td class="<%=roles[i].Role_id%>" colspan="4"><%= roles[i].Description %></td>
-                <td class="<%=roles[i].Role_id%>">
-                  <a href="/updaterole?Role_id=<%= roles[i].Role_id%>" class="btn border-shadow update" title="1">
-                      <span class="text-gradient"><i class="fas fa-pencil-alt"></i></span>
-                  </a>
-              </td>
-              </tr>
-              <%}%>
+              <%for (var i = 0; i<files.length; i++){%>
+                <tr>
+                  <td class="<%=files[i].StudID%>" ><%= i+1 %></td>
+                  <td class="<%=files[i].StudID%>"><%= files[i].StudID %></td>
+                  <td class="<%=files[i].StudID%>"><%= files[i].Jamb %></td>
+                  <td class="<%=files[i].StudID%>"><%= files[i].Passport %></td>
+                  <!-- <td><%= files[i].Pic_Passport %></td> -->
+                  <td class="<%=files[i].StudID%>"><%= files[i].Waec %></td> 
+                  <td class="<%=files[i].StudID%>"><%= files[i].Transcript %></td>                            
+                  <td class="<%=files[i].StudID%>"><%= files[i].Rec_letter %></td>                            
+                  <td class="<%=files[i].StudID%>"><%= files[i].P_essay %></td>                               
+                </tr>
+                <%}%>
             </tbody>
           </table>
           <div class="">
             <br>
-            <a href="" class="btn btn-outline-primary"><i class=""></i>Generate Report</a>
+            <!-- <a href="" class="btn btn-outline-primary"><i class=""></i>Generate Report</a> -->
           </div>
-        </div>
-        <br><br><br>
+        </div> <br><br><br>
 
         <br><br><br><br><br>
         <br><br><br>
@@ -234,8 +260,8 @@
           });
         });
       </script>
-       <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-       <script src="/js/conn.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+      <script src="/js/conn.js"></script>
 </body>
 
 </html>

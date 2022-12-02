@@ -71,9 +71,9 @@
             <div class="header-left">
               <div class="dashboard_bar">
                 <div class="input-group search-area d-lg-inline-flex d-none">
-                  <input type="text" class="form-control" placeholder="Search here...">
+                  <input type="text" id="OOLSEARCHID" class="form-control" placeholder="Search here...">
                   <div class="input-group-append">
-                    <span class="input-group-text"><a href="javascript:void(0)"><i class="flaticon-381-search-2"></i></a></span>
+                    <span id="OOLSEARCH" class="input-group-text"><i class="flaticon-381-search-2"></i></a></span>
 
                   </div>
                 </div>
@@ -171,50 +171,36 @@
           <table class="table table-hover">
             <thead>
               <tr>
-                <th>ID</th>
-                <th>Name</th>
+                <th>No.</th>
+                <th>StudID</th>
+                <th>Jamb</th>
                 <th>Passport</th>
-                <th>JAMB</th>
-                <th>WAEC</th>
-                <th>Admin Verification</th>
+                <!-- <th>Pic_Passport</th> -->
+                <th>Waec</th>
+                <th>Transcript</th>
+                <th>Rec_letter</th>
+                <th>P_essay</th>
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <td>A00023905</td>
-                <td>Rimansukwe Magaji</td>
-                <td>
-                  <label for="container"></label>
-                  <input type="checkbox" checked="checked">
-                  <span class="checkmark"></span>
-                </td>
-
-                <td>
-                  <label for="container"></label>
-                  <input type="checkbox" checked="checked">
-                  <span class="checkmark"></span>
-                </td>
-                <td>
-                  <label for="container"></label>
-                  <input type="checkbox" checked="checked">
-                  <span class="checkmark"></span>
-                </td>
-
-                <td>
-                  <!-- <label for="radio1"></label>
-                            <input type="radio" class="larger1" name="radios1" id="finanaceOverall1" /> -->
-
-                  <label for="container"></label>
-                  <input type="checkbox" checked="checked">
-                  <span class="checkmark"></span>
-
-                </td>
-              </tr>
+              <%for (var i = 0; i<files.length; i++){%>
+                <tr>
+                    <td class="<%=files[i].StudID%>" ><%= i+1 %></td>
+                    <td class="<%=files[i].StudID%>"><%= files[i].StudID %></td>
+                    <td class="<%=files[i].StudID%>"><%= files[i].Jamb %></td>
+                    <td class="<%=files[i].StudID%>"><%= files[i].Passport %></td>
+                    <!-- <td><%= files[i].Pic_Passport %></td> -->
+                    <td class="<%=files[i].StudID%>"><%= files[i].Waec %></td> 
+                    <td class="<%=files[i].StudID%>"><%= files[i].Transcript %></td>                            
+                    <td class="<%=files[i].StudID%>"><%= files[i].Rec_letter %></td>                            
+                    <td class="<%=files[i].StudID%>"><%= files[i].P_essay %></td>                            
+                </tr>
+                <%}%>
             </tbody>
           </table>
           <div class="">
             <br>
-            <a href="" class="btn btn-outline-primary"><i class=""></i>Generate Report</a>
+            <!-- <a href="" class="btn btn-outline-primary"><i class=""></i>Generate Report</a> -->
           </div>
         </div> <br><br><br>
 
@@ -274,6 +260,8 @@
           });
         });
       </script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+      <script src="/js/conn.js"></script>
 </body>
 
 </html>

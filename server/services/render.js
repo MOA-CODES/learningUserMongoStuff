@@ -178,8 +178,16 @@ exports.mainadmin = (req, res)=>{
 }
 
 exports.adminfiles = (req, res)=>{
-    res.render('adminfiles')
+    axios.get('http://localhost:3001/api/file/retrieve')
+    .then(function(response){
+        res.render('adminfiles', {files:response.data})
+    })
+    .catch(err=>{
+        res.send(err);
+    })
 }
+
+
 
 exports.adminroles = (req, res)=>{
     axios.get('http://localhost:3001/api/role/retrieve')
@@ -363,7 +371,13 @@ exports.addroleform = (req, res) => {
 }
 
 exports.updaterole = (req, res) => {
-    res.render("updaterole")
+    axios.get('http://localhost:3001/api/role/retrieve',{params:{Role_id:req.query.Role_id}})
+    .then(function(response){
+        res.render("updaterole",{role:response.data})
+    })
+    .catch(err=>{
+        res.send(err);
+    })
 }
 
 exports.updatestudent = (req, res) => {    
@@ -377,7 +391,43 @@ exports.updatestudent = (req, res) => {
 }
 
 exports.updateuser = (req, res) => {
-    res.render("updateuser")
+    axios.get('http://localhost:3001/api/user/retrieve',{params:{User_id:req.query.User_id}})
+    .then(function(response){
+        res.render("updateuser",{user:response.data})
+    })
+    .catch(err=>{
+        res.send(err);
+    })
+}
+
+exports.complete = (req, res) => {
+    axios.get('http://localhost:3001/api/student/retrieve')
+    .then(function(response){
+        res.render('completed', {students:response.data})
+    })
+    .catch(err=>{
+        res.send(err);
+    })
+}
+
+exports.complete2 = (req, res) => {
+    axios.get('http://localhost:3001/api/student/retrieve')
+    .then(function(response){
+        res.render('completed2', {students:response.data})
+    })
+    .catch(err=>{
+        res.send(err);
+    })
+}
+
+exports.ooadmissionfiles = (req, res) => {
+    axios.get('http://localhost:3001/api/file/retrieve')
+    .then(function(response){
+        res.render('adminfiles2', {files:response.data})
+    })
+    .catch(err=>{
+        res.send(err);
+    })
 }
 
 

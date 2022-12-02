@@ -68,9 +68,9 @@
                         <div class="header-left">
                             <div class="dashboard_bar">
 								<div class="input-group search-area d-lg-inline-flex d-none">
-									<input type="text" class="form-control" placeholder="Search here...">
+									<input type="text" id="OOLSEARCHID" class="form-control" placeholder="Search here...">
 									<div class="input-group-append">
-										<span class="input-group-text"><a href="javascript:void(0)"><i class="flaticon-381-search-2"></i></a></span>
+										<span id="OOLSEARCH" class="input-group-text"><a href="javascript:void(0)"><i class="flaticon-381-search-2"></i></a></span>
 									</div>
 								</div>
                             </div>
@@ -160,7 +160,7 @@
                 <svg class="mr-3" width="8" height="30" viewBox="0 0 8 30" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <rect width="7.65957" height="30" fill="#BDA25C"/>
                 </svg>
-                <%= (x/students.length) * 100%>
+                <%= Math.ceil((x/students.length) * 100) +"%"  %>
               </span>
 
         </div>
@@ -187,16 +187,16 @@
                           <tbody>
                             <%for (var i = 0; i<students.length; i++){%>
                             <tr>
-                              <td><%= i+1 %></td>
-                              <td><%= students[i].StudID %></td>
-                              <td><%= students[i].Firstname %></td>
-                              <td><%= students[i].Lastname %></td>
-                              <td><%= students[i].Faith %></td>
-                              <td><%= students[i].SportsClub %></td>
-                              <td><%= students[i].AcademicInt %></td>
-                              <td><%= students[i].Hobbies %></td>
-                              <td><%= students[i].GovClubs %></td>
-                              <td><%= students[i].Studactvr %></td>
+                              <td class="<%= students[i].StudID %>"><%= i+1 %></td>
+                              <td class="<%= students[i].StudID %>"><%= students[i].StudID %></td>
+                              <td class="<%= students[i].StudID %>"><%= students[i].Firstname %></td>
+                              <td class="<%= students[i].StudID %>"><%= students[i].Lastname %></td>
+                              <td class="<%= students[i].StudID %>"><%= students[i].Faith %></td>
+                              <td class="<%= students[i].StudID %>"><%= students[i].SportsClub %></td>
+                              <td class="<%= students[i].StudID %>"><%= students[i].AcademicInt %></td>
+                              <td class="<%= students[i].StudID %>"><%= students[i].Hobbies %></td>
+                              <td class="<%= students[i].StudID %>"><%= students[i].GovClubs %></td>
+                              <td class="<%= students[i].StudID %>"><%= students[i].Studactvr %></td>
 
                                 <td>
                                   <a href="/update-ooactivities?StudID=<%= students[i].StudID%>" class="btn border-shadow update" title="1">
@@ -307,5 +307,7 @@
 			});
 		});
 	</script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="/js/conn.js"></script>
 </body>
 </html>

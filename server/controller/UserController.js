@@ -13,8 +13,8 @@ exports.create = (req,res)=>{
     const U = new User({
         User_id:req.body.User_id,
         name:req.body.name,
-        password:req.body.password
-    })
+        password:req.body.password,
+        })
 
     var x = req.body.User_id;
     
@@ -50,21 +50,19 @@ exports.update = (req,res)=>{
         res.status(400).send({message: "Data to update can not be empty!"})
         return;
     }
-
     const id = req.body.User_id;
-    Role.findOneAndUpdate({User_id: id}, req.body, {useFindAndModify: false})
+    console.log(id)
+    User.findOneAndUpdate({User_id: id}, req.body)
     .then(data =>{
+        console.log(data);
         if(!data){
             res.status(404).send({message:`Cannot Update user with ${id}. Maybe user not found!`})
         }else{
-            // res.send(data)
-            res.json({
-                message:'User: '+id+ ' updated'
-            })
+            res.send("User updated")
         }
     })
     .catch(err=>{
-        res.status(500).send({message:"Error Update user information"})
+        res.status(500).send({message:"Error Updating user information"})
     })
     
 }

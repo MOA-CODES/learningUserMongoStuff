@@ -148,20 +148,21 @@
               <button class="previous" id="previousf" disabled>Previous</button>
             </a>            
             <a href="/itstage?StudID=<%- stud.StudID%>">
-              <button class="next" id="nextf" >Next</button>
+              <button class="next" id="nextf" disabled>Next</button>
             </a>
   </section>
     </div>
     <script>
       var nextbutton = document.getElementById("nextf");
+
       var status = document.getElementById("getFinancevrstatus").value;
       var rd = document.getElementById("finanaceOverall");
 
       if(status == "true"){
         rd.checked = true;
-        nexff.disabled = false;
+        nextbutton.disabled = false;
       }else{
-        nexff.disabled = true;
+        nextbutton.disabled = true;
       }
 
     </script>

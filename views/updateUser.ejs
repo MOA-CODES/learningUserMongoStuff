@@ -10,24 +10,25 @@
 </head>
 
 <body>
-  <div class="container1" style="margin-top: -370; margin-left: -1300;">
-    <a href="/mainadmin1">
+  <div class="container1" style="margin-top: -170; margin-left: -1300;">
+    <a href="/adminusers">
       <div class="btn btn-light" ><span class="bi bi-box-arrow-left" ></span>&nbsp;Go Back</div>
     </a>
   </div>
+  <p> <br> </p>
   <main id="main-holder" style="margin-top: -650;">
     <h1 id="login-header">UPDATE USER</h1>
 
-    <form id="adduserform">
-      <input type="text" name="User_id"  class="login-form-field" placeholder="User ID">
+    <form id="updateuserform">
+      <input type="text" name="User_id" value="<%= user.User_id %>" class="login-form-field" placeholder="User ID">
       <p> </p>
-      <input type="text" name="name"  class="login-form-field" placeholder="Name">
+      <input type="text" name="name" value="<%= user.name %>" class="login-form-field" placeholder="Name">
       <p> </p>
-      <input type="password" name="password"  class="login-form-field" placeholder="Password">
+      <input type="password" name="password" value="<%= user.password %>"  class="login-form-field" placeholder="Password">
       <p> </p>
         <div>
             <label  class="login-form-field" for="roleID">Role ID</label>
-                    <select name="RoleId" value="" style="margin-left: 30; margin-top:10; margin-bottom:-50;"><br>
+                    <select name="Role_id" value="<%= user.Role_id %>" style="margin-left: 30; margin-top:10; margin-bottom:-50;"><br>
                         <option value="0">0</option>
                         <option value="1">1</option>
                         <option value="2">2</option>
@@ -40,7 +41,7 @@
                     </select>
             </div>
       <p> <p>
-      <button type="submit" id="login-form-submit">Update User</button>
+      <button type="submit">Update User</button>
     </form>
   
   </main>

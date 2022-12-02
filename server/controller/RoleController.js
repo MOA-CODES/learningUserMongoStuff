@@ -6,13 +6,10 @@ exports.create = (req,res)=>{
         res.status(400).send({message: "Content can not be empty!"})
         return;
     }
-    if( Role.find(req.body.Role_id)  ){
-        res.status(400).send({message: "ID: already exists in table"})
-        return;
-    }
-
-
-
+    // if( Role.find(req.body.Role_id)  ){
+    //     res.status(400).send({message: "ID: already exists in table"})
+    //     return;
+    // }
     //new role
     const R = new Role({
         Role_id:req.body.Role_id,
@@ -50,16 +47,12 @@ exports.update = (req,res)=>{
         if(!data){
             res.status(404).send({message:`Cannot Update user with ${id}. Maybe user not found!`})
         }else{
-            // res.send(data)
-            res.json({
-                message:'Role: '+ id+' updated'
-            })
+            res.send("Role updated")
         }
     })
     .catch(err=>{
         res.status(500).send({message:"Error Update user information"})
     })
-    
 }
 
 

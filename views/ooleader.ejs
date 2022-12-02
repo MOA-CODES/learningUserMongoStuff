@@ -154,8 +154,8 @@
                   </div>
                   <div class="row align-items-center">
                         <div class="col-lg-4">
-                          <p class="fs-18 mb-2">Total Students that have Completed <strong style="color: black;">Orientation:</strong>:</p>
-                          <span class="fs-26 text-primary font-w600"><%= Completed%>/<%= students.length %></span>
+                          <p class="fs-18 mb-2">Total Students that have Completed <a href="/complete"><strong style="color: black;">Orientation:</strong>:</p></a>
+                          <span class="fs-26 text-primary font-w600"><%= Completed %>/<%= students.length %></span>
                         </div>
                   </div>
   <br>
@@ -181,29 +181,29 @@
                           <tbody>
                             <%for (var i = 0; i<students.length; i++){%>
                             <tr>
-                                <td><%= i+1 %></td>
-                                <td><%= students[i].StudID %></td>
-                                <td><%= students[i].Firstname %></td>
-                                <td><%= students[i].Major %></td>
-                                <td><%= students[i].Personalemail %></td>
-                                <td><%= students[i].SchoolEmail %></td>
+                                <td class="<%= students[i].StudID %>  sean"><%= i+1 %></td>
+                                <td class="<%= students[i].StudID %>  sean"><%= students[i].StudID %></td>
+                                <td class="<%= students[i].StudID %>  sean"><%= students[i].Firstname %></td>
+                                <td class="<%= students[i].StudID %>  sean"><%= students[i].Major %></td>
+                                <td class="<%= students[i].StudID %>  sean"><%= students[i].Personalemail %></td>
+                                <td class="<%= students[i].StudID %>  sean"><%= students[i].SchoolEmail %></td>
 
-                                <td><%= students[i].Phonenumber %></td>
-                                <td><%= students[i].Adminvr %></td>
-                                <td><%= students[i].Financevr %></td>
-                                <td><%= students[i].Itvr %></td>
-                                <td><%= students[i].Housingvr %></td>
-                                <td><%= students[i].Healthvr %></td>
-                                <td><%= students[i].Studactvr %></td>                                
+                                <td class="<%= students[i].StudID %>  sean"><%= students[i].Phonenumber %></td>
+                                <td class="<%= students[i].StudID %>  sean"><%= students[i].Adminvr %></td>
+                                <td class="<%= students[i].StudID %>  sean"><%= students[i].Financevr %></td>
+                                <td class="<%= students[i].StudID %>  sean"><%= students[i].Itvr %></td>
+                                <td class="<%= students[i].StudID %>  sean"><%= students[i].Housingvr %></td>
+                                <td class="<%= students[i].StudID %>  sean"><%= students[i].Healthvr %></td>
+                                <td class="<%= students[i].StudID %>"><%= students[i].Studactvr %></td>                                
                             </tr>
                             <%}%>
                           </tbody>
                         </table>
                       </div>
                       <div class="">
-                        <br>
+                        <!-- <br>
                         <a href="" class="btn btn-outline-primary"><i class=""></i>Generate Report</a>
-                      </div>
+                      </div> -->
         <div class="footer">
             <div class="copyright">
             <p>Copyright 2022© Designed &amp; Developed by SDP Team 2022</p>

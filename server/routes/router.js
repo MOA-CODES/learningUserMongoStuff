@@ -62,18 +62,14 @@ route.get('/reporthealth', services.reporthealth);
 route.get('/adduserform', services.adduserform);
 route.get('/addroleform', services.addroleform);
 
-route.get('/updaterole', services.addroleform);
+route.get('/updaterole', services.updaterole);
 route.get('/updatestudent', services.updatestudent);
-route.get('/updateuser', services.addroleform);
+route.get('/updateuser', services.updateuser);
 
+route.get('/complete', services.complete);
+route.get('/complete2', services.complete2);
 
-
-
-
-
-
-
-
+route.get('/ooadmissionfiles', services.ooadmissionfiles);
 
 
 //api

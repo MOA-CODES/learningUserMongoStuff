@@ -274,9 +274,60 @@ $("#updatestudentform").submit( function (event){
             location.assign("http://localhost:3001/mainadmin1")
         }
     })
-
-
 })
+
+$("#updateuserform").submit(function(event){
+    event.preventDefault();
+
+    var unindexed_array = $(this).serializeArray();
+    var data ={}
+
+    $.map(unindexed_array, function(n,i){
+        data[n['name']]=n['value']
+    })
+
+    console.log(data);
+
+    var request ={
+        "url":`http://localhost:3001/api/user/update`,
+        "method": "PUT",
+        "data":data
+    }
+
+    $.ajax(request).done(function(response){
+        console.log(response)
+        if(response == "User updated"){
+            location.assign("http://localhost:3001/adminusers")
+        }
+    })
+})
+
+$("#updateroleform").submit(function(event){
+    event.preventDefault();
+
+    var unindexed_array = $(this).serializeArray();
+    var data ={}
+
+    $.map(unindexed_array, function(n,i){
+        data[n['name']]=n['value']
+    })
+
+    console.log(data);
+
+    var request ={
+        "url":`http://localhost:3001/api/role/update`,
+        "method": "PUT",
+        "data":data
+    }
+
+    $.ajax(request).done(function(response){
+        console.log(response)
+        if(response == "Role updated"){
+            location.assign("http://localhost:3001/adminroles")
+        }
+    })
+})
+
 
 
 
@@ -481,8 +532,32 @@ $("#adduserform").submit(function(event){
 
 })
 
-// $(".deleterow").click(function () {    
-// })
+$("#addroleform").submit(function(event){
+    event.preventDefault();
+
+    var unindexed_array = $(this).serializeArray();
+    var data ={}
+
+    $.map(unindexed_array, function(n,i){
+        data[n['name']]=n['value']
+    })
+
+    console.log(data);
+
+    var request ={
+        "url":`http://localhost:3001/api/role/register`,
+        "method": "POST",
+        "data":data
+    }
+
+    $.ajax(request).done(function(response){
+        alert("submitted successfully");
+        location.assign("http://localhost:3001/adminusers")
+
+    })
+
+
+})
 
 //SEARCH
 $('#OOLSEARCH').on('click', function(event){
@@ -490,16 +565,11 @@ $('#OOLSEARCH').on('click', function(event){
 
     var id = document.getElementById("OOLSEARCHID").value;
 
-    var request ={
-        "url":`http://localhost:3001/api/student/retrieve?StudID=${id}`,
-        "method": "GET",
+    var elements = document.getElementsByClassName(`${id}`)
+    for (var i = 0; i < elements.length; i++) {
+        elements[i].style.background= "#c47474";
+        elements[i].style.color= "#ffffff";
+
     }
-
-    $.ajax(request).done(function(response){
-        var x = response.toString();
-
-        console.log(x);
-        alert("yo");
-    
-    })
 })
+

@@ -75,9 +75,9 @@
             <div class="header-left">
               <div class="dashboard_bar">
                 <div class="input-group search-area d-lg-inline-flex d-none">
-                  <input type="text" class="form-control" placeholder="Search here...">
+                  <input type="text"  id="OOLSEARCHID" class="form-control" placeholder="Search here...">
                   <div class="input-group-append">
-                    <span class="input-group-text"><a href="javascript:void(0)"><i class="flaticon-381-search-2"></i></a></span>
+                    <span id="OOLSEARCH" class="input-group-text"><a href="javascript:void(0)"><i class="flaticon-381-search-2"></i></a></span>
 
                   </div>
                 </div>
@@ -95,11 +95,11 @@
     <a style="color: black;" class="nav-link" href="/adminusers">Users</a>
   </li>
 </strong>
-<!-- <strong>
+<strong>
   <li class="nav-item">
     <a style="color: black;" class="nav-link" href="/adminfiles">Files</a>
   </li>
-</strong> -->
+</strong>
 <strong>
   <li class="nav-item">
     <a style="color: black;" class="nav-link" href="/adminroles">Roles</a>
@@ -215,7 +215,7 @@
                         </div>
                         <div class="row align-items-center">
                           <div class="col-lg-4">
-                            <p class="fs-18 mb-2">Total Students that have Completed <strong style="color: black;">Orientation:</strong>:</p>
+                            <p class="fs-18 mb-2">Total Students that have Completed <a href="complete2"><strong style="color: black;">Orientation:</strong>:</p></a>
                             <span class="fs-26 text-primary font-w600"><%= Completed%>/<%= students.length %></span>
                           </div>
                         </div>
@@ -280,55 +280,52 @@
                       <tbody>
                         <%for (var i = 0; i<students.length; i++){%>
                         <tr>
-                          <td><%= i+1 %></td>
-                          <td><%= students[i].StudID %></td>
-                          <td><%= students[i].Firstname %></td>
-                          <td><%= students[i].Middlename %></td>
-                          <td><%= students[i].Lastname %></td>
-                          <td><%= students[i].Gender %></td>
-                          <td><%= students[i].DOB %></td>
-                          <td><%= students[i].Phonenumber %></td>
-                          <td><%= students[i].Major %></td>
-                          <td><%= students[i].Nationality %></td>
-                          <td><%= students[i].Address %></td>
-                          <td><%= students[i].Personalemail %></td>
-                          <td><%= students[i].Schoolemail %></td>
-                          <td><%= students[i].ArrivalDate %></td>
-                          <td><%= students[i].MaritalStatus %></td>
-                          <td><%= students[i].GuardianName %></td>
-                          <td><%= students[i].GuardianRel %></td>
-                          <td><%= students[i].PaymentPlan %></td>
-                          <td><%= students[i].HousingType %></td>
-                          <td><%= students[i].MealPlan %></td>
+                          <td class="<%= students[i].StudID %>"><%= i+1 %></td>
+                          <td class="<%= students[i].StudID %>"><%= students[i].StudID %></td>
+                          <td class="<%= students[i].StudID %>"><%= students[i].Firstname %></td>
+                          <td class="<%= students[i].StudID %>"><%= students[i].Middlename %></td>
+                          <td class="<%= students[i].StudID %>"><%= students[i].Lastname %></td>
+                          <td class="<%= students[i].StudID %>"><%= students[i].Gender %></td>
+                          <td class="<%= students[i].StudID %>"><%= students[i].DOB %></td>
+                          <td class="<%= students[i].StudID %>"><%= students[i].Phonenumber %></td>
+                          <td class="<%= students[i].StudID %>"><%= students[i].Major %></td>
+                          <td class="<%= students[i].StudID %>"><%= students[i].Nationality %></td>
+                          <td class="<%= students[i].StudID %>"><%= students[i].Address %></td>
+                          <td class="<%= students[i].StudID %>"><%= students[i].Personalemail %></td>
+                          <td class="<%= students[i].StudID %>"><%= students[i].Schoolemail %></td>
+                          <td class="<%= students[i].StudID %>"><%= students[i].ArrivalDate %></td>
+                          <td class="<%= students[i].StudID %>"><%= students[i].MaritalStatus %></td>
+                          <td class="<%= students[i].StudID %>"><%= students[i].GuardianName %></td>
+                          <td class="<%= students[i].StudID %>"><%= students[i].GuardianRel %></td>
+                          <td class="<%= students[i].StudID %>"><%= students[i].PaymentPlan %></td>
+                          <td class="<%= students[i].StudID %>"><%= students[i].HousingType %></td>
+                          <td class="<%= students[i].StudID %>"><%= students[i].MealPlan %></td>
 
-                          <td><%= students[i].BG %></td>
-                          <td><%= students[i].GT %></td>
-                          <td><%= students[i].MedicalCond %></td>
-                          <td><%= students[i].Allergies %></td>
-                          <td><%= students[i].ParentRel %></td>
-                          <td><%= students[i].ParentAddress %></td>
-                          <td><%= students[i].ParentPhone %></td>
+                          <td class="<%= students[i].StudID %>"><%= students[i].BG %></td>
+                          <td class="<%= students[i].StudID %>"><%= students[i].GT %></td>
+                          <td class="<%= students[i].StudID %>"><%= students[i].MedicalCond %></td>
+                          <td class="<%= students[i].StudID %>"><%= students[i].Allergies %></td>
+                          <td class="<%= students[i].StudID %>"><%= students[i].ParentRel %></td>
+                          <td class="<%= students[i].StudID %>"><%= students[i].ParentAddress %></td>
+                          <td class="<%= students[i].StudID %>"><%= students[i].ParentPhone %></td>
 
-                          <td><%= students[i].Faith %></td>
-                          <td><%= students[i].AcademicInt %></td>
-                          <td><%= students[i].SportsClub %></td>
-                          <td><%= students[i].Hobbies %></td>
-                          <td><%= students[i].GovClubs %></td>
+                          <td class="<%= students[i].StudID %>"><%= students[i].Faith %></td>
+                          <td class="<%= students[i].StudID %>"><%= students[i].AcademicInt %></td>
+                          <td class="<%= students[i].StudID %>"><%= students[i].SportsClub %></td>
+                          <td class="<%= students[i].StudID %>"><%= students[i].Hobbies %></td>
+                          <td class="<%= students[i].StudID %>"><%= students[i].GovClubs %></td>
 
-                          <td><%= students[i].OpenerpStatus %></td>
-                          <td><%= students[i].Adminvr %></td>
-                          <td><%= students[i].Financevr %></td>
-                          <td><%= students[i].Itvr %></td>
-                          <td><%= students[i].Housingvr %></td>
-                          <td><%= students[i].Healthvr %></td>
-                          <td><%= students[i].Studactvr %></td>
+                          <td class="<%= students[i].StudID %>"><%= students[i].OpenerpStatus %></td>
+                          <td class="<%= students[i].StudID %>"><%= students[i].Adminvr %></td>
+                          <td class="<%= students[i].StudID %>"><%= students[i].Financevr %></td>
+                          <td class="<%= students[i].StudID %>"><%= students[i].Itvr %></td>
+                          <td class="<%= students[i].StudID %>"><%= students[i].Housingvr %></td>
+                          <td class="<%= students[i].StudID %>"><%= students[i].Healthvr %></td>
+                          <td class="<%= students[i].StudID %>"><%= students[i].Studactvr %></td>
                           
-                          <td>
+                          <td class="<%= students[i].StudID %>">
                             <a href="/updatestudent?StudID=<%= students[i].StudID%>" class="btn border-shadow update" title="1">
                                 <span class="text-gradient"><i class="fas fa-pencil-alt"></i></span>
-                            </a>
-                            <a class="btn border-shadow delete" data-id="">
-                                <span class="text-gradient"><i class="fas fa-times"></i></span>
                             </a>
                         </td>
 
@@ -396,6 +393,8 @@
                       });
                     });
                   </script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="/js/conn.js"></script>
 </body>
 
 </html>
